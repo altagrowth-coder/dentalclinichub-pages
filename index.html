@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Revenue Leak Audit for UK Dental Practices | AltaDent Growth</title>
+<meta name="description" content="Most practices lose thousands each month between the first enquiry and an accepted treatment plan. Book a free leak audit and see exactly where your patients drop off.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1F3B5C; --teal:#00B3A4; --paper:#FFFFFF; --cream:#F4F7FA;
+    --ink:#1F3B5C;
+    --hairline-light:rgba(31,59,92,.08);
+    --hairline-dark:rgba(255,255,255,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+  h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-0.01em;line-height:1.12}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+  .btn{display:inline-block;background:var(--teal);color:#fff;font-weight:700;font-size:17px;
+       padding:16px 34px;border-radius:999px;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,179,164,.35)}
+  .btn.ghost{background:transparent;border:1px solid var(--hairline-dark);color:#fff;font-weight:600}
+
+  /* Hero */
+  .hero{background:var(--navy);color:#fff;padding:28px 0 96px}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0 64px}
+  .nav img{height:38px;display:block}
+  .nav a.cta{color:#fff;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--hairline-dark);padding:10px 22px;border-radius:999px}
+  .nav a.cta:hover{border-color:var(--teal);color:var(--teal)}
+  .hero h1{font-size:clamp(38px,5.6vw,62px);font-weight:700;max-width:820px}
+  .hero p.sub{font-size:clamp(17px,2vw,21px);color:rgba(255,255,255,.82);max-width:640px;margin:22px 0 36px}
+  .hero .actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .hero .note{font-size:14px;color:rgba(255,255,255,.55);margin-top:16px}
+
+  /* Stats band */
+  .stats{background:var(--navy);color:#fff;padding:0 0 84px}
+  .stats .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline-dark);border:1px solid var(--hairline-dark)}
+  .stat{background:var(--navy);padding:34px 30px}
+  .stat .num{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:44px;color:var(--teal);line-height:1}
+  .stat .label{margin-top:10px;font-size:15.5px;color:rgba(255,255,255,.8)}
+  .stat .src{margin-top:8px;font-size:12.5px;color:rgba(255,255,255,.45)}
+
+  section{padding:96px 0}
+  .cream{background:var(--cream)}
+  .section-head{max-width:680px;margin-bottom:56px}
+  .section-head h2{font-size:clamp(30px,3.8vw,42px);font-weight:700;margin-top:14px}
+  .section-head p{margin-top:16px;font-size:18px;color:rgba(31,59,92,.75)}
+
+  /* Problem cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--paper);border:1px solid var(--hairline-light);padding:34px 30px}
+  .card .glyph{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:26px;color:var(--teal)}
+  .card h3{font-size:21px;margin:14px 0 10px}
+  .card p{font-size:15.5px;color:rgba(31,59,92,.75)}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+  .step{border:1px solid var(--hairline-light);background:var(--cream);padding:34px 30px;position:relative}
+  .step::before{counter-increment:step;content:"0" counter(step);font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:700;font-size:15px;color:var(--teal);letter-spacing:.12em}
+  .step h3{font-size:21px;margin:12px 0 10px}
+  .step p{font-size:15.5px;color:rgba(31,59,92,.75)}
+
+  /* Deliverables */
+  .deliver{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .deliver ul{list-style:none;margin-top:8px}
+  .deliver li{padding:16px 0;border-bottom:1px solid var(--hairline-light);font-size:17px;display:flex;gap:14px;align-items:baseline}
+  .deliver li:first-child{border-top:1px solid var(--hairline-light)}
+  .deliver li .tick{color:var(--teal);font-weight:700}
+  .quotebox{background:var(--navy);color:#fff;padding:44px 40px}
+  .quotebox .q{font-family:'Bricolage Grotesque',sans-serif;font-size:23px;font-weight:600;line-height:1.4}
+  .quotebox .who{margin-top:20px;font-size:14.5px;color:rgba(255,255,255,.6)}
+
+  /* Final CTA */
+  .final{background:var(--navy);color:#fff;text-align:center}
+  .final h2{font-size:clamp(30px,4vw,46px);font-weight:700;max-width:720px;margin:14px auto 0}
+  .final p{max-width:560px;margin:18px auto 36px;color:rgba(255,255,255,.78);font-size:18px}
+  .final .note{font-size:14px;color:rgba(255,255,255,.5);margin-top:16px}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.55);border-top:1px solid var(--hairline-dark);padding:28px 0;font-size:13.5px}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  footer img{height:26px;opacity:.85}
+
+  @media (max-width:820px){
+    .stats .grid,.cards,.steps{grid-template-columns:1fr}
+    .deliver{grid-template-columns:1fr;gap:36px}
+    section{padding:72px 0}
+    .hero{padding-bottom:72px}
+    .nav{padding-bottom:44px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav">
+      <img src="/assets/logo-white.svg" alt="AltaDent Growth">
+      <a class="cta" href="#book">Book Your Free Audit</a>
+    </nav>
+    <p class="eyebrow">Free Revenue Leak Audit For UK Dental Practices</p>
+    <h1 style="margin-top:18px">Find The Revenue Leaking Out Of Your Practice</h1>
+    <p class="sub">Most practices lose thousands every month between the first enquiry and an accepted treatment plan. In one 30 minute audit we trace that journey and show you exactly where patients drop off, and what it costs you.</p>
+    <div class="actions">
+      <a class="btn" href="#book">Book Your Free Leak Audit</a>
+      <a class="btn ghost" href="#how">See How It Works</a>
+    </div>
+    <p class="note">30 minutes. No obligation. You keep the findings either way.</p>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="grid">
+      <div class="stat">
+        <div class="num">2 in 3</div>
+        <div class="label">Enquiries at the average practice never turn into a booked appointment</div>
+        <div class="src">Dental Business Journal, 2023</div>
+      </div>
+      <div class="stat">
+        <div class="num">55%</div>
+        <div class="label">Of treatment plans presented are never accepted by the patient</div>
+        <div class="src">Henry Schein One Catalyst Index, 2026</div>
+      </div>
+      <div class="stat">
+        <div class="num">75%</div>
+        <div class="label">Acceptance rate reached by the top 10% of practices. The gap is the leak</div>
+        <div class="src">Henry Schein One Catalyst Index, 2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The Problem</p>
+      <h2>Marketing Is Not Your Bottleneck</h2>
+      <p>Most practices do not have an enquiry problem. They have a follow up problem. The leak sits in three places, and none of them show up in your marketing reports.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="glyph">01</div>
+        <h3>Missed And Unreturned Calls</h3>
+        <p>Enquiries that ring out, land in voicemail, or arrive after hours rarely get a call back. Each one is a patient who books somewhere else.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">02</div>
+        <h3>Enquiries That Go Cold</h3>
+        <p>A lead answered once and never followed up again is a lead lost. Consistent, structured follow up is what separates booked from vanished.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">03</div>
+        <h3>Plans Presented, Never Accepted</h3>
+        <p>The most expensive leak of all. High value treatment plans that leave the room as a maybe and quietly become a no.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cream" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How It Works</p>
+      <h2>One Call. A Clear Picture Of The Leak.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Book A 30 Minute Call</h3>
+        <p>Pick a slot that suits you. We ask a short set of questions about how enquiries, follow up, and treatment plans flow through your practice today.</p>
+      </div>
+      <div class="step">
+        <h3>We Map Your Patient Journey</h3>
+        <p>We trace the path from first contact to accepted plan and benchmark each stage against what the best performing practices achieve.</p>
+      </div>
+      <div class="step">
+        <h3>You Get Your Leak Report</h3>
+        <p>A written summary of where patients drop off, what it costs you per month, and the three fixes with the biggest return. Yours to keep.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="deliver">
+      <div>
+        <p class="eyebrow">What You Get</p>
+        <h2 style="font-size:clamp(30px,3.8vw,42px);margin:14px 0 18px">Your Leak Report Includes</h2>
+        <ul>
+          <li><span class="tick">✓</span> Stage by stage drop off map, from enquiry to accepted plan</li>
+          <li><span class="tick">✓</span> Estimated monthly revenue lost at each stage</li>
+          <li><span class="tick">✓</span> Benchmarks against top performing UK practices</li>
+          <li><span class="tick">✓</span> The three highest impact fixes, prioritised by return</li>
+          <li><span class="tick">✓</span> A clear next step, whether you work with us or not</li>
+        </ul>
+      </div>
+      <div class="quotebox">
+        <p class="q">“You cannot fix a leak you cannot see. Most owners are shocked at how much value is sitting in enquiries they already paid to generate.”</p>
+        <p class="who">AltaDent Growth, revenue infrastructure for UK dental practices</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="book">
+  <div class="wrap">
+    <p class="eyebrow">Book Your Audit</p>
+    <h2>See What Your Practice Is Leaking</h2>
+    <p>Free, 30 minutes, and you keep the report. The only cost of skipping it is not knowing.</p>
+    <!-- PLACEHOLDER: replace with live zcal booking link -->
+    <a class="btn" href="#" data-placeholder="BOOKING_LINK">Book Your Free Leak Audit</a>
+    <p class="note">Limited to a handful of audits per week so each report gets proper attention.</p>
+    <!-- OPTIONAL: ActiveCampaign form embed goes here (B2B account altadent.activehosted.com).
+         Paste the AC form embed snippet to capture name / email / practice instead of, or alongside, the booking link. -->
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="/assets/logo-white.svg" alt="AltaDent Growth">
+    <span>© 2026 AltaDent Growth. Revenue infrastructure for UK dental practices.</span>
+  </div>
+</footer>
+
+<!-- OPTIONAL: ActiveCampaign site tracking snippet goes here -->
+</body>
+</html>
