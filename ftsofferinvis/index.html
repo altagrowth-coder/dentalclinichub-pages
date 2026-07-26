@@ -81,6 +81,9 @@
   .card .big{font-size:2rem;color:var(--gold-dark);font-weight:600;display:block;margin-bottom:.6rem;line-height:1.1}
 
   /* Steps */
+  .video-section{background:var(--cream);padding-bottom:96px}
+  .video-wrap{max-width:400px;margin:0 auto}
+  .video-wrap video{display:block;width:100%;aspect-ratio:9/16;border-radius:18px;background:#0c0c0c;box-shadow:0 22px 60px rgba(0,0,0,.28);border:1px solid rgba(201,182,145,.45)}
   .steps-section{background:var(--cream)}
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;counter-reset:step}
   .step{background:var(--white);padding:38px 30px;border:1px solid #eee7d9;position:relative}
@@ -178,6 +181,22 @@
     <span>Chalfont St Peter &middot; <b>Buckinghamshire</b></span>
   </div>
 </div>
+
+<section class="video-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>A message from Dr&nbsp;Raj&nbsp;Juneja</h2>
+      <p>Our principal dentist explains the VAT change &mdash; and how to hold your Invisalign price &mdash; in under a minute.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="video-wrap">
+      <video controls playsinline preload="metadata" poster="assets/fts-vat-video-poster.jpg">
+        <source src="assets/fts-vat-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="container">
