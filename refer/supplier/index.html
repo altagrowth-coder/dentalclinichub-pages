@@ -79,6 +79,17 @@ footer{background:var(--navy);padding:22px 20px}
 .dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.28);transition:background .2s,transform .2s}
 .dots i.on{background:var(--teal);transform:scale(1.35)}
 .swipe{text-align:center;font-size:12px;color:rgba(255,255,255,.45);margin-top:8px}
+.about{border:1px solid rgba(31,59,92,.14);border-radius:10px;background:#fff;margin-bottom:32px;overflow:hidden}
+.about>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:600;font-size:16.5px;color:var(--navy)}
+.about>summary::-webkit-details-marker{display:none}
+.about>summary i{flex:0 0 20px;width:20px;height:20px;border-radius:50%;background:var(--teal);color:#fff;font-style:normal;font-weight:700;font-size:14px;line-height:20px;text-align:center;transition:transform .2s}
+.about[open]>summary i{transform:rotate(45deg)}
+.about .body{padding:0 18px 18px;font-size:15px;line-height:1.65;color:rgba(31,59,92,.8)}
+.about .body p{margin-top:10px}
+.about .body ol{margin:12px 0 0 18px}
+.about .body li{margin-top:10px;padding-left:2px}
+.about .demo{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--navy);color:#fff;font-weight:700;font-size:14.5px;border-radius:999px;padding:12px 24px;text-decoration:none}
+.about .demo:hover{background:#16304b}
 .hp{position:absolute;left:-9999px;opacity:0}
 </style>
 </head>
@@ -104,6 +115,7 @@ footer{background:var(--navy);padding:22px 20px}
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="steps"><div class="step"><em>1</em><h3>You send the introduction</h3><p>One minute, one form. No commitment from you or them.</p></div><div class="step"><em>2</em><h3>We speak to them personally</h3><p>A no obligation case acceptance review. No cold spam, and we always credit you by name.</p></div><div class="step"><em>3</em><h3>They sign, you get paid</h3><p>£400 in John Lewis vouchers, sent within 14 days of their first paid invoice.</p></div></div>
     <p class="proof">We only touch case acceptance and patient finance, so your relationship and your product stay yours. Happy to work as a two way referral.</p>
+    
     <div class="tst"><div class="eyebrow">What practices say about the results</div><div class="track" id="tk"><div class="q"><p>“Case acceptance is up 31% in 90 days.”</p><div class="who"><img src="/refer/img/raj.jpg" alt="Dr Raj Juneja" width="56" height="56" loading="lazy"><span>Dr Raj Juneja<b>Face Teeth Smile</b></span></div></div><div class="q"><p>“Same-day acceptance is 2x higher than our old PDF flow.”</p><div class="who"><img src="/refer/img/paul.jpg" alt="Dr Paul Guicherit" width="56" height="56" loading="lazy"><span>Dr Paul Guicherit<b>The Dentist Amsterdam</b></span></div></div><div class="q"><p>“My treatment coordinator saved 6 hours a week on follow-ups.”</p><div class="who"><img src="/refer/img/kaveet.jpg" alt="Dr Kaveet Patel" width="56" height="56" loading="lazy"><span>Dr Kaveet Patel<b>York House Dental</b></span></div></div><div class="q"><p>“Fully integrated into our PMS, with deeper clinician analytics.”</p><div class="who"><img src="/refer/img/amit.jpg" alt="Dr Amit Jilka" width="56" height="56" loading="lazy"><span>Dr Amit Jilka<b>Abbey House Dental</b></span></div></div></div><div class="dots" id="dt"></div><p class="swipe">Swipe for more</p></div>
     <div class="eyebrow">About you</div>
     <div class="grid">
