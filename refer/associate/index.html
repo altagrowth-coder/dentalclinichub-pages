@@ -60,6 +60,12 @@ footer{background:var(--navy);padding:22px 20px}
 .foot{max-width:820px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .foot svg{height:24px;width:auto;opacity:.9}
 .foot p{color:rgba(255,255,255,.6);font-size:12.5px}
+.who{display:flex;align-items:center;gap:12px;margin-top:16px}
+.who img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:0 0 56px;border:2px solid rgba(0,179,164,.55)}
+.q span{margin-top:0}
+.wa{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-sizing:border-box;margin-top:14px;padding:15px 18px;border-radius:999px;border:1px solid rgba(31,59,92,.18);background:#fff;color:var(--navy);font-family:'Manrope',Arial,sans-serif;font-weight:700;font-size:16px;text-decoration:none}
+.wa svg{width:20px;height:20px;flex:0 0 20px}
+.wa:hover{border-color:var(--teal)}
 .tst{background:var(--navy);border-radius:12px;padding:26px 24px 20px;margin-bottom:34px}
 .tst .eyebrow{margin-bottom:14px}
 .track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
@@ -98,7 +104,7 @@ footer{background:var(--navy);padding:22px 20px}
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="steps"><div class="step"><em>1</em><h3>You send the introduction</h3><p>One minute, one form. No commitment from you or them.</p></div><div class="step"><em>2</em><h3>We speak to them personally</h3><p>A no obligation case acceptance review. No cold spam, and we always credit you by name.</p></div><div class="step"><em>3</em><h3>They sign, you get paid</h3><p>£400 in John Lewis vouchers, sent within 14 days of their first paid invoice.</p></div></div>
     <p class="proof">Associates lose most large plans at the money conversation, not the clinical one. That conversation is exactly what we systemise.</p>
-    <div class="tst"><div class="eyebrow">What practices say about the results</div><div class="track" id="tk"><div class="q"><p>“Case acceptance is up 31% in 90 days.”</p><span>Dr Raj Juneja<b>Face Teeth Smile</b></span></div><div class="q"><p>“Same-day acceptance is 2x higher than our old PDF flow.”</p><span>Dr Paul Guicherit<b>The Dentist Amsterdam</b></span></div><div class="q"><p>“My treatment coordinator saved 6 hours a week on follow-ups.”</p><span>Dr Kaveet Patel<b>York House Dental</b></span></div><div class="q"><p>“Fully integrated into our PMS, with deeper clinician analytics.”</p><span>Dr Amit Jilka<b>Abbey House Dental</b></span></div></div><div class="dots" id="dt"></div><p class="swipe">Swipe for more</p></div>
+    <div class="tst"><div class="eyebrow">What practices say about the results</div><div class="track" id="tk"><div class="q"><p>“Case acceptance is up 31% in 90 days.”</p><div class="who"><img src="/refer/img/raj.jpg" alt="Dr Raj Juneja" width="56" height="56" loading="lazy"><span>Dr Raj Juneja<b>Face Teeth Smile</b></span></div></div><div class="q"><p>“Same-day acceptance is 2x higher than our old PDF flow.”</p><div class="who"><img src="/refer/img/paul.jpg" alt="Dr Paul Guicherit" width="56" height="56" loading="lazy"><span>Dr Paul Guicherit<b>The Dentist Amsterdam</b></span></div></div><div class="q"><p>“My treatment coordinator saved 6 hours a week on follow-ups.”</p><div class="who"><img src="/refer/img/kaveet.jpg" alt="Dr Kaveet Patel" width="56" height="56" loading="lazy"><span>Dr Kaveet Patel<b>York House Dental</b></span></div></div><div class="q"><p>“Fully integrated into our PMS, with deeper clinician analytics.”</p><div class="who"><img src="/refer/img/amit.jpg" alt="Dr Amit Jilka" width="56" height="56" loading="lazy"><span>Dr Amit Jilka<b>Abbey House Dental</b></span></div></div></div><div class="dots" id="dt"></div><p class="swipe">Swipe for more</p></div>
     <div class="eyebrow">About you</div>
     <div class="grid">
       <div><label for="rn">Your name *</label><input id="rn" required placeholder="Jane Smith"></div>
@@ -116,7 +122,7 @@ footer{background:var(--navy);padding:22px 20px}
       </div>
     </div>
     <p id="err" class="err"></p>
-    <div class="cta"><button class="btn" type="submit" id="sb">Refer and claim £400</button><p>Takes under a minute</p></div>
+    <div class="cta"><button class="btn" type="submit" id="sb">Refer and claim £400</button><p>Takes under a minute</p><a class="wa" href="https://wa.me/447940636939?text=Hi%20Sim%2C%20a%20question%20about%20the%20AltaDent%20referral%20programme" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.2c.1.2.1.4 0 .6l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>Questions? WhatsApp Sim</a></div>
     <p class="terms">£400 in John Lewis vouchers is paid to you within 14 days of the practice you refer signing with AltaDent Growth and paying their first invoice. One reward per new client practice, no limit on how many practices you refer. We only use these details to contact your referral about AltaDent, and we always tell them you sent us.</p>
   </form>
 </div></main>
