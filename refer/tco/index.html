@@ -90,6 +90,28 @@ footer{background:var(--navy);padding:22px 20px}
 .about .body li{margin-top:10px;padding-left:2px}
 .about .demo{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--navy);color:#fff;font-weight:700;font-size:14.5px;border-radius:999px;padding:12px 24px;text-decoration:none}
 .about .demo:hover{background:#16304b}
+.tw ul.tick{list-style:none;margin-top:10px}
+.tw ul.tick li{position:relative;padding-left:22px;margin-top:8px;color:rgba(255,255,255,.86);font-size:14.5px;line-height:1.5}
+.tw ul.tick li:before{content:"";position:absolute;left:0;top:5px;width:12px;height:7px;border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+.tw ul.tick li strong{color:#fff}
+.tw.flagged{position:relative;border-color:rgba(0,179,164,.55);background:linear-gradient(150deg,rgba(0,179,164,.16),rgba(255,255,255,.05))}
+.flag{position:absolute;top:-11px;left:16px;background:var(--teal);color:#fff!important;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.badge{position:relative;overflow:hidden}
+.badge:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);animation:sheen 4.5s ease-in-out infinite}
+@keyframes sheen{0%{left:-60%}55%{left:130%}100%{left:130%}}
+.rv{opacity:0;transform:translateY(14px)}
+.rv.in{opacity:1;transform:none;transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.3,1)}
+@media(prefers-reduced-motion:reduce){.rv,.rv.in{opacity:1;transform:none;transition:none}.badge:after{animation:none}}
+.step{transition:transform .2s ease,box-shadow .2s ease}
+.step:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(31,59,92,.1)}
+.feed{max-width:820px;margin:26px auto 0}
+.feed .eyebrow{color:rgba(31,59,92,.5);margin-bottom:12px}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:640px){.strip{grid-template-columns:repeat(2,1fr)}}
+.strip a{display:block;border-radius:10px;overflow:hidden;border:1px solid rgba(31,59,92,.12);line-height:0}
+.strip img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .3s ease}
+.strip a:hover img{transform:scale(1.04)}
+.feed p.cap{margin-top:10px;font-size:12.5px;color:rgba(31,59,92,.55)}
 .hp{position:absolute;left:-9999px;opacity:0}
 </style>
 </head>
@@ -100,9 +122,14 @@ footer{background:var(--navy);padding:22px 20px}
   <div class="badge"><b>£300</b> John Lewis vouchers per practice that signs</div>
   <h1>Know a TCO Who Deserves Better Tools?</h1>
   <p class="sub">You know which practices are losing cases they should be winning. Refer a treatment coordinator or a practice to AltaDent and we will show them what a proper case acceptance system looks like.</p>
-  <div class="twoway">
-    <div class="tw"><span>What you get</span><p><strong>£300 in John Lewis vouchers</strong> when the practice you refer becomes a client. No cap on how many you refer.</p></div>
-    <div class="tw"><span>What they get</span><p>A <strong>free case acceptance review</strong> of their treatment plans, finance options and follow up, with no obligation to buy anything.</p></div>
+  <div class="twoway rv">
+    <div class="tw"><span>What you get</span>
+      <p><strong>£300 in John Lewis vouchers</strong> when the practice you refer becomes a client.</p>
+      <ul class="tick"><li>Paid within 14 days of their first invoice</li><li>We credit you by name, every time</li></ul>
+    </div>
+    <div class="tw flagged"><span class="flag">Free · no obligation</span><span>What the clinic gets</span>
+      <ul class="tick"><li><strong>A full case acceptance review</strong> of their plans, finance options and follow up</li><li><strong>The exact revenue they are leaking</strong>, in pounds, from plans that never got signed</li><li><strong>A fix they can copy</strong> whether or not they ever work with us</li></ul>
+    </div>
   </div>
 </div></header>
 <main><div class="card">
@@ -113,10 +140,10 @@ footer{background:var(--navy);padding:22px 20px}
   </div>
   <form id="f">
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <div class="steps"><div class="step"><em>1</em><h3>You send the introduction</h3><p>One minute, one form. No commitment from you or them.</p></div><div class="step"><em>2</em><h3>We speak to them personally</h3><p>A no obligation case acceptance review. No cold spam, and we always credit you by name.</p></div><div class="step"><em>3</em><h3>They sign, you get paid</h3><p>£300 in John Lewis vouchers, sent within 14 days of their first paid invoice.</p></div></div>
-    <p class="proof">TCOs using AltaDent's case acceptance system run 41 to 50 per cent acceptance against a 42 per cent UK benchmark.</p>
+    <div class="steps rv"><div class="step"><em>1</em><h3>You send the introduction</h3><p>One minute, one form. No commitment from you or them.</p></div><div class="step"><em>2</em><h3>We speak to them personally</h3><p>A no obligation case acceptance review. No cold spam, and we always credit you by name.</p></div><div class="step"><em>3</em><h3>They sign, you get paid</h3><p>£300 in John Lewis vouchers, sent within 14 days of their first paid invoice.</p></div></div>
+    <p class="proof rv">TCOs using AltaDent's case acceptance system run 41 to 50 per cent acceptance against a 42 per cent UK benchmark.</p>
     <details class="about"><summary>What is AltaDent?<i>+</i></summary><div class="body"><p>AltaDent Growth is a bespoke solution provider for dental practices. Everything we build points at one number: case acceptance. Two things:</p><ol><li><b>We make the front desk convert.</b> Bespoke patient journeys so enquiries actually turn into booked, attended consultations instead of dying in a voicemail or an unanswered form.</li><li><b>We kill the boring PDF treatment plan.</b> Interactive plans that explain the treatment and the finance options clearly, and keep working on the patients who are sitting on the fence until they come back and say yes.</li></ol><p>For a treatment coordinator that means fewer plans stuck at the money conversation, finance answered on the spot, and the fence sitters chased automatically instead of living on your follow up list. Practices we work with run 41 to 50 per cent acceptance on high value plans against a 42 per cent UK benchmark.</p><a class="demo" href="https://zcal.co/simjuneja/introduction" target="_blank" rel="noopener">Book a demo for yourself</a></div></details>
-    <div class="tst"><div class="eyebrow">What practices say about the results</div><div class="track" id="tk"><div class="q"><p>“Case acceptance is up 31% in 90 days.”</p><div class="who"><img src="/refer/img/raj.jpg" alt="Dr Raj Juneja" width="56" height="56" loading="lazy"><span>Dr Raj Juneja<b>Face Teeth Smile</b></span></div></div><div class="q"><p>“Same-day acceptance is 2x higher than our old PDF flow.”</p><div class="who"><img src="/refer/img/paul.jpg" alt="Dr Paul Guicherit" width="56" height="56" loading="lazy"><span>Dr Paul Guicherit<b>The Dentist Amsterdam</b></span></div></div><div class="q"><p>“My treatment coordinator saved 6 hours a week on follow-ups.”</p><div class="who"><img src="/refer/img/kaveet.jpg" alt="Dr Kaveet Patel" width="56" height="56" loading="lazy"><span>Dr Kaveet Patel<b>York House Dental</b></span></div></div><div class="q"><p>“Fully integrated into our PMS, with deeper clinician analytics.”</p><div class="who"><img src="/refer/img/amit.jpg" alt="Dr Amit Jilka" width="56" height="56" loading="lazy"><span>Dr Amit Jilka<b>Abbey House Dental</b></span></div></div></div><div class="dots" id="dt"></div><p class="swipe">Swipe for more</p></div>
+    <div class="tst rv"><div class="eyebrow">What practices say about the results</div><div class="track" id="tk"><div class="q"><p>“Case acceptance is up 31% in 90 days.”</p><div class="who"><img src="/refer/img/raj.jpg" alt="Dr Raj Juneja" width="56" height="56" loading="lazy"><span>Dr Raj Juneja<b>Face Teeth Smile</b></span></div></div><div class="q"><p>“Same-day acceptance is 2x higher than our old PDF flow.”</p><div class="who"><img src="/refer/img/paul.jpg" alt="Dr Paul Guicherit" width="56" height="56" loading="lazy"><span>Dr Paul Guicherit<b>The Dentist Amsterdam</b></span></div></div><div class="q"><p>“My treatment coordinator saved 6 hours a week on follow-ups.”</p><div class="who"><img src="/refer/img/kaveet.jpg" alt="Dr Kaveet Patel" width="56" height="56" loading="lazy"><span>Dr Kaveet Patel<b>York House Dental</b></span></div></div><div class="q"><p>“Fully integrated into our PMS, with deeper clinician analytics.”</p><div class="who"><img src="/refer/img/amit.jpg" alt="Dr Amit Jilka" width="56" height="56" loading="lazy"><span>Dr Amit Jilka<b>Abbey House Dental</b></span></div></div></div><div class="dots" id="dt"></div><p class="swipe">Swipe for more</p></div>
     <div class="eyebrow">About you</div>
     <div class="grid">
       <div><label for="rn">Your name *</label><input id="rn" required placeholder="Jane Smith"></div>
@@ -135,11 +162,24 @@ footer{background:var(--navy);padding:22px 20px}
     </div>
     <p id="err" class="err"></p>
     <div class="cta"><button class="btn" type="submit" id="sb">Refer and claim £300</button><p>Takes under a minute</p><a class="wa" href="https://wa.me/447940636939?text=Hi%20Sim%2C%20a%20question%20about%20the%20AltaDent%20referral%20programme" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.2c.1.2.1.4 0 .6l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>Questions? WhatsApp Sim</a></div>
-    <p class="terms">£300 in John Lewis vouchers is paid to you within 14 days of the practice you refer signing with AltaDent Growth and paying their first invoice. One reward per new client practice, no limit on how many practices you refer. We only use these details to contact your referral about AltaDent, and we always tell them you sent us.</p>
+    <p class="terms">£300 in John Lewis vouchers is paid to you within 14 days of the practice you refer signing with AltaDent Growth and paying their first invoice. One reward per new client practice. We only use these details to contact your referral about AltaDent, and we always tell them you sent us.</p>
   </form>
-</div></main>
+</div>
+  <section class="feed rv">
+    <div class="eyebrow">Inside the work · @altadentgrowth</div>
+    <div class="strip">
+      <a href="https://www.instagram.com/altadentgrowth/" target="_blank" rel="noopener"><img src="/refer/img/feed1.jpg" alt="AltaDent technical session with a client clinic team" loading="lazy"></a>
+      <a href="https://www.instagram.com/altadentgrowth/" target="_blank" rel="noopener"><img src="/refer/img/feed2.jpg" alt="2 in 3 of your enquiries never book" loading="lazy"></a>
+      <a href="https://www.instagram.com/altadentgrowth/" target="_blank" rel="noopener"><img src="/refer/img/feed3.jpg" alt="55 per cent of treatment plans never get accepted" loading="lazy"></a>
+      <a href="https://www.instagram.com/altadentgrowth/" target="_blank" rel="noopener"><img src="/refer/img/feed4.jpg" alt="We built the fix, an advanced patient journey system" loading="lazy"></a>
+    </div>
+    <p class="cap">Sessions, systems and numbers from the practices we work in. Follow along on Instagram.</p>
+  </section>
+</main>
 <footer><div class="foot"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="480 420 970 240"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#ffffff;}.cls-3{fill:#00b3a4;}</style></defs><path class="cls-2" d="M681,646.34V485.43h28.43V646.34Z"/><path class="cls-2" d="M798.46,563.46H773.55v45.85q0,5.73,2.87,8.37t8.37,3a122.1,122.1,0,0,0,13.67-.11v25.79q-29.33,3.3-41.33-5.51t-12-31.52V563.46H725.94V536.13h19.18V513.87l28.43-8.6v30.86h24.91Z"/><path class="cls-2" d="M899,536.13H927.4V646.34H899v-13Q886.19,649.42,863,649.42q-22,0-37.8-16.86t-15.76-41.33q0-24.47,15.76-41.33T863,533q23.15,0,35.93,16.09Zm-52.46,77.48q8.6,8.7,21.82,8.7t21.93-8.7Q899,604.9,899,591.23t-8.71-22.37q-8.7-8.7-21.93-8.71t-21.82,8.71q-8.6,8.71-8.6,22.37T846.51,613.61Z"/><path class="cls-2" d="M1015.79,492.05q31.74,0,53,22.26t21.27,54.88q0,32.63-21.27,54.89t-53,22.26H954.51V492.05Zm0,125.19q20.06,0,32.62-13.33T1061,569.19q0-21.37-12.57-34.72t-32.62-13.33H984.93v96.1Z"/><path class="cls-2" d="M1134.37,602.92q5.73,20.72,31.08,20.72,16.32,0,24.69-11l22.92,13.23q-16.3,23.6-48,23.58-27.33,0-43.86-16.53t-16.53-41.66q0-24.9,16.31-41.55T1162.81,533q24.24,0,40,16.75t15.76,41.44a66.13,66.13,0,0,1-1.1,11.69Zm-.44-22h56.21q-2.43-11.24-10-16.75a28.77,28.77,0,0,0-17.3-5.51q-11.46,0-19,5.84T1133.93,580.87Z"/><path class="cls-2" d="M1299.69,533q18.06,0,29.86,12.13t11.8,33.5v67.67h-28.44V582.2q0-11-6-16.86t-15.87-5.85q-11,0-17.63,6.84t-6.61,20.49v59.52h-28.44V536.13h28.44v12.34Q1277.2,533.05,1299.69,533Z"/><path class="cls-2" d="M1428.63,563.46h-24.91v45.85q0,5.73,2.87,8.37t8.38,3a121.93,121.93,0,0,0,13.66-.11v25.79q-29.31,3.3-41.33-5.51t-12-31.52V563.46h-19.18V536.13h19.18V513.87l28.43-8.6v30.86h24.91Z"/><path class="cls-3" d="M620,519l-59,96.8h50.57l6.74,30.53h33Z"/><polygon class="cls-3" points="646.2 492.46 623.57 487.28 526.59 646.33 491.37 646.33 592.56 480.24 568.97 474.82 634.64 430.57 646.2 492.46"/></svg><p>Altadent Growth Ltd · success@altadentgrowth.com · altadent.co.uk</p></div></footer>
 <script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -8%"});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
 const tk=document.getElementById("tk"),dt=document.getElementById("dt");
 const cards=[...tk.children];
 cards.forEach(()=>dt.appendChild(document.createElement("i")));
