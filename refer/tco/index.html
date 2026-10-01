@@ -128,6 +128,12 @@ html.rvon .rv.in{opacity:1;transform:none;transition:opacity .55s ease,transform
 .strip img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .3s ease}
 .strip a:hover img{transform:scale(1.04)}
 .feed p.cap{margin-top:10px;font-size:12.5px;color:rgba(31,59,92,.55)}
+.vid{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:center;background:var(--cream);border-radius:12px;padding:26px;margin-bottom:34px}
+@media(max-width:700px){.vid{grid-template-columns:1fr;gap:18px;padding:20px}}
+.vid h2{font-family:'Bricolage Grotesque',Arial,sans-serif;font-size:clamp(22px,3.4vw,28px);line-height:1.18;margin-top:10px}
+.vid p{font-size:15px;line-height:1.65;color:rgba(31,59,92,.78);margin-top:12px}
+.vframe{position:relative;width:100%;max-width:300px;margin:0 auto;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--navy);box-shadow:0 12px 34px rgba(31,59,92,.22)}
+.vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .hp{position:absolute;left:-9999px;opacity:0}
 </style>
 </head>
@@ -156,6 +162,7 @@ html.rvon .rv.in{opacity:1;transform:none;transition:opacity .55s ease,transform
   </div>
   <form id="f">
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    
     <div class="steps rv"><div class="step"><em>1</em><h3>You send the introduction</h3><p>One minute, one form. No commitment from you or them.</p></div><div class="step"><em>2</em><h3>We speak to them personally</h3><p>A no obligation case acceptance review. No cold spam, and we always credit you by name.</p></div><div class="step"><em>3</em><h3>They sign, you get paid</h3><p>£300 in John Lewis vouchers, sent within 14 days of their first paid invoice.</p></div></div>
     <p class="proof rv">TCOs using AltaDent's case acceptance system run 41 to 50 per cent acceptance against a 42 per cent UK benchmark.</p>
     <details class="about"><summary>What is AltaDent?<i>+</i></summary><div class="body"><p>AltaDent Growth is a bespoke solution provider for dental practices. Everything we build points at one number: case acceptance. Two things:</p><ol><li><b>We make the front desk convert.</b> Bespoke patient journeys so enquiries actually turn into booked, attended consultations instead of dying in a voicemail or an unanswered form.</li><li><b>We kill the boring PDF treatment plan.</b> Interactive plans that explain the treatment and the finance options clearly, and keep working on the patients who are sitting on the fence until they come back and say yes.</li></ol><p>For a treatment coordinator that means fewer plans stuck at the money conversation, finance answered on the spot, and the fence sitters chased automatically instead of living on your follow up list. Practices we work with run 41 to 50 per cent acceptance on high value plans against a 42 per cent UK benchmark.</p><a class="demo" href="https://zcal.co/simjuneja/introduction" target="_blank" rel="noopener">Book a demo for yourself</a></div></details>
