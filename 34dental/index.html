@@ -31,8 +31,6 @@ a{color:inherit}
 header{background:var(--white);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
 header img{height:54px;width:auto;display:block}
-.tel{font-family:var(--display);font-weight:600;letter-spacing:.04em;text-decoration:none;font-size:15px;color:var(--ink-soft)}
-.tel b{color:var(--ink)}
 
 .hero{padding:64px 0 72px;position:relative;overflow:hidden}
 .hero:before{content:"";position:absolute;right:-180px;top:-160px;width:560px;height:560px;border:1.5px solid var(--gold);border-radius:50%;opacity:.35}
@@ -88,6 +86,7 @@ footer{background:#232322;color:#9d9b94;font-size:13px;padding:22px 0 100px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
 .sticky{display:none}
+.dots{display:none}
 
 @media (max-width:900px){
   .hero{padding:36px 0 48px}
@@ -96,11 +95,44 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   .visit .wrap{grid-template-columns:1fr;gap:28px}
 }
 @media (max-width:560px){
-  header .wrap{height:70px}
+  header .wrap{height:64px;justify-content:center}
   header img{height:36px}
-  .tel .lbl{display:none}
-  .ctas .btn{flex:1 1 100%;justify-content:center}
-  .grid{grid-template-columns:1fr}
+  .hero{padding:22px 0 28px}
+  .hero:before{display:none}
+  .hero .wrap{gap:22px;grid-template-columns:minmax(0,1fr)}
+  .hero .wrap>*{min-width:0}
+  .eyebrow{font-size:11px;letter-spacing:.18em}
+  h1{font-size:32px;margin:8px 0 10px}
+  .lede{font-size:15px;line-height:1.5}
+  .lede .more{display:none}
+  .ctas{margin:18px 0 12px;gap:8px;flex-wrap:nowrap}
+  .ctas .btn{flex:1 1 0;justify-content:center;padding:13px 10px;font-size:14px;gap:6px}
+  .ctas .btn svg{width:17px;height:17px}
+  .ctas .btn .x{display:none}
+  .reassure{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -24px;padding:0 24px}
+  .reassure::-webkit-scrollbar{display:none}
+  .reassure span{flex:none;margin:0;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;white-space:nowrap}
+  .video-card{max-width:250px}
+  .video-cap{margin-top:8px;font-size:13px}
+  .offers{padding:32px 0 26px}
+  .offers h2{margin-bottom:18px;font-size:26px}
+  .grid{display:flex;grid-template-columns:none;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -24px;padding:0 24px 4px;scroll-padding:0 24px;scrollbar-width:none}
+  .grid::-webkit-scrollbar{display:none}
+  .tile{flex:0 0 78%;scroll-snap-align:start;padding:20px 18px}
+  .tile .big{font-size:26px}
+  .tile h3{margin:10px 0 6px}
+  .tile p{font-size:14px}
+  .dots{display:flex;justify-content:center;gap:6px;margin-top:14px}
+  .dots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:all .2s}
+  .dots i.on{background:var(--gold-deep);width:18px;border-radius:4px}
+  .visit{padding:30px 0 28px}
+  .visit .wrap{gap:16px;grid-template-columns:minmax(0,1fr)}
+  .visit h2{font-size:24px}
+  .visit p{display:none}
+  dl{padding:18px;gap:8px 16px}
+  dd{font-size:15px}
+  .final{display:none}
+  footer{padding:18px 0 90px;font-size:12px}
   .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,253,248,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);z-index:10}
   .sticky .btn{flex:1;justify-content:center;padding:14px 10px;font-size:15px}
 }
@@ -111,7 +143,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 <header>
   <div class="wrap">
     <img src="/34dental/assets/34-dental-logo.png" alt="34 Dental">
-    <a class="tel" href="tel:+441162714792"><span class="lbl">Call us </span><b>0116 271 4792</b></a>
   </div>
 </header>
 
@@ -120,15 +151,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
     <div>
       <div class="eyebrow">New patients welcome · Oadby, Leicester</div>
       <h1>Your new dental home, <strong>here in Oadby</strong></h1>
-      <p class="lede">For over 30 years, families across Leicester have trusted 34 Dental with everything from routine check-ups to dental implants. Our specialists work under one roof, so your whole journey stays with one friendly team.</p>
+      <p class="lede">For over 30 years, families across Leicester have trusted 34 Dental with everything from routine check-ups to dental implants.<span class="more"> Our specialists work under one roof, so your whole journey stays with one friendly team.</span></p>
       <div class="ctas">
         <a class="btn btn-book" href="https://34dental.altadentgrowth.com/book">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Book your visit online
+          Book<span class="x"> your visit</span> online
         </a>
         <a class="btn btn-wa" href="https://wa.me/447863750619?text=Hi%2034%20Dental%2C%20I%27d%20like%20to%20register%20as%20a%20new%20patient.">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.38 9.38 0 0 1 9.43 9.44c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.7C5.8.7.7 5.8.7 12.06c0 2 .52 3.95 1.52 5.67L.6 23.6l6.02-1.58a11.33 11.33 0 0 0 5.42 1.38h.01c6.26 0 11.35-5.09 11.36-11.35 0-3.03-1.18-5.88-3.33-8.02z"/></svg>
-          Message us on WhatsApp
+          <span class="x">Message us on </span>WhatsApp
         </a>
       </div>
       <div class="reassure"><span>Rated 5.0 from 200 reviews</span><span>Free consultations</span><span>0% finance available</span><span>Nervous patients welcome</span></div>
@@ -149,12 +180,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   <div class="wrap">
     <div class="eyebrow">Why patients choose us</div>
     <h2 style="margin-top:12px">Everything you need, <strong>under one roof</strong></h2>
-    <div class="grid">
+    <div class="grid" id="offerGrid">
       <div class="tile"><div class="big">£49</div><h3>New patient exam</h3><p>A full check-up with two x-rays, so you know exactly where your oral health stands.</p></div>
       <div class="tile"><div class="big">Free</div><h3>Treatment consultation</h3><p>Talk through implants, Invisalign or a smile makeover with no obligation.</p></div>
       <div class="tile"><div class="big">0%</div><h3>Finance over 12 months</h3><p>Spread the cost of your treatment into simple monthly payments.</p></div>
       <div class="tile"><div class="big">IV</div><h3>Sedation in-house</h3><p>Feeling anxious? Our calm team and IV sedation help you relax through treatment.</p></div>
     </div>
+    <div class="dots" id="offerDots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
   </div>
 </section>
 
@@ -167,7 +199,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
     </div>
     <dl>
       <dt>Address</dt><dd><a href="https://maps.google.com/?q=34+Dental,+34+Leicester+Road,+Oadby,+LE2+5BA">34 Leicester Road, Oadby, Leicester LE2 5BA</a></dd>
-      <dt>Phone</dt><dd><a href="tel:+441162714792">0116 271 4792</a></dd>
       <dt>WhatsApp</dt><dd><a href="https://wa.me/447863750619">07863 750619</a></dd>
       <dt>Hours</dt><dd>Monday to Friday, 9:00am to 5:30pm<br>Saturday, 8:30am to 5:30pm</dd>
     </dl>
@@ -192,10 +223,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   </div>
 </footer>
 
-<div class="sticky">
+<div class="sticky" id="stk">
   <a class="btn btn-book" href="https://34dental.altadentgrowth.com/book">Book online</a>
   <a class="btn btn-wa" href="https://wa.me/447863750619?text=Hi%2034%20Dental%2C%20I%27d%20like%20to%20register%20as%20a%20new%20patient.">WhatsApp us</a>
 </div>
 
+<script>
+(function(){var g=document.getElementById('offerGrid'),d=document.querySelectorAll('#offerDots i');if(!g||!d.length)return;
+g.addEventListener('scroll',function(){var t=g.children,step=t[1].getBoundingClientRect().left-t[0].getBoundingClientRect().left,i=Math.round(g.scrollLeft/step);
+if(g.scrollLeft+g.clientWidth>=g.scrollWidth-4)i=t.length-1;for(var j=0;j<d.length;j++)d[j].className=j===i?'on':'';},{passive:true});})();
+</script>
 </body>
 </html>
