@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="Stanley Dental: marketing return calculator"><meta property="og:description" content="Ad spend to enquiries, consultations and accepted treatment for Stanley Dental Practice, Kidderminster."><meta name="robots" content="noindex">
+<title>Stanley Dental: marketing return calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F3B5C;--teal:#00B3A4;--paper:#F4F7FA;--ink:#1F3B5C;--dim:rgba(31,59,92,.62);--line:rgba(31,59,92,.12);--white:#fff;--good:#0E8F6E;--warm:#B7791F}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:15px;line-height:1.5;font-variant-numeric:tabular-nums}
+header{background:var(--navy);color:var(--white);padding:28px 20px 34px}
+.wrap{max-width:1080px;margin:0 auto}
+.logo{height:30px;display:block;margin-bottom:22px}
+h1{font-family:'Bricolage Grotesque';font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--teal)}
+header p{margin:0;max-width:66ch;color:rgba(255,255,255,.8)}
+main{padding:24px 20px 60px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:-46px 0 22px}
+.tile{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px}
+.tile .v{font-family:'Bricolage Grotesque';font-size:30px;font-weight:700;line-height:1.1}
+.tile .l{font-size:13px;color:var(--dim)}
+.tile.hero{background:var(--teal);border-color:var(--teal);color:var(--white)}
+.tile.hero .l{color:rgba(255,255,255,.85)}
+section{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:18px}
+h2{font-family:'Bricolage Grotesque';font-size:21px;margin:0 0 4px}
+.sub{color:var(--dim);font-size:13.5px;margin:0 0 14px}
+table{width:100%;border-collapse:collapse}
+th{font-size:12px;font-weight:700;color:var(--dim);text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}
+td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+td.r,th.r{text-align:right}
+input[type=number]{width:92px;font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:8px;color:var(--ink);text-align:right}
+.rowname{font-weight:700}
+.rowname small{display:block;font-weight:500;color:var(--dim)}
+.toggle{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+.toggle button{font:inherit;font-weight:700;border:1px solid var(--navy);background:var(--white);color:var(--navy);padding:9px 14px;border-radius:999px;cursor:pointer}
+.toggle button.on{background:var(--navy);color:var(--white)}
+.goal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.g{border:1px solid var(--line);border-radius:12px;padding:14px}
+.g .t{font-weight:700}
+.bar{height:10px;background:var(--paper);border-radius:99px;overflow:hidden;margin:10px 0 6px}
+.bar i{display:block;height:100%;background:var(--teal);border-radius:99px}
+.g .n{font-size:13px;color:var(--dim)}
+.scroll{overflow-x:auto}
+.foot{font-size:12.5px;color:var(--dim);max-width:80ch}
+.foot li{margin-bottom:4px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cmp>div{border:1px solid var(--line);border-radius:12px;padding:14px}
+.cmp .v{font-family:'Bricolage Grotesque';font-size:24px;font-weight:700}
+.funnel{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:-46px 0 14px;background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.step{padding:18px 14px;position:relative;border-right:1px solid var(--line)}
+.step:last-child{border-right:0;background:var(--teal);color:var(--white)}
+.step:last-child .l,.step:last-child .s{color:rgba(255,255,255,.88)}
+.step .k{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.step:last-child .k{color:var(--white)}
+.step .v{font-family:'Bricolage Grotesque';font-size:30px;font-weight:700;line-height:1.1;margin:4px 0 2px}
+.step .l{font-size:13px;font-weight:600}
+.step .s{font-size:12px;color:var(--dim);margin-top:4px}
+.step:not(:last-child):after{content:'\2192';position:absolute;right:-11px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:13px;display:grid;place-items:center;z-index:2}
+.big3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.big3>div{background:var(--navy);color:#fff;border-radius:14px;padding:16px}
+.big3 .v{font-family:'Bricolage Grotesque';font-size:28px;font-weight:700;color:var(--teal);line-height:1.1}
+.big3 .l{font-size:13px;color:rgba(255,255,255,.82)}
+.ch{width:100%;border-collapse:collapse}
+.ch td,.ch th{padding:10px 6px}
+.ch .arrow{color:var(--teal);font-weight:700}
+.slider{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:4px 0 0}
+.slider input{flex:1;min-width:220px;accent-color:var(--teal)}
+.slider b{font-family:'Bricolage Grotesque';font-size:22px;min-width:110px}
+details summary{cursor:pointer;font-family:'Bricolage Grotesque';font-size:19px;font-weight:700}
+details[open] summary{margin-bottom:10px}
+@media(max-width:760px){.funnel{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.step:not(:last-child):after{content:'\2193';right:auto;left:50%;top:auto;bottom:-11px;transform:translateX(-50%)}.big3{grid-template-columns:1fr}}
+@media(max-width:760px){.tiles{grid-template-columns:1fr 1fr}.goal,.cmp{grid-template-columns:1fr}h1{font-size:27px}}
+</style></head><body>
+<header><div class="wrap">
+<img class="logo" src="data:image/png;base64,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" alt="AltaDent Growth">
+<h1>How <em>£4,000 a month</em> in ads becomes accepted treatment</h1>
+<p>Our suggested budget is £2,500 on Meta (Facebook and Instagram) and £1,500 on Google. Follow it left to right: what you spend, who enquires, who comes in, who says yes, and what that is worth.</p>
+</div></header>
+<main><div class="wrap">
+<div class="funnel">
+ <div class="step"><div class="k">1. You spend</div><div class="v" id="f_spend"></div><div class="l">on ads a month</div><div class="s">Meta £2,500 · Google £1,500</div></div>
+ <div class="step"><div class="k">2. People enquire</div><div class="v" id="f_enq"></div><div class="l">new enquiries</div><div class="s" id="f_cpl"></div></div>
+ <div class="step"><div class="k">3. They come in</div><div class="v" id="f_con"></div><div class="l">consultations booked</div><div class="s" id="f_conx"></div></div>
+ <div class="step"><div class="k">4. They say yes</div><div class="v" id="f_acc"></div><div class="l">treatments accepted</div><div class="s" id="f_accx"></div></div>
+ <div class="step"><div class="k">5. Revenue</div><div class="v" id="f_rev"></div><div class="l">treatment value a month</div><div class="s" id="f_revx"></div></div>
+</div>
+<div class="big3">
+ <div><div class="v" id="k_ret"></div><div class="l">back in treatment for every £1 of ad spend</div></div>
+ <div><div class="v" id="k_cpa"></div><div class="l">ad cost to win one Invisalign or implant patient</div></div>
+ <div><div class="v" id="k_roi"></div><div class="l" id="k_roil"></div></div>
+</div>
+
+<section>
+<h2>Where each pound goes</h2>
+<p class="sub">The same journey, split by channel. Meta builds demand with video. Google catches people already searching.</p>
+<div class="scroll"><table class="ch">
+<thead><tr><th>Channel</th><th class="r">Ad spend</th><th></th><th class="r">Enquiries</th><th></th><th class="r">Consultations</th><th></th><th class="r">Accepted</th><th></th><th class="r">Revenue</th></tr></thead>
+<tbody id="chrows"></tbody>
+</table></div>
+<div class="slider" style="margin-top:16px"><span class="rowname">Try a different budget</span><input type="range" id="scale" min="1000" max="10000" step="250" value="4000"><b id="scale_v">£4,000</b></div>
+<p class="sub" style="margin-top:6px">Moves Meta and Google together in the same 62/38 split.</p>
+</section>
+
+<section>
+<h2>Your goals</h2>
+<p class="sub">The targets you set on our call, against what this budget delivers each month.</p>
+<div class="goal">
+ <div class="g"><div class="t">Invisalign cases</div><div class="bar"><i id="b_inv"></i></div><div class="n" id="n_inv"></div></div>
+ <div class="g"><div class="t">Implant cases</div><div class="bar"><i id="b_imp"></i></div><div class="n" id="n_imp"></div></div>
+ <div class="g"><div class="t">Private emergencies</div><div class="bar"><i id="b_em"></i></div><div class="n" id="n_em"></div></div>
+</div>
+</section>
+
+<section>
+<h2>Follow-up makes the difference</h2>
+<p class="sub">Same ad spend, same enquiries. The only change is how fast and how often every enquiry hears back.</p>
+<div class="toggle"><button id="mode_today">Typical follow-up</button><button id="mode_alta" class="on">With AltaDent follow-up</button></div>
+<div class="cmp">
+ <div><div class="n">Typical follow-up (one call, office hours)</div><div class="v" id="c_today">£0</div></div>
+ <div><div class="n">With AltaDent (instant reply, WhatsApp, video, finance, chasing)</div><div class="v" id="c_alta">£0</div></div>
+</div>
+</section>
+
+<section><details>
+<summary>Adjust the assumptions</summary>
+<p class="sub">Monthly budget per campaign, cost per enquiry, how many enquiries book a consultation, how many consultations accept, and the average fee.</p>
+<div class="scroll"><table>
+<thead><tr><th>Campaign</th><th class="r">Budget £</th><th class="r">Cost per enquiry £</th><th class="r">Book a visit %</th><th class="r">Accept %</th><th class="r">Avg fee £</th><th class="r">Patients</th><th class="r">Revenue</th></tr></thead>
+<tbody id="rows"></tbody>
+</table></div>
+<table style="margin-top:14px"><tbody>
+<tr><td class="rowname">AltaDent monthly fees<small>CRM, Google, Meta and social media management</small></td><td class="r"><input type="number" id="fees" value="2000" step="50"></td></tr>
+</tbody></table>
+</details></section>
+
+<section>
+<h2>Where these numbers come from</h2>
+<ul class="foot">
+<li>Google cost per enquiry: UK dental campaign benchmarks, Q3 2025 (Dental Design Marketing). Emergency £3.71 a click at 10.5% conversion, Invisalign £5.76 at 5.8%, implants £3.94 at 3.4%.</li>
+<li>Meta cost per enquiry: UK dental ranges for 2026 (Upscale). Invisalign £25 to £60, single implants £40 to £100. Smaller towns often come in cheaper than this.</li>
+<li>Booking rate: Meta enquiries book at around 10% on average. Our clinics book 20% to 25% with instant replies and steady WhatsApp and email follow-up. Google enquiries carry higher intent.</li>
+<li>Acceptance: 42% average case acceptance across UK practices (Henry Schein One, 2026).</li>
+<li>Fees start from local published prices (clear aligners from £3,200, implants from £2,900). Replace them with your own fees.</li>
+<li>This is a planning model, not a guarantee. Results depend on your offer, your diary and how quickly the team follows up.</li>
+</ul>
+</section>
+<p class="foot">Prepared by AltaDent Growth for Stanley Dental Practice, October 2026.</p>
+</div></main>
+<script>
+const R=[
+ {id:'g_em',name:'Google: emergency',note:'Same-day pain, broken teeth',b:800,cpl:35,bk:60,bkT:40,acc:100,fee:120,k:'em'},
+ {id:'g_inv',name:'Google: Invisalign',note:'High-intent searches',b:300,cpl:99,bk:35,bkT:20,acc:42,fee:3500,k:'inv'},
+ {id:'g_imp',name:'Google: implants',note:'Single, bridges, all-on-4',b:400,cpl:117,bk:35,bkT:20,acc:42,fee:2900,k:'imp'},
+ {id:'m_inv',name:'Meta: Invisalign',note:'Video ads, free consultation',b:1500,cpl:45,bk:25,bkT:10,acc:42,fee:3500,k:'inv'},
+ {id:'m_imp',name:'Meta: implants',note:'Clinician video, finance',b:1000,cpl:70,bk:25,bkT:10,acc:42,fee:2900,k:'imp'}
+];
+let mode='alta';
+R.forEach(r=>r.base=r.b);
+const f=n=>'£'+Math.round(n).toLocaleString('en-GB');
+const tb=document.getElementById('rows');
+R.forEach(r=>{tb.insertAdjacentHTML('beforeend',`<tr><td class="rowname">${r.name}<small>${r.note}</small></td>
+<td class="r"><input type="number" data-r="${r.id}" data-f="b" value="${r.b}" step="100"></td>
+<td class="r"><input type="number" data-r="${r.id}" data-f="cpl" value="${r.cpl}" step="5"></td>
+<td class="r"><input type="number" data-r="${r.id}" data-f="bk" value="${r.bk}" step="1"></td>
+<td class="r"><input type="number" data-r="${r.id}" data-f="acc" value="${r.acc}" step="1"></td>
+<td class="r"><input type="number" data-r="${r.id}" data-f="fee" value="${r.fee}" step="50"></td>
+<td class="r" id="p_${r.id}"></td><td class="r" id="v_${r.id}"></td></tr>`)});
+function calc(useMode){
+ let rev=0,enq=0,pts=0,spend=0,by={inv:0,imp:0,em:0};
+ R.forEach(r=>{const e=r.cpl>0?r.b/r.cpl:0;const bk=(useMode==='alta'?r.bk:r.bkT)/100;
+  const p=e*bk*(r.k==='em'?1:r.acc/100);const v=p*r.fee;
+  rev+=v;enq+=e;spend+=r.b;by[r.k]+=p;if(r.k!=='em')pts+=p;r._p=p;r._v=v;});
+ return {rev,enq,pts,spend,by};
+}
+function render(){
+ document.querySelectorAll('input[data-r]').forEach(i=>{const r=R.find(x=>x.id===i.dataset.r);r[i.dataset.f]=+i.value||0;
+  if(i.dataset.f==='bk'){r.bkT=Math.round(r.bk*(r.k==='em'?0.67:(r.id.startsWith('m')?0.4:0.57)));}});
+ const fees=+document.getElementById('fees').value||0;
+ const t=calc('today'),a=calc('alta');const c=mode==='alta'?a:t; calc(mode);
+ R.forEach(r=>{document.getElementById('p_'+r.id).textContent=r._p.toFixed(1);document.getElementById('v_'+r.id).textContent=f(r._v)});
+ const cost=c.spend+(mode==='alta'?fees:0);
+
+ const em=c.by.em, plans=c.pts, acc=plans+em; let cons=0; const ch={meta:{s:0,e:0,c:0,a:0,v:0},google:{s:0,e:0,c:0,a:0,v:0}};
+ R.forEach(r=>{const e=r.cpl>0?r.b/r.cpl:0;const cn=e*(mode==='alta'?r.bk:r.bkT)/100;cons+=cn;const k=r.id[0]==='m'?'meta':'google';
+  ch[k].s+=r.b;ch[k].e+=e;ch[k].c+=cn;ch[k].a+=r._p;ch[k].v+=r._v;});
+ const nonEmSpend=R.filter(r=>r.k!=='em').reduce((a,r)=>a+r.b,0);
+ const one=n=>n<10?n.toFixed(1):Math.round(n);
+ document.getElementById('f_spend').textContent=f(c.spend);
+ document.querySelector('.step .s').textContent='Meta '+f(ch.meta.s)+' · Google '+f(ch.google.s);
+ document.getElementById('f_enq').textContent=Math.round(c.enq);
+ document.getElementById('f_cpl').textContent='about '+f(c.enq?c.spend/c.enq:0)+' each';
+ document.getElementById('f_con').textContent=Math.round(cons);
+ document.getElementById('f_conx').textContent=Math.round(c.enq?cons/c.enq*100:0)+'% of enquiries book';
+ document.getElementById('f_acc').textContent=Math.round(acc);
+ document.getElementById('f_accx').textContent=one(c.by.inv)+' Invisalign, '+one(c.by.imp)+' implants, '+Math.round(em)+' private emergencies';
+ document.getElementById('f_rev').textContent=f(c.rev);
+ document.getElementById('f_revx').textContent=f(c.rev*12)+' a year';
+ document.getElementById('k_ret').textContent='£'+(c.spend?c.rev/c.spend:0).toFixed(2);
+ document.getElementById('k_cpa').textContent=f(plans?nonEmSpend/plans:0);
+ document.getElementById('k_roi').textContent=(cost?c.rev/cost:0).toFixed(1)+'x';
+ document.getElementById('k_roil').textContent=mode==='alta'?'return including our '+f(fees)+' monthly fees ('+f(cost)+' all in)':'return on ad spend alone, typical follow-up';
+ const cr=(n,k)=>`<tr><td class="rowname">${n}</td><td class="r">${f(ch[k].s)}</td><td class="arrow">→</td><td class="r">${Math.round(ch[k].e)}</td><td class="arrow">→</td><td class="r">${Math.round(ch[k].c)}</td><td class="arrow">→</td><td class="r">${one(ch[k].a)}</td><td class="arrow">→</td><td class="r"><b>${f(ch[k].v)}</b></td></tr>`;
+ document.getElementById('chrows').innerHTML=cr('Meta (Facebook, Instagram)<small>Invisalign and implant video ads</small>','meta')+cr('Google search<small>Emergency, Invisalign, implants</small>','google');
+ const g=[['inv',6,'Goal: 6 a month'],['imp',3,'Goal: 2 to 3 a month'],['em',10,'Goal: 10 a month']];
+ g.forEach(([k,goal,l])=>{const v=c.by[k];document.getElementById('b_'+k).style.width=Math.min(100,v/goal*100)+'%';
+  document.getElementById('n_'+k).textContent=v.toFixed(1)+' a month · '+l;});
+ document.getElementById('c_today').textContent=f(t.rev)+' a month';
+ document.getElementById('c_alta').textContent=f(a.rev)+' a month';
+ document.getElementById('mode_today').classList.toggle('on',mode==='today');
+ document.getElementById('mode_alta').classList.toggle('on',mode==='alta');
+}
+document.addEventListener('input',e=>{if(e.target.id==='scale'){const k=+e.target.value/4000;R.forEach(r=>{r.b=Math.round(r.base*k/50)*50;const i=document.querySelector(`input[data-r="${r.id}"][data-f="b"]`);i.value=r.b;});document.getElementById('scale_v').textContent=f(+e.target.value);document.querySelector('header h1 em').textContent=f(+e.target.value)+' a month';}render();});
+document.getElementById('mode_today').onclick=()=>{mode='today';render()};
+document.getElementById('mode_alta').onclick=()=>{mode='alta';render()};
+render();
+</script>
+</body></html>
