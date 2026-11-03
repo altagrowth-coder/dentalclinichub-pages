@@ -181,13 +181,80 @@ footer a{color:#fff}
  #check .card{padding:18px}#check .stat{padding:12px 10px}#check .stat b{font-size:19px}#check .stat span{font-size:11px}
  #check .row .btn{width:100%}
 }
+
+/* ---- testimonial videos: respect each clip's shape ---- */
+.vt{display:flex;flex-direction:column}
+@media(min-width:1000px){.vt{grid-template-columns:none}}
+.vt .vw{background:#0f2236;display:flex;justify-content:center;aspect-ratio:16/9;overflow:hidden}
+.vt video{aspect-ratio:auto;height:100%;width:100%;object-fit:contain}
+.vt.port video{width:auto;max-width:100%}
+.vt figcaption{justify-content:flex-start}
+/* ---- mobile ---- */
+@media(max-width:899px){
+ .hgrid{display:flex;flex-direction:column;align-items:stretch;gap:0}
+ .hl{display:contents}
+ .hero .tag{order:1}.hero h1{order:2}
+ .phone{order:3;margin:26px auto 6px;width:min(80%,300px)}
+ .hero .sub{order:4;margin-top:22px}.hbtns{order:5}.hmeta{order:6}
+}
+@media(max-width:620px){
+ body{font-size:16px}
+ .sec{padding:48px 0}
+ h1{font-size:clamp(30px,8.6vw,38px)}
+ h2{font-size:clamp(26px,7.4vw,32px)}
+ .lead{font-size:16px}
+ .hero{padding:28px 0 44px}
+ .hero .sub{font-size:16.5px}
+ .hbtns{margin-top:22px;gap:10px}
+ .hmeta{display:grid;gap:6px;margin-top:20px;font-size:14px}
+ nav .wrap{height:56px}nav img{height:22px}
+ .trust{padding:18px 0}
+ .trust .wrap{gap:8px}
+ .trust small{flex:0 0 100%;text-align:center;font-size:12.5px}
+ .trust span{font-size:13.5px;opacity:1;background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px 12px}
+ .intro{gap:20px}
+ .pull{font-size:20px;padding-left:16px}
+ .steps{margin-top:26px;gap:10px}
+ .steps li{display:grid;grid-template-columns:34px 1fr;column-gap:14px;padding:16px 16px 18px;align-items:center}
+ .steps .n{width:34px;height:34px;margin:0;font-size:15px}
+ .steps h3{font-size:18px;margin:0}
+ .steps p{grid-column:2;font-size:15px;margin-top:4px}
+ .own{font-size:15px}
+ .cgrid{gap:22px}
+ .cside .btn{width:100%;margin-top:22px}
+ .cl li{padding:13px 0;gap:12px}
+ .cl b{font-size:16px}.cl span{font-size:14.5px}
+ .ogrid{grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+ .oc{padding:18px 16px}.oc.hi{grid-column:span 2}
+ .oc b{font-size:36px}.oc b small{font-size:18px}
+ .oc p{font-size:14px;margin-top:8px}
+ .olist{margin-top:22px;gap:10px}.olist div{font-size:15px}
+ .vgrid{margin-top:26px;gap:14px}
+ .vt.port .vw{aspect-ratio:4/5}
+ .vt.port video{width:100%;object-fit:cover}
+ .vt figcaption{padding:16px 18px 18px;gap:10px}
+ .vt blockquote,.q blockquote{font-size:17px}
+ .qgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:14px -20px 0;padding:0 20px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .qgrid::-webkit-scrollbar{display:none}
+ .q{flex:0 0 84%;scroll-snap-align:center;padding:20px}
+ .swipe{display:block;text-align:center;font-size:13px;color:var(--mute);font-weight:600;margin-top:10px}
+ .qwrap{margin-top:22px}
+ #check .q2{font-size:18px}
+ .fgrid{gap:18px}
+ .final img{width:84px;height:84px}
+ .fbtns .btn{width:100%}
+ .faq summary{font-size:16px;padding:16px 0}
+ footer{font-size:12.5px;padding:24px 16px 96px}
+}
+.swipe{display:none}
+@media(max-width:620px){.swipe{display:block}}
 </style>
 </head>
 <body>
 <nav><div class="wrap"><img src="/assets/logo-white.svg" alt="AltaDent Growth"><a class="btn p" href="https://zcal.co/simjuneja/introduction">Book a call</a></div></nav>
 
 <header class="hero"><div class="wrap hgrid">
- <div>
+ <div class="hl">
   <div class="tag"><i></i>For owners expanding to two sites or more</div>
   <h1>Adding a site should not mean adding <em>another front desk problem.</em></h1>
   <p class="sub">AltaDent builds one patient journey system for your whole group. Every enquiry answered, every plan followed through, and every site measured on the same terms, so the next practice you add runs the way your best one does.</p>
@@ -249,8 +316,9 @@ footer a{color:#fff}
 <section class="sec tst"><div class="wrap">
  <div class="kicker">What practice owners say</div>
  <h2>Built around how each practice runs</h2>
- <div class="vgrid"><figure class="vt"><video controls playsinline preload="none" poster="/assets/video/altadent-testimonial-raj.jpg" src="/assets/video/altadent-testimonial-raj.mp4"></video><figcaption><blockquote>&ldquo;Growth for a squat practice is key. Month on month, year on year, the numbers should be heading up.&rdquo;</blockquote><span><b>Dr Raj Juneja</b>Face Teeth Smile</span></figcaption></figure><figure class="vt"><video controls playsinline preload="none" poster="/assets/video/altadent-testimonial-lawrence.jpg" src="/assets/video/altadent-testimonial-lawrence.mp4"></video><figcaption><blockquote>&ldquo;You are doubling the amount of people who are going to have a treatment without doubling your ad spend.&rdquo;</blockquote><span><b>Lawrence Dash</b>Stella Dental Suite</span></figcaption></figure></div>
+ <div class="vgrid"><figure class="vt port"><div class="vw"><video controls playsinline preload="metadata" poster="/assets/video/altadent-testimonial-raj.jpg" src="/assets/video/altadent-testimonial-raj.mp4"></video></div><figcaption><blockquote>&ldquo;Growth for a squat practice is key. Month on month, year on year, the numbers should be heading up.&rdquo;</blockquote><span><b>Dr Raj Juneja</b>Face Teeth Smile</span></figcaption></figure><figure class="vt land"><div class="vw"><video controls playsinline preload="metadata" poster="/assets/video/altadent-testimonial-lawrence.jpg" src="/assets/video/altadent-testimonial-lawrence.mp4"></video></div><figcaption><blockquote>&ldquo;You are doubling the amount of people who are going to have a treatment without doubling your ad spend.&rdquo;</blockquote><span><b>Lawrence Dash</b>Stella Dental Suite</span></figcaption></figure></div>
  <div class="qgrid"><figure class="q"><blockquote>&ldquo;My treatment coordinator saved 6 hours a week on follow-ups.&rdquo;</blockquote><figcaption><img src="/refer/img/kaveet.jpg" alt="Dr Kaveet Patel" width="48" height="48"><span><b>Dr Kaveet Patel</b>York House Dental</span></figcaption></figure><figure class="q"><blockquote>&ldquo;Case acceptance is up 31% in 90 days.&rdquo;</blockquote><figcaption><img src="/refer/img/raj.jpg" alt="Dr Raj Juneja" width="48" height="48"><span><b>Dr Raj Juneja</b>Face Teeth Smile</span></figcaption></figure><figure class="q"><blockquote>&ldquo;The team found it easy to use and the bespoke setup fit our workflow, fully integrated into our PMS with deeper clinician analytics.&rdquo;</blockquote><figcaption><img src="/refer/img/amit.jpg" alt="Dr Amit Jilka" width="48" height="48"><span><b>Dr Amit Jilka</b>Owner, Abbey House Dental</span></figcaption></figure><figure class="q"><blockquote>&ldquo;The bespoke systems make the difference. Nothing feels generic, it is all built around how our clinic actually runs.&rdquo;</blockquote><figcaption><img src="/refer/img/kaveet.jpg" alt="Dr Kaveet Patel" width="48" height="48"><span><b>Dr Kaveet Patel</b>York House Dental Practice</span></figcaption></figure></div>
+ <p class="swipe">Swipe for more &rarr;</p>
 </div></section>
 
 <section class="sec quiz" id="check"><div class="wrap">
