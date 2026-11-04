@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Treatment Plan | Example</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="An example personalised treatment plan, as your patients would see it.">
+<meta property="og:title" content="Example patient treatment plan">
+<meta property="og:description" content="See the personalised treatment journey your patients receive: video, timeline, plain-English explanations, payment options and one-tap acceptance.">
+<meta property="og:image" content="https://go.dentalclinichub.com/demo-plan/assets/og.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F9F7F3; --card:#FFFFFF; --ink:#141414; --ink2:#3d3d3d; --muted:#6f6b66; --faint:#9a948c;
+  --gold:#B9A07E; --gold-d:#9C8360; --gold-t:#BFA27E; --beige:#F1EBE3; --beige2:#E9E0D5; --line:#ECE6DE;
+  --sage:#6F9180; --sage-l:#E8EFEA; --dark:#0E0E0E; --wa:#25D366;
+  --r:14px; --shadow:0 1px 2px rgba(20,16,10,.04),0 8px 24px rgba(20,16,10,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Outfit,system-ui,sans-serif;font-weight:400;letter-spacing:-.02em;line-height:1.15;text-wrap:balance}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+svg.i{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-t);font-weight:500}
+.sec{padding-top:84px}
+.sec-h{text-align:center;margin-bottom:40px}
+.sec-h h2{font-size:clamp(28px,4.4vw,38px);margin-top:12px}
+.sec-h p{color:var(--muted);max-width:52ch;margin:12px auto 0}
+
+/* demo ribbon */
+.ribbon{background:var(--dark);color:#d9d2c7;font-size:12.5px;text-align:center;padding:9px 44px 9px 16px;position:relative}
+.ribbon b{color:#fff;font-weight:600}
+.ribbon a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;margin-left:6px;white-space:nowrap}
+.ribbon .x{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:#8d867c;padding:6px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:40;background:rgba(249,247,243,.88);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.top.scrolled{border-bottom-color:var(--line)}
+.hbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:16px}
+.logo{display:flex;flex-direction:column;line-height:1.1}
+.logo .w{font-family:Montserrat;font-weight:500;letter-spacing:.28em;font-size:14px;color:var(--ink)}
+.logo .s{font-size:9.5px;letter-spacing:.34em;color:var(--faint);margin-top:4px}
+.hcenter{font-size:10.5px;letter-spacing:.34em;color:var(--faint);text-transform:uppercase}
+.acc-pill{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border-radius:999px;padding:9px 16px;font-size:13px;font-weight:500;transition:transform .15s,background .2s}
+.acc-pill:hover{background:#2a2a2a;transform:translateY(-1px)}
+nav.chips{border-top:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+nav.chips::-webkit-scrollbar{display:none}
+nav.chips .in{display:flex;gap:4px;justify-content:center;padding:8px 16px;min-width:max-content;margin:0 auto}
+nav.chips a{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);padding:7px 13px;border-radius:999px;transition:background .2s,color .2s;white-space:nowrap}
+nav.chips a svg.i{width:15px;height:15px}
+nav.chips a:hover{color:var(--ink)}
+nav.chips a.on{background:var(--beige);color:var(--ink)}
+
+/* hero */
+.hero{text-align:center;padding-top:64px}
+.badge{display:inline-block;border:1px solid var(--beige2);background:var(--beige);color:var(--gold-d);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:999px;font-weight:500}
+.hero .eyebrow{display:block;margin-top:16px;color:var(--faint);font-size:11px}
+.hero h1{font-size:clamp(46px,8vw,68px);margin-top:10px;font-weight:400}
+.hero h1 span{background:linear-gradient(90deg,#3a342c,#B9A07E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{color:var(--muted);font-size:17px;max-width:46ch;margin:16px auto 0}
+.prep{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;color:var(--muted);font-size:14.5px}
+.prep b{color:var(--ink);font-weight:500}
+.prep .av{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin-top:12px;color:var(--faint);font-size:13px}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+.meta svg.i{width:14px;height:14px}
+.hbtns{display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap}
+.btn-o{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:500;transition:border-color .2s,transform .15s}
+.btn-o:hover{border-color:var(--gold);transform:translateY(-1px)}
+.btn-o.gold{color:var(--gold-d)}
+.btn-o.playing{border-color:var(--gold);background:var(--beige)}
+.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:28px}
+.trust span{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.trust svg.i{width:15px;height:15px;color:var(--gold)}
+.glance{display:grid;grid-template-columns:repeat(3,1fr);max-width:640px;margin:34px auto 0;border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden}
+.glance>div{padding:16px 10px;text-align:center}
+.glance>div+div{border-left:1px solid var(--line)}
+.glance .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+.glance .v{font-family:Outfit;font-size:22px;margin-top:4px;font-variant-numeric:tabular-nums}
+
+/* video */
+.video{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/9;background:#ddd;box-shadow:var(--shadow);cursor:pointer}
+.video img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.video:hover img{transform:scale(1.02)}
+.video .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55))}
+.video .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:78px;height:78px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .2s}
+.video:hover .play{transform:translate(-50%,-50%) scale(1.06)}
+.video .play svg{width:28px;height:28px;fill:var(--ink);stroke:none;margin-left:4px}
+.video .cap{position:absolute;left:22px;bottom:18px;right:22px;color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.video .cap b{font-family:Outfit;font-weight:400;font-size:20px;display:block}
+.video .cap small{opacity:.85;font-size:13px}
+.video .dur{background:rgba(0,0,0,.45);border-radius:6px;padding:3px 8px;font-size:12px;font-variant-numeric:tabular-nums}
+.video .note{position:absolute;inset:0;background:rgba(14,14,14,.82);color:#fff;display:none;place-items:center;text-align:center;padding:24px}
+.video .note p{max-width:40ch;font-size:15px;color:#e8e2d8}
+.video .note h4{font-size:22px;margin-bottom:8px}
+.video.shownote .note{display:grid}
+
+/* timeline */
+.tl-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.tl-head .ic{width:40px;height:40px;border-radius:50%;background:var(--beige);display:grid;place-items:center;color:var(--gold-d)}
+.tl-head b{font-weight:500;display:block;font-size:15px}
+.tl-head small{color:var(--faint);font-size:12.5px}
+.tl{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tl:before{content:"";position:absolute;top:19px;left:0;right:0;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--sage),var(--gold))}
+.tl a{position:relative;text-align:center;display:block}
+.tl .n{width:40px;height:40px;border-radius:50%;margin:0 auto;background:var(--bg);border:2px solid var(--gold);display:grid;place-items:center;font-family:Outfit;font-size:15px;color:var(--gold-d);transition:background .2s,color .2s}
+.tl a:hover .n{background:var(--gold);color:#fff}
+.tl .t{font-size:13.5px;font-weight:500;margin-top:10px;line-height:1.3}
+.tl .w{display:inline-block;margin-top:6px;font-size:11.5px;color:var(--gold-d);background:var(--beige);border-radius:999px;padding:2px 10px}
+.overview{margin-top:26px;background:var(--beige);border-radius:12px;padding:13px 18px;text-align:center;font-size:14px;color:var(--muted)}
+.overview b{color:var(--ink);font-weight:600}
+.overview em{font-style:normal;color:var(--sage);font-weight:500}
+
+/* phase cards */
+.phase{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);margin-top:22px;padding:34px 34px 22px;display:grid;grid-template-columns:62px 1fr;gap:0 26px;border-top:3px solid var(--beige2)}
+.phase .num{width:62px;height:62px;border-radius:50%;background:var(--beige);display:grid;place-items:center;font-family:Outfit;font-weight:500;font-size:18px;box-shadow:0 4px 12px rgba(150,120,80,.15)}
+.phase .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.phase h3{font-size:clamp(23px,3vw,28px);font-weight:500}
+.phase .sub{color:var(--muted);font-size:15px;margin-top:6px}
+.phase .when{flex:none;border:1px solid var(--beige2);background:var(--bg);color:var(--gold-d);font-size:11px;letter-spacing:.2em;text-transform:uppercase;border-radius:999px;padding:7px 14px;text-align:center;max-width:220px}
+.phase .desc{font-size:17px;color:var(--ink2);margin-top:20px;line-height:1.65}
+.phase .tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.tool{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--beige2);background:var(--bg);color:var(--gold-d);border-radius:8px;padding:9px 14px;font-size:14px;font-weight:500;transition:background .2s}
+.tool:hover{background:var(--beige)}
+.tool .pb{width:28px;height:28px;border-radius:50%;background:var(--beige2);display:grid;place-items:center}
+.tool .pb svg{width:12px;height:12px;fill:var(--gold-d);stroke:none;margin-left:2px}
+.acc{border-top:1px solid var(--line);margin-top:18px}
+.acc+.acc{margin-top:0}
+.acc>button{width:100%;display:flex;align-items:center;gap:10px;padding:16px 0;text-align:left}
+.acc>button .l{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-t);font-weight:500}
+.acc.dark>button .l{color:var(--muted)}
+.acc>button .c{font-size:11px;background:var(--beige);color:var(--ink2);border-radius:999px;padding:2px 9px}
+.acc>button svg{margin-left:auto;transition:transform .25s;color:var(--faint)}
+.acc.open>button svg{transform:rotate(180deg)}
+.acc .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.acc.open .body{grid-template-rows:1fr}
+.acc .body>div{overflow:hidden}
+.terms{display:grid;gap:10px;padding-bottom:16px}
+.terms>div{background:var(--bg);border-radius:10px;padding:12px 14px;font-size:14.5px;color:var(--ink2)}
+.terms b{font-weight:600;color:var(--ink)}
+.incl{list-style:none;display:grid;gap:9px;padding-bottom:16px}
+.incl li{display:flex;gap:10px;align-items:center;font-size:14.5px;color:var(--ink2)}
+.incl svg.i{color:var(--sage);width:17px;height:17px}
+.ask{display:flex;justify-content:center;margin-top:28px}
+.ask button,.ask a{display:inline-flex;align-items:center;gap:9px;background:var(--beige);border:1px solid var(--beige2);border-radius:999px;padding:11px 20px;font-size:14px;font-weight:500;transition:background .2s}
+.ask button:hover{background:var(--beige2)}
+
+/* progress */
+.prog{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:28px}
+.prog-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.prog-top .k{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
+.prog-top .v{font-family:Outfit;font-size:22px;margin-top:2px}
+.bar{height:8px;border-radius:8px;background:var(--beige);margin:16px 0 22px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--sage));border-radius:8px;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.steps{display:grid;gap:0}
+.step{display:grid;grid-template-columns:28px 1fr auto;gap:14px;align-items:start;padding:12px 0;position:relative}
+.step:not(:last-child):before{content:"";position:absolute;left:13px;top:38px;bottom:-6px;width:2px;background:var(--line)}
+.step .dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--sage-l);color:var(--sage)}
+.step .dot svg{width:15px;height:15px}
+.step.next .dot{background:var(--gold);color:#fff;box-shadow:0 0 0 5px rgba(185,160,126,.18)}
+.step.later .dot{background:var(--bg);border:2px solid var(--line);color:var(--faint)}
+.step b{font-weight:500;font-size:15px;display:block}
+.step small{color:var(--muted);font-size:13px}
+.step .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:3px 10px;background:var(--sage-l);color:var(--sage);white-space:nowrap;margin-top:3px}
+.step.next .tag{background:var(--beige);color:var(--gold-d)}
+.step.later .tag{background:var(--bg);color:var(--faint)}
+.held{margin-top:18px;border-radius:12px;background:var(--beige);padding:14px 16px;font-size:14px;color:var(--ink2);display:flex;gap:10px;align-items:flex-start}
+.held svg.i{color:var(--gold-d);margin-top:2px}
+
+/* expect */
+.sublabel{text-align:center;font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--sage);margin:0 0 22px}
+.ms{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ms>div{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:22px;display:grid;grid-template-columns:44px 1fr;gap:16px}
+.ms .ic{width:44px;height:44px;border-radius:50%;background:var(--sage-l);color:var(--sage);display:grid;place-items:center}
+.ms .k{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);font-weight:600}
+.ms p{font-size:15px;margin-top:4px;color:var(--ink2)}
+.ms>div:last-child:nth-child(odd){grid-column:1/-1}
+.conf{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.conf>div{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:22px;display:grid;grid-template-columns:44px 1fr;gap:16px}
+.conf .ic{width:44px;height:44px;border-radius:50%;background:var(--beige);color:var(--gold-d);display:grid;place-items:center}
+.conf b{font-weight:500;font-size:16px;display:block;line-height:1.35}
+.conf p{color:var(--muted);font-size:13.5px;margin-top:6px}
+
+/* faq */
+.faq{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.faq .acc{margin:0;padding:0 24px;border-top:1px solid var(--line)}
+.faq .acc:first-child{border-top:0}
+.faq .acc>button{padding:20px 0;font-family:Outfit;font-size:17px;font-weight:500;color:var(--ink)}
+.faq .acc p{color:var(--ink2);font-size:15px;padding-bottom:20px;max-width:68ch}
+.faq-foot{text-align:center;color:var(--muted);font-size:14px;margin-top:26px}
+
+/* reviews */
+.g{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:28px;font-size:14px;color:var(--muted)}
+.g .stars{color:#F5B400;letter-spacing:3px;font-size:22px}
+.g small{font-size:12.5px;color:var(--faint)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column}
+.rev .stars{color:#F5B400;letter-spacing:2px;font-size:14px}
+.rev p{font-size:14.5px;color:var(--ink2);margin:12px 0 16px;flex:1}
+.rev .who{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:500}
+.rev .who i{width:30px;height:30px;border-radius:50%;background:var(--beige);display:grid;place-items:center;font-style:normal;color:var(--gold-d);font-weight:600;font-size:12px}
+.rev .who small{display:block;color:var(--faint);font-weight:400;font-size:12px}
+
+/* investment */
+.inv{position:relative;background:radial-gradient(120% 140% at 85% 0%,#3a3530 0%,#121212 48%,#0b0b0b 100%);color:#fff;border-radius:16px;padding:52px 28px;text-align:center;overflow:hidden}
+.inv:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.inv .eyebrow{color:var(--gold)}
+.inv .amt{font-family:Outfit;font-weight:300;font-size:clamp(64px,11vw,96px);line-height:1;margin-top:14px;font-variant-numeric:tabular-nums;position:relative;display:inline-block}
+.inv .amt sup{font-size:.42em;color:#bdb6aa;vertical-align:top;position:relative;top:.25em;margin-right:4px}
+.inv .day{display:inline-block;margin-top:16px;font-size:13px;color:var(--gold);border:1px solid rgba(185,160,126,.4);border-radius:999px;padding:5px 14px}
+.inv p{color:#bdb6aa;max-width:46ch;margin:16px auto 0;font-size:16px}
+.inv .chk{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin-top:22px;font-size:14px;color:#ddd6cb}
+.inv .chk span{display:inline-flex;align-items:center;gap:7px}
+.inv .chk svg.i{color:var(--gold);width:16px;height:16px}
+.bd{max-width:640px;margin:18px auto 0}
+.bd>button{display:flex;margin:0 auto;align-items:center;gap:8px;color:var(--gold-d);font-size:14.5px;font-weight:500;padding:10px}
+.bd>button svg{transition:transform .25s}
+.bd.open>button svg{transform:rotate(180deg)}
+.bd .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.bd.open .body{grid-template-rows:1fr}
+.bd .body>div{overflow:hidden}
+.bd table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);font-size:14.5px;margin-top:6px}
+.bd td{padding:13px 18px;border-top:1px solid var(--line)}
+.bd tr:first-child td{border-top:0}
+.bd td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bd .inc{color:var(--sage);font-size:13px;font-weight:500}
+.bd tfoot td{font-weight:600;background:var(--bg)}
+.pay-l{text-align:center;margin:44px 0 20px}
+.pays{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pay{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:24px 22px;text-align:left;transition:border-color .2s,transform .15s,box-shadow .2s;display:flex;flex-direction:column}
+.pay:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.pay .pop{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);font-weight:600;margin-bottom:8px}
+.pay h4{font-size:19px;font-weight:500}
+.pay .d{color:var(--muted);font-size:13.5px;margin-top:8px;flex:1}
+.pay .p{font-family:Outfit;font-size:34px;margin-top:18px;font-variant-numeric:tabular-nums;line-height:1}
+.pay .u{font-size:12.5px;color:var(--muted);margin-top:6px}
+.pay .tick{position:absolute;top:14px;right:14px;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;transition:all .2s}
+.pay .tick svg{width:12px;height:12px;opacity:0;stroke:#fff;stroke-width:3}
+.pay.sel{border-color:var(--gold);background:linear-gradient(180deg,#F3ECE3,#FBF8F4)}
+.pay.sel .tick{background:var(--gold);border-color:var(--gold)}
+.pay.sel .tick svg{opacity:1}
+.pay-note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:18px}
+.fin{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:34px 24px;text-align:center;margin-top:16px}
+.fin p{color:var(--muted);max-width:46ch;margin:0 auto}
+.fin .row{display:flex;justify-content:center;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn-g{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--gold);color:#1c160e;border-radius:10px;padding:13px 26px;font-size:14.5px;font-weight:600;transition:background .2s,transform .15s}
+.btn-g:hover{background:#ad9370;transform:translateY(-1px)}
+.fin small{display:block;color:var(--faint);font-size:12.5px;margin-top:14px}
+
+/* accept */
+.cta{text-align:center}
+.yes{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--ink);color:#fff;border-radius:14px;padding:22px 34px;font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;width:100%;max-width:560px;box-shadow:0 14px 34px rgba(0,0,0,.18);transition:transform .15s,box-shadow .2s}
+.yes:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.22)}
+.yes small{display:block;font-size:12px;letter-spacing:.04em;text-transform:none;font-weight:400;color:#bdb6aa;margin-top:2px}
+.cta .chosen{margin-top:12px;font-size:13.5px;color:var(--muted)}
+.cta .or{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin:34px 0 14px}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:640px;margin:0 auto}
+.contact button{display:flex;align-items:center;justify-content:center;gap:10px;border-radius:10px;padding:14px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--ink);transition:transform .15s}
+.contact button:hover{transform:translateY(-1px)}
+.contact .call{background:var(--ink);color:#fff}
+.contact .wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.contact .em{background:#fff}
+
+footer{background:var(--dark);color:#cfc8bd;margin-top:96px;padding:56px 0 28px;font-size:14px}
+footer .cols{max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:28px}
+footer .w{color:#fff;letter-spacing:.28em;font-size:15px;font-weight:500}
+footer .s{letter-spacing:.32em;font-size:10.5px;color:#8a837a;margin-top:6px}
+footer .tag{color:#8a837a;font-size:13px;margin-top:14px;max-width:30ch}
+footer h5{font-family:Montserrat;font-weight:500;color:var(--gold);letter-spacing:.24em;font-size:11.5px;text-transform:uppercase;margin-bottom:12px}
+footer li{list-style:none;margin-bottom:8px}
+footer .fine{max-width:1180px;margin:36px auto 0;padding:20px 24px 0;border-top:1px solid #222;text-align:center;font-size:12px;color:#6f695f;letter-spacing:.04em}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:45;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:none;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s}
+.mbar.show{transform:none}
+.mbar .t{flex:1;line-height:1.25}
+.mbar .t b{font-family:Outfit;font-size:18px;font-weight:500;font-variant-numeric:tabular-nums}
+.mbar .t small{display:block;font-size:11.5px;color:var(--muted)}
+.mbar button{background:var(--ink);color:#fff;border-radius:10px;padding:13px 18px;font-weight:600;font-size:14px}
+
+/* assistant */
+.fab{position:fixed;right:22px;bottom:22px;z-index:46;width:62px;height:62px;border-radius:50%;padding:3px;background:var(--gold);box-shadow:0 10px 28px rgba(0,0,0,.22);transition:transform .2s}
+.fab:hover{transform:scale(1.05)}
+.fab img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 18%}
+.fab:after{content:"";position:absolute;right:4px;bottom:4px;width:13px;height:13px;border-radius:50%;background:#3ccf6e;border:2px solid #fff}
+.fab .hint{position:absolute;right:74px;top:50%;transform:translateY(-50%);background:#fff;color:var(--ink);font-size:13px;white-space:nowrap;padding:9px 14px;border-radius:12px;box-shadow:var(--shadow);border:1px solid var(--line);opacity:0;pointer-events:none;transition:opacity .3s}
+.fab .hint.on{opacity:1}
+.chat{position:fixed;right:22px;bottom:96px;z-index:47;width:min(390px,calc(100vw - 24px));height:min(560px,calc(100dvh - 130px));background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.22);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .25s,transform .25s}
+.chat.open{opacity:1;transform:none;pointer-events:auto}
+.chat .h{background:var(--dark);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
+.chat .h img{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:50% 18%}
+.chat .h b{font-weight:500;font-size:15px;display:block}
+.chat .h small{font-size:12px;color:#bdb6aa}
+.chat .h button{margin-left:auto;color:#bdb6aa;padding:4px}
+.msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.m{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.5}
+.m.a{background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+.m.u{background:var(--ink);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.m.typing{color:var(--faint);letter-spacing:3px}
+.sugs{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px 0;background:#fff}
+.sugs button{font-size:12.5px;border:1px solid var(--beige2);background:var(--bg);border-radius:999px;padding:6px 11px;color:var(--ink2)}
+.sugs button:hover{background:var(--beige)}
+.chat form{display:flex;gap:8px;padding:12px 14px 14px;background:#fff}
+.chat input{flex:1;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;font-size:14px;outline:none}
+.chat input:focus{border-color:var(--gold)}
+.chat form button{background:var(--ink);color:#fff;border-radius:10px;width:44px;display:grid;place-items:center}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:60;background:rgba(14,12,10,.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex;animation:fade .2s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.mbox{background:#fff;border-radius:18px;width:min(520px,100%);max-height:calc(100dvh - 32px);overflow:auto;padding:30px;position:relative;animation:up .25s cubic-bezier(.2,.7,.2,1)}
+.mbox.wide{width:min(860px,100%);padding:0;background:#000;overflow:hidden}
+@keyframes up{from{transform:translateY(14px);opacity:.6}to{transform:none;opacity:1}}
+.mbox .x{position:absolute;right:14px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--bg);display:grid;place-items:center;z-index:2}
+.mbox.wide .x{background:rgba(255,255,255,.9)}
+.mbox h3{font-size:26px;font-weight:500;padding-right:30px}
+.mbox .s{color:var(--muted);font-size:14.5px;margin-top:8px}
+.sum{margin-top:20px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.sum>div{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;font-size:14.5px;border-top:1px solid var(--line)}
+.sum>div:first-child{border-top:0}
+.sum span{color:var(--muted)}
+.sum b{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.agree{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:14px;color:var(--ink2);cursor:pointer}
+.agree input{width:18px;height:18px;margin-top:2px;accent-color:var(--ink)}
+.mbtn{width:100%;margin-top:20px;background:var(--ink);color:#fff;border-radius:12px;padding:16px;font-weight:600;font-size:15px;transition:opacity .2s}
+.mbtn:disabled{opacity:.35;cursor:not-allowed}
+.mbtn.gold{background:var(--gold);color:#1c160e}
+.done{text-align:center}
+.done .ok{width:72px;height:72px;border-radius:50%;background:var(--sage-l);color:var(--sage);display:grid;place-items:center;margin:4px auto 16px;animation:pop .5s cubic-bezier(.2,1.6,.4,1)}
+.done .ok svg{width:34px;height:34px;stroke-width:2.2}
+@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
+.next3{text-align:left;margin-top:20px;display:grid;gap:10px}
+.next3>div{display:flex;gap:12px;align-items:flex-start;background:var(--bg);border-radius:10px;padding:12px 14px;font-size:14px;color:var(--ink2)}
+.next3 i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:600;flex:none}
+.field{margin-top:18px}
+.field label{display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.field label b{color:var(--ink);font-variant-numeric:tabular-nums}
+.field input[type=range]{width:100%;accent-color:var(--gold)}
+.terms-seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.terms-seg button{border:1.5px solid var(--line);border-radius:10px;padding:10px;font-size:14px;font-weight:500}
+.terms-seg button.on{border-color:var(--gold);background:var(--beige)}
+.est{margin-top:20px;background:var(--dark);color:#fff;border-radius:12px;padding:18px;text-align:center}
+.est small{color:#bdb6aa;font-size:12.5px}
+.est b{display:block;font-family:Outfit;font-weight:400;font-size:40px;font-variant-numeric:tabular-nums;line-height:1.1;margin:4px 0}
+.fine2{font-size:12px;color:var(--faint);margin-top:12px;text-align:center}
+.vid{aspect-ratio:16/9;width:100%;display:block;border:0}
+.how{display:grid;gap:10px;margin-top:18px}
+.how>div{display:flex;gap:12px;background:var(--bg);border-radius:10px;padding:12px 14px;font-size:14px}
+.how i{font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--beige2);display:grid;place-items:center;font-weight:600;font-size:12px;color:var(--gold-d);flex:none}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,30px);background:var(--dark);color:#fff;font-size:13.5px;padding:12px 18px;border-radius:12px;z-index:70;opacity:0;transition:all .3s;max-width:calc(100vw - 32px);text-align:center;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+@media (max-width:880px){
+  .hcenter{display:none}
+  nav.chips .in{justify-content:flex-start}
+  .pays{grid-template-columns:1fr 1fr}
+  .revs{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .sec{padding-top:64px}
+  .hero{padding-top:40px}
+  .acc-pill{display:none}
+  .glance .v{font-size:18px}
+  .tl{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+  .tl .t{font-size:11.5px}
+  .tl .w{font-size:10px;padding:2px 6px}
+  .phase{grid-template-columns:1fr;padding:24px 20px 14px}
+  .phase .num{width:46px;height:46px;font-size:15px;margin-bottom:14px}
+  .phase .top{flex-direction:column;gap:10px}
+  .phase .desc{font-size:16px}
+  .ms,.conf{grid-template-columns:1fr}
+  .pays{grid-template-columns:1fr}
+  .pay{padding:20px}
+  .contact{grid-template-columns:1fr}
+  .mbar{display:flex}
+  .fab{bottom:86px;right:14px;width:54px;height:54px}
+  .chat{right:12px;bottom:150px;height:min(520px,calc(100dvh - 170px))}
+  .faq .acc{padding:0 18px}
+  .prog{padding:22px 18px}
+  .step{grid-template-columns:28px 1fr}
+  .step .tag{grid-column:2;justify-self:start;margin-top:0}
+  .ribbon{font-size:11.5px}
+  footer .cols{grid-template-columns:1fr}
+  .inv{padding:42px 20px}
+  .video .play{width:58px;height:58px}
+  .video .play svg{width:22px;height:22px}
+  .video .cap{left:14px;right:14px;bottom:12px}
+  .video .cap b{font-size:15px}
+  .video .cap small{font-size:11.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon" id="ribbon"><b>Example plan.</b> Your patients get this with your logo, your team, your video and your prices.<a href="https://zcal.co/simjuneja/introduction">Book a 15-minute walkthrough</a><button class="x" aria-label="Hide" onclick="this.parentNode.remove()"><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+
+<header class="top" id="top">
+  <div class="hbar">
+    <a href="#" class="logo"><span class="w">YOUR | CLINIC</span><span class="s">DENTAL STUDIO</span></a>
+    <span class="hcenter">Treatment plan</span>
+    <button class="acc-pill" data-accept><svg class="i" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Accept plan</button>
+  </div>
+  <nav class="chips" aria-label="Plan sections"><div class="in">
+    <a href="#video"><svg class="i" viewBox="0 0 24 24"><path d="m16 13 5.2 3.5a.5.5 0 0 0 .8-.4V7.9a.5.5 0 0 0-.8-.4L16 11"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>Your video</a>
+    <a href="#journey"><svg class="i" viewBox="0 0 24 24"><path d="M14.1 6.3 9.9 4.2a2 2 0 0 0-1.8 0L3.6 6.5A1 1 0 0 0 3 7.4v12a1 1 0 0 0 1.4.9l3.7-1.9a2 2 0 0 1 1.8 0l4.2 2.1a2 2 0 0 0 1.8 0l4.5-2.3a1 1 0 0 0 .6-.9v-12a1 1 0 0 0-1.4-.9l-3.7 1.9a2 2 0 0 1-1.8 0zM15 5.8v15M9 3.2v15"/></svg>Journey</a>
+    <a href="#progress"><svg class="i" viewBox="0 0 24 24"><path d="M13 5h8M13 12h8M13 19h8M3 17l2 2 4-4M3 7l2 2 4-4"/></svg>Progress</a>
+    <a href="#success"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 12.9 17 22l-5-3-5 3 1.5-9.1"/></svg>Results</a>
+    <a href="#faq"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg>FAQ</a>
+    <a href="#reviews"><svg class="i" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Reviews</a>
+    <a href="#investment"><svg class="i" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Investment</a>
+    <a href="#accept"><svg class="i" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Accept</a>
+  </div></nav>
+</header>
+
+<main>
+<section class="hero wrap">
+  <span class="badge">Award-winning cosmetic dentistry</span>
+  <span class="eyebrow">Your personalised treatment plan</span>
+  <h1>Hello, <span>Sarah</span></h1>
+  <p class="lead">Thank you for trusting us with your smile. We have prepared this personal journey to walk you through every step, clearly and openly.</p>
+  <div class="prep"><img class="av" src="/demo-plan/assets/dentist-video.jpg" alt="">Prepared by <b>Dr Emma Hart</b></div>
+  <div class="meta">
+    <span><svg class="i" viewBox="0 0 24 24"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Marylebone</span>
+    <span><svg class="i" viewBox="0 0 24 24"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Richmond</span>
+    <span><svg class="i" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>020 7946 0123</span>
+  </div>
+  <div class="hbtns">
+    <button class="btn-o" id="listen"><svg class="i" viewBox="0 0 24 24"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5zM16 9a5 5 0 0 1 0 6M19.4 18.4a9 9 0 0 0 0-12.8"/></svg><span>Listen to plan</span></button>
+    <button class="btn-o gold" id="share"><svg class="i" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>Share plan</button>
+  </div>
+  <div class="trust">
+    <span><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 12.9 17 22l-5-3-5 3 1.5-9.1"/></svg>Platinum Invisalign provider</span>
+    <span><svg class="i" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.7 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/></svg>GDC registered team</span>
+    <span><svg class="i" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>4.9 on Google</span>
+  </div>
+  <div class="glance">
+    <div><div class="k">Treatment</div><div class="v">Invisalign</div></div>
+    <div><div class="k">Time</div><div class="v">6 months</div></div>
+    <div><div class="k">From</div><div class="v">£309/mo</div></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="video">
+  <div class="sec-h rv"><span class="eyebrow">Your personal video</span><h2>A message from Dr Hart</h2></div>
+  <div class="video rv" id="vid" role="button" tabindex="0" aria-label="Play your video message">
+    <img src="/demo-plan/assets/dentist-video.jpg" alt="Dr Emma Hart recording a video message">
+    <div class="shade"></div>
+    <div class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div>
+    <div class="cap"><div><b>Sarah, here is your plan in Dr Hart's words</b><small>Recorded after your consultation</small></div><span class="dur">1:12</span></div>
+    <div class="note"><div><h4>Your dentist's video plays here</h4><p>After each consultation the dentist records a short personal message for the patient, walking through their plan. In this example the video is a placeholder.</p></div></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="journey">
+  <div class="sec-h rv"><span class="eyebrow">Your journey</span><h2>The path to your new smile</h2></div>
+  <div class="rv">
+    <div class="tl-head"><span class="ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><div><b>Your treatment timeline</b><small>4 phases from start to finish. Tap a step to jump to it.</small></div></div>
+    <div class="tl" id="tl"></div>
+    <div class="overview"><b>Quick overview:</b> your journey starts with <em>Invisalign aligners</em> and finishes with <em>Vivera retainers</em>.</div>
+  </div>
+  <div id="phases"></div>
+  <div class="ask"><button data-chat><svg class="i" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Ask the assistant about any step</button></div>
+</section>
+
+<section class="sec wrap" id="progress">
+  <div class="sec-h rv"><span class="eyebrow">Where you are</span><h2>Your progress so far</h2><p>Updated live from your dental records.</p></div>
+  <div class="prog rv">
+    <div class="prog-top"><div><div class="k">Appointments</div><div class="v">2 of 6 complete</div></div><div style="text-align:right"><div class="k">Balance due today</div><div class="v">£0</div></div></div>
+    <div class="bar"><i id="pbar"></i></div>
+    <div class="steps">
+      <div class="step"><span class="dot"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Smile consultation</b><small>Tue 27 Oct 2026 · Dr Emma Hart</small></div><span class="tag">Done</span></div>
+      <div class="step"><span class="dot"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>3D scan, photos and hygiene visit</b><small>Mon 2 Nov 2026 · Priya Shah, hygienist</small></div><span class="tag">Done</span></div>
+      <div class="step next"><span class="dot"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><div><b>Aligner fit: your treatment begins</b><small>Thu 19 Nov 2026 at 10:30 · Dr Emma Hart</small></div><span class="tag">Your next visit</span></div>
+      <div class="step later"><span class="dot"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg></span><div><b>Attachments and IPR</b><small>About week 4</small></div><span class="tag">Coming up</span></div>
+      <div class="step later"><span class="dot"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg></span><div><b>Progress review and whitening</b><small>About month 5</small></div><span class="tag">Coming up</span></div>
+      <div class="step later"><span class="dot"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg></span><div><b>Retainers fitted</b><small>About month 6</small></div><span class="tag">Coming up</span></div>
+    </div>
+    <div class="held"><svg class="i" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M9 16l2 2 4-4"/></svg><span>We are holding your aligner fit on <b>Thu 19 Nov at 10:30</b> for you. Accept your plan below to confirm it.</span></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="success">
+  <div class="sec-h rv"><span class="eyebrow">Your results</span><h2>What you can expect</h2></div>
+  <p class="sublabel rv">Along the way</p>
+  <div class="ms rv" id="ms"></div>
+  <p class="sublabel rv" style="margin-top:44px;color:var(--gold-t)">Why patients trust Invisalign</p>
+  <div class="conf rv">
+    <div><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><div><b>Millions of smiles straightened worldwide</b><p>Invisalign is the world's most widely used clear aligner system, with a long track record of predictable results.</p></div></div>
+    <div><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="m15.5 12.9 1.5 9.1-5-3-5 3 1.5-9.1"/><circle cx="12" cy="8" r="6"/></svg></span><div><b>Retainers made to last</b><p>Vivera retainers are made by the makers of Invisalign from a strong, clear material designed for years of night-time wear.</p></div></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="faq">
+  <div class="sec-h rv"><span class="eyebrow">Common questions</span><h2>You might be wondering</h2></div>
+  <div class="faq rv" id="faqs"></div>
+  <p class="faq-foot">Don't see your question? Your assistant knows your full plan.</p>
+  <div class="ask" style="margin-top:14px"><button data-chat><svg class="i" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Ask the assistant</button></div>
+</section>
+
+<section class="sec wrap" id="reviews">
+  <div class="sec-h rv"><span class="eyebrow">Patient stories</span><h2>What our patients say</h2></div>
+  <div class="g rv"><span><svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px;margin-right:6px"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.3-4.8 3.3-8"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.2 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4"/></svg>Google reviews</span><span class="stars">★★★★★</span><small>Rated 4.9 from 300+ verified reviews</small></div>
+  <div class="revs rv">
+    <div class="rev"><span class="stars">★★★★★</span><p>"Dr Hart talked me through every step and I never felt rushed. Having the plan on my phone meant my husband could see it too. I love my new smile."</p><div class="who"><i>JH</i><div>Jess H.<small>Invisalign, 2026</small></div></div></div>
+    <div class="rev"><span class="stars">★★★★★</span><p>"The 0% option made it easy to say yes. Really clear about the costs from day one, no surprises at all."</p><div class="who"><i>LM</i><div>Lauren M.<small>Invisalign and whitening</small></div></div></div>
+    <div class="rev"><span class="stars">★★★★★</span><p>"Exceptional care from start to finish. The team genuinely cares, and the reminders kept me on track."</p><div class="who"><i>JT</i><div>James T.<small>Invisalign, 2025</small></div></div></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="investment">
+  <div class="sec-h rv"><span class="eyebrow">Investment</span><h2>Your smile investment</h2></div>
+  <div class="inv rv">
+    <div class="eyebrow">Total investment</div>
+    <div class="amt"><sup>£</sup><span id="count">3,700</span></div>
+    <div><span class="day">From £10.16 a day on the 12-month plan</span></div>
+    <p>This includes everything: appointments, custom aligners, check-ups, whitening, retainers and ongoing support.</p>
+    <div class="chk"><span><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>All appointments</span><span><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Custom aligners</span><span><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Whitening</span><span><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Retainers</span><span><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Ongoing support</span></div>
+  </div>
+  <div class="bd" id="bd"><button><span>View cost breakdown</span><svg class="i" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="body"><div>
+    <table><tbody>
+      <tr><td>Invisalign package<br><small style="color:var(--muted)">Aligners, attachments, IPR, smile monitoring, reviews</small></td><td>£3,700</td></tr>
+      <tr><td>Home whitening kit</td><td class="inc">Included</td></tr>
+      <tr><td>Bonded (fixed) retainer</td><td class="inc">Included</td></tr>
+      <tr><td>Vivera night retainers</td><td class="inc">Included</td></tr>
+    </tbody><tfoot><tr><td>Total</td><td>£3,700</td></tr></tfoot></table>
+  </div></div></div>
+
+  <p class="eyebrow pay-l">Choose your payment style</p>
+  <div class="pays" id="pays">
+    <button class="pay" data-k="full" data-label="Pay in full" data-sum="£3,700 today"><span class="tick"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><h4>Pay in full</h4><p class="d">Complete your investment in one payment.</p><div class="p">£3,700</div><div class="u">One payment</div></button>
+    <button class="pay" data-k="dep" data-label="Deposit + balance" data-sum="£1,200 deposit, then £2,500"><span class="tick"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pop">Most popular</span><h4>Deposit + balance</h4><p class="d">Start with a deposit, pay the rest flexibly.</p><div class="p">£1,200</div><div class="u">Then £2,500 remaining</div></button>
+    <button class="pay sel" data-k="12" data-label="12-month plan, 0%" data-sum="£309 a month for 12 months"><span class="tick"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pop">0% interest</span><h4>12-month plan</h4><p class="d">Spread the cost over 12 months at no extra cost.</p><div class="p">£309</div><div class="u">Per month for 12 months</div></button>
+    <button class="pay" data-k="24" data-label="24-month plan" data-sum="£170 a month for 24 months"><span class="tick"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><h4>24-month plan</h4><p class="d">Smaller monthly payments over 24 months.</p><div class="p">£170</div><div class="u">Per month for 24 months</div></button>
+  </div>
+  <p class="pay-note">We accept card, Apple Pay and bank transfer. Finance is subject to status.</p>
+
+  <p class="eyebrow pay-l" style="margin-top:40px">Apply for 0% finance</p>
+  <div class="fin rv">
+    <p>Check your eligibility in minutes with no impact on your credit score. Spread the cost of your treatment with flexible monthly payments.</p>
+    <div class="row">
+      <button class="btn-g" id="elig">Check my eligibility<svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      <button class="tool" id="howfin"><span class="pb"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>How finance works</button>
+    </div>
+    <small>Takes about 2 minutes · Soft search only, no hard credit check</small>
+  </div>
+  <div class="ask"><button data-chat><svg class="i" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Questions about your investment? Ask the assistant</button></div>
+</section>
+
+<section class="sec wrap cta" id="accept">
+  <div class="sec-h rv"><span class="eyebrow">Ready?</span><h2>Let's begin your journey</h2><p>Have questions? Our team is here to guide you every step of the way.</p></div>
+  <button class="yes" data-accept><svg class="i" viewBox="0 0 24 24" style="width:22px;height:22px"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span>Yes, I accept this treatment<small id="yes-sub">With the 12-month plan, 0%</small></span></button>
+  <p class="chosen">Your aligner fit on Thu 19 Nov is held for you.</p>
+  <p class="or">Or get in touch with us directly</p>
+  <div class="contact">
+    <button class="call" data-demo="Calls your reception"><svg class="i" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call us</button>
+    <button class="wa" data-demo="Opens WhatsApp with the plan reference filled in"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4"/></svg>WhatsApp</button>
+    <button class="em" data-demo="Emails your clinic"><svg class="i" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email us</button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="cols">
+    <div><div class="w">YOUR | CLINIC</div><div class="s">DENTAL STUDIO</div><p class="tag">Modern cosmetic dentistry, explained clearly and planned around you.</p></div>
+    <div><h5>Contact</h5><ul><li>020 7946 0123</li><li>hello@yourclinic.co.uk</li><li>@yourclinic</li></ul></div>
+    <div><h5>Locations</h5><ul><li>Marylebone, W1</li><li>Richmond, TW9</li></ul></div>
+    <div><h5>Visit us online</h5><ul><li>yourclinic.co.uk</li><li>Patient journey</li><li>All treatments</li></ul></div>
+  </div>
+  <p class="fine">Illustrative example. The clinic, patient, team and reviews on this page are fictional.</p>
+</footer>
+
+<div class="mbar" id="mbar"><div class="t"><b id="mb-p">£309/mo</b><small id="mb-s">12-month plan, 0% · £3,700 total</small></div><button data-accept>Accept plan</button></div>
+
+<button class="fab" id="fab" aria-label="Ask about your plan"><img src="/demo-plan/assets/dentist-video.jpg" alt=""><span class="hint" id="hint">Questions about your plan? Ask me</span></button>
+<div class="chat" id="chat" role="dialog" aria-label="Plan assistant">
+  <div class="h"><img src="/demo-plan/assets/dentist-video.jpg" alt=""><div><b>Your plan assistant</b><small>Knows your full plan · replies instantly</small></div><button id="chatx" aria-label="Close"><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+  <div class="msgs" id="msgs"></div>
+  <div class="sugs" id="sugs"></div>
+  <form id="chatf"><input id="chati" placeholder="Ask anything about your plan" autocomplete="off"><button aria-label="Send"><svg class="i" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></button></form>
+</div>
+
+<div class="modal" id="m-accept"><div class="mbox">
+  <button class="x" data-close><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <div id="acc-form">
+    <h3>Accept your treatment plan</h3>
+    <p class="s">One last look before we confirm everything for you, Sarah.</p>
+    <div class="sum">
+      <div><span>Treatment</span><b>Invisalign with whitening and retainers</b></div>
+      <div><span>Dentist</span><b>Dr Emma Hart</b></div>
+      <div><span>Total</span><b>£3,700</b></div>
+      <div><span>Payment</span><b id="acc-pay">12-month plan, 0%</b></div>
+      <div><span>First visit</span><b>Thu 19 Nov, 10:30</b></div>
+    </div>
+    <label class="agree"><input type="checkbox" id="agree"> I have read my plan and I am happy to go ahead.</label>
+    <button class="mbtn" id="confirm" disabled>Confirm and accept</button>
+  </div>
+  <div id="acc-done" class="done" hidden>
+    <div class="ok"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h3 style="padding:0">Wonderful, Sarah. You're all set.</h3>
+    <p class="s">Your plan is accepted and the team has been told straight away.</p>
+    <div class="next3">
+      <div><i>1</i><span>Your treatment coordinator calls you today to say hello and answer any last questions.</span></div>
+      <div><i>2</i><span id="nx2">You complete your 0% finance application in about 2 minutes.</span></div>
+      <div><i>3</i><span>Your aligner fit on <b>Thu 19 Nov at 10:30</b> is confirmed by text and email.</span></div>
+    </div>
+    <button class="mbtn" data-close>Back to my plan</button>
+  </div>
+</div></div>
+
+<div class="modal" id="m-elig"><div class="mbox">
+  <button class="x" data-close><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <h3>Check your eligibility</h3>
+  <p class="s">See your monthly payment, then apply in about 2 minutes. Soft search only, so your credit score is not affected.</p>
+  <div class="field"><label>Deposit <b id="dep-v">£0</b></label><input type="range" id="dep" min="0" max="1500" step="50" value="0"></div>
+  <div class="field"><label>Pay over</label><div class="terms-seg" id="seg"><button data-m="12" class="on">12 months</button><button data-m="24">24 months</button><button data-m="36">36 months</button></div></div>
+  <div class="est"><small>Your estimated monthly payment</small><b id="est">£309</b><small id="est-s">0% interest · 12 payments</small></div>
+  <button class="mbtn gold" data-demo="Opens your finance partner's soft-search application">Continue to secure application</button>
+  <p class="fine2">Finance is subject to status. Example rates for illustration only. 24 and 36 months shown at 9.9% APR representative.</p>
+</div></div>
+
+<div class="modal" id="m-how"><div class="mbox">
+  <button class="x" data-close><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <h3>How finance works</h3>
+  <p class="s">Spread the cost of your treatment in three simple steps.</p>
+  <div class="how">
+    <div><i>1</i><span><b>Choose your plan.</b> Pick 12 months at 0%, or a longer term for smaller payments.</span></div>
+    <div><i>2</i><span><b>Check eligibility.</b> A soft search gives you an answer in minutes with no effect on your credit score.</span></div>
+    <div><i>3</i><span><b>Start treatment.</b> Once approved, we confirm your first visit and your treatment begins.</span></div>
+  </div>
+  <button class="mbtn gold" onclick="closeM();openM('m-elig')">Check my eligibility</button>
+</div></div>
+
+<div class="modal" id="m-3d"><div class="mbox wide">
+  <button class="x" data-close><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <iframe class="vid" id="v3d" data-src="https://player.vimeo.com/video/1161051804?autoplay=1&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="3D treatment animation"></iframe>
+</div></div>
+
+<div class="modal" id="m-term"><div class="mbox">
+  <button class="x" data-close><svg class="i" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <h3 id="term-h"></h3><p class="s" id="term-p" style="font-size:15.5px;color:var(--ink2)"></p>
+  <button class="mbtn" data-close>Got it</button>
+</div></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const PHASES=[
+ {t:"Invisalign aligners",sub:"Starting your journey to a straighter smile",when:"Months 1-5",short:"Months 1-5",
+  d:"Your smile journey begins. We give you a series of custom-made clear aligners, each designed to move your teeth gently into their ideal position.",
+  tools:[["What are attachments?","term:att"],["What is IPR?","term:ipr"],["See 3D animation","3d"]],
+  terms:[["Invisalign","Clear, removable trays that straighten teeth safely and predictably, without fixed metal braces."],["IPR","Making tiny spaces between some teeth, less than a fingernail's thickness."],["Attachments","Small tooth-coloured bumps that act as handles for your aligners. Barely noticeable."]],
+  inc:["Custom-made clear removable aligners","Digital smile monitoring between visits","Attachments and IPR at week 4"]},
+ {t:"Home whitening kit",sub:"Brightening your new smile",when:"Towards the end of treatment",short:"Near the end",
+  d:"As your teeth reach their final position, we help them shine. You receive a professional home whitening kit to brighten your smile safely.",
+  terms:[["Whitening","Professional-grade gel that lifts stains gently and safely."]],
+  inc:["Professional whitening gel","Step-by-step guidance from our team","Gradual, safe shade improvement"]},
+ {t:"Bonded (fixed) retainer",sub:"Hidden, permanent protection",when:"End of alignment",short:"End of alignment",
+  d:"To keep your teeth exactly where we moved them, we fit a thin, discreet wire behind your front teeth. Nobody can see it, and it stops your teeth drifting back.",
+  terms:[["Fixed retainer","A thin, smooth wire fixed to the inside of your teeth to hold them straight."]],
+  inc:["Discreet placement behind front teeth","Upper and lower support","Permanent, worry-free retention"]},
+ {t:"Vivera retainers",sub:"Protecting your smile for years",when:"After treatment",short:"After treatment",
+  d:"The final step. You receive premium Vivera night retainers to wear while you sleep, giving your new smile long-lasting protection.",
+  terms:[["Vivera retainers","Custom-made, durable clear night-time retainers from the makers of Invisalign."]],
+  inc:["Premium clear material","Night-time wear only","Built for long-term durability"]}
+];
+const TERMS={att:["What are attachments?","Small tooth-coloured bumps placed on a few teeth to help your aligners grip and move them precisely. We remove them at the end of treatment."],
+ ipr:["What is IPR?","Interproximal reduction (IPR) gently smooths tiny amounts of enamel between some teeth. This creates the small spaces your teeth need to move into place. It is quick and painless."]};
+const MS=[["Day 1","Treatment begins with your first set of clear aligners."],["Week 4","Attachments placed and IPR done to guide your teeth precisely."],["Weeks 6-8","You start to see your teeth moving into line."],["Month 5","Home whitening begins to brighten your smile."],["Month 6","Treatment complete. Retainers fitted to protect your new smile."]];
+const FAQ=[
+ ["Will Invisalign treatment hurt?","You may feel slight pressure for a day or two when you change to a new set of aligners. This is normal and shows the aligners are working. Any tightness fades quickly.",["hurt","pain","sore","uncomfortable"]],
+ ["What are attachments and IPR, and when do they happen?","Attachments are tiny tooth-coloured bumps that act as handles for your aligners. IPR makes microscopic spaces between some teeth so they have room to move. We do both at week 4.",["attachment","ipr","bump"]],
+ ["Can I eat normally while wearing my aligners?","Yes. You take your aligners out to eat or drink anything except cool water. That keeps them clear, prevents staining and means no food restrictions.",["eat","food","drink","coffee","wine"]],
+ ["How many hours a day do I need to wear the aligners?","For the best and fastest results, wear them 20 to 22 hours a day. Take them out only for meals, hot drinks and brushing.",["hours","wear","long a day","sleep"]],
+ ["How and when do I use the whitening kit?","Towards the end of treatment, you apply the whitening gel into your aligners at home. Our team shows you exactly how.",["whiten","white","bleach"]],
+ ["Why are there two types of retainer in my plan?","Teeth naturally try to drift back after straightening. The bonded retainer behind your front teeth gives constant support, and the Vivera night retainers add a second layer of protection.",["retainer","two","vivera","relapse","drift"]],
+ ["Do I have to pay the total cost upfront?","You have a few options. Pay a deposit and spread the rest, or choose our 0% plan over 12 months at £309 a month. Longer terms are available too.",["pay","cost","price","upfront","finance","monthly","afford","deposit","0%"]],
+ ["How long will my treatment take?","About 6 months from your aligner fit to your retainers. We review your progress at every visit and with digital monitoring in between.",["how long","months","time","quick","duration"]]
+];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const ic={chev:'<svg class="i" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>',chk:'<svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>',eye:'<svg class="i" viewBox="0 0 24 24"><path d="M2.1 12.3a1 1 0 0 1 0-.6 10.8 10.8 0 0 1 19.8 0 1 1 0 0 1 0 .6 10.8 10.8 0 0 1-19.8 0"/><circle cx="12" cy="12" r="3"/></svg>',clock:'<svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>'};
+
+$('#tl').innerHTML=PHASES.map((p,i)=>`<a href="#ph${i}"><span class="n">${i+1}</span><div class="t">${p.t}</div><span class="w">${p.short}</span></a>`).join('');
+$('#phases').innerHTML=PHASES.map((p,i)=>`<article class="phase rv" id="ph${i}"><div class="num">0${i+1}</div><div>
+ <div class="top"><div><h3>${p.t}</h3><p class="sub">${p.sub}</p></div><span class="when">${p.when}</span></div>
+ <p class="desc">${p.d}</p>
+ ${p.tools?`<div class="tools">${p.tools.map(t=>t[1]=='3d'?`<button class="tool" data-act="3d"><span class="pb"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>${t[0]}</button>`:`<button class="tool" data-act="${t[1]}">${ic.eye}${t[0]}</button>`).join('')}</div>`:''}
+ <div class="acc"><button><span class="l">What does this mean?</span><span class="c">${p.terms.length} term${p.terms.length>1?'s':''} explained</span>${ic.chev}</button><div class="body"><div><div class="terms">${p.terms.map(t=>`<div><b>${t[0]}:</b> ${t[1]}</div>`).join('')}</div></div></div></div>
+ <div class="acc dark"><button><span class="l">Included in this phase</span><span class="c">${p.inc.length} items</span>${ic.chev}</button><div class="body"><div><ul class="incl">${p.inc.map(x=>`<li>${ic.chk}${x}</li>`).join('')}</ul></div></div></div>
+</div></article>`).join('');
+$('#ms').innerHTML=MS.map(m=>`<div><span class="ic">${ic.clock}</span><div><div class="k">${m[0]}</div><p>${m[1]}</p></div></div>`).join('');
+$('#faqs').innerHTML=FAQ.slice(0,7).map(f=>`<div class="acc"><button><span>${f[0]}</span>${ic.chev}</button><div class="body"><div><p>${f[1]}</p></div></div></div>`).join('');
+
+document.addEventListener('click',e=>{
+  const a=e.target.closest('.acc>button,.bd>button'); if(a){a.parentNode.classList.toggle('open');return}
+  const t=e.target.closest('[data-act]'); if(t){const k=t.dataset.act; if(k=='3d'){const f=$('#v3d');f.src=f.dataset.src;openM('m-3d')} else {const x=TERMS[k.split(':')[1]];$('#term-h').textContent=x[0];$('#term-p').textContent=x[1];openM('m-term')} return}
+  if(e.target.closest('[data-accept]')){openAccept();return}
+  if(e.target.closest('[data-chat]')){openChat();return}
+  if(e.target.closest('[data-close]')||e.target.classList.contains('modal')){closeM();return}
+  const d=e.target.closest('[data-demo]'); if(d){toast('In your version, this '+d.dataset.demo.charAt(0).toLowerCase()+d.dataset.demo.slice(1)+'.');}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeM();$('#chat').classList.remove('open')}});
+function openM(id){$('#'+id).classList.add('open');document.body.style.overflow='hidden'}
+function closeM(){$$('.modal.open').forEach(m=>m.classList.remove('open'));document.body.style.overflow='';const f=$('#v3d');f.src='about:blank'}
+let tT;function toast(s){const t=$('#toast');t.textContent=s;t.classList.add('on');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('on'),3200)}
+
+/* payment selection */
+let pay=$('.pay.sel');
+const MB={full:['£3,700','Pay in full today'],dep:['£1,200 today','Deposit, then £2,500'],'12':['£309/mo','12-month plan, 0% · £3,700 total'],'24':['£170/mo','24-month plan · £3,700 treatment']};
+$$('.pay').forEach(b=>b.addEventListener('click',()=>{pay.classList.remove('sel');b.classList.add('sel');pay=b;
+  $('#yes-sub').textContent='With '+(b.dataset.k=='full'?'payment in full':b.dataset.k=='dep'?'deposit + balance':'the '+b.dataset.label.replace(', 0%','')+(b.dataset.k=='12'?', 0%':''));
+  const m=MB[b.dataset.k];$('#mb-p').textContent=m[0];$('#mb-s').textContent=m[1];toast('Payment option saved: '+b.dataset.label);}));
+function openAccept(){ $('#acc-pay').textContent=pay.dataset.label+' · '+pay.dataset.sum; $('#acc-form').hidden=false;$('#acc-done').hidden=true;$('#agree').checked=false;$('#confirm').disabled=true;
+  $('#nx2').textContent=pay.dataset.k=='12'||pay.dataset.k=='24'?'You complete your finance application in about 2 minutes. Soft search only.':pay.dataset.k=='dep'?'We send you a secure link to pay your £1,200 deposit.':'We send you a secure payment link for £3,700.';
+  openM('m-accept')}
+$('#agree').addEventListener('change',e=>$('#confirm').disabled=!e.target.checked);
+$('#confirm').addEventListener('click',()=>{$('#acc-form').hidden=true;$('#acc-done').hidden=false;$$('[data-accept]').forEach(b=>{if(b.classList.contains('yes')){b.querySelector('span').firstChild.textContent='Plan accepted';}})});
+
+/* eligibility */
+let term=12;const amt=3700;
+function calc(){const dep=+$('#dep').value;$('#dep-v').textContent='£'+dep.toLocaleString('en-GB');const P=amt-dep;let m;
+ if(term==12)m=P/12;else{const r=0.0990/12*0.955;m=P*r/(1-Math.pow(1+r,-term));}
+ $('#est').textContent='£'+Math.ceil(m).toLocaleString('en-GB');$('#est-s').textContent=(term==12?'0% interest':'9.9% APR representative')+' · '+term+' payments'}
+$('#dep').addEventListener('input',calc);
+$$('#seg button').forEach(b=>b.addEventListener('click',()=>{$$('#seg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');term=+b.dataset.m;calc()}));
+$('#elig').addEventListener('click',()=>{calc();openM('m-elig')});
+$('#howfin').addEventListener('click',()=>openM('m-how'));
+
+/* video */
+const vid=$('#vid');vid.addEventListener('click',()=>vid.classList.toggle('shownote'));vid.addEventListener('keydown',e=>{if(e.key==='Enter')vid.click()});
+
+/* listen */
+const SUM="Hello Sarah. Here is your treatment plan from Dr Emma Hart. Your treatment is Invisalign, and takes about six months. It has four phases. First, your custom clear aligners, over months one to five. Second, a home whitening kit towards the end of treatment. Third, a hidden bonded retainer behind your front teeth. And finally, Vivera night retainers to protect your new smile. Your total investment is three thousand seven hundred pounds, which includes everything. You can spread the cost at zero percent over twelve months, at three hundred and nine pounds a month. When you are ready, tap Yes, I accept this treatment, and our team will be in touch the same day.";
+$('#listen').addEventListener('click',function(){const s=window.speechSynthesis;if(!s){toast('Audio is not supported on this browser');return}
+ if(s.speaking){s.cancel();this.classList.remove('playing');this.querySelector('span').textContent='Listen to plan';return}
+ const u=new SpeechSynthesisUtterance(SUM);const v=s.getVoices().find(v=>/en-GB/i.test(v.lang)&&/female|Serena|Kate|Martha|Libby|Sonia/i.test(v.name))||s.getVoices().find(v=>/en-GB/i.test(v.lang));if(v)u.voice=v;u.lang='en-GB';u.rate=.97;
+ u.onend=()=>{this.classList.remove('playing');this.querySelector('span').textContent='Listen to plan'};s.speak(u);this.classList.add('playing');this.querySelector('span').textContent='Stop listening'});
+$('#share').addEventListener('click',async()=>{const d={title:'My treatment plan',text:'Have a look at my treatment plan',url:location.href};
+ try{if(navigator.share){await navigator.share(d)}else{await navigator.clipboard.writeText(location.href);toast('Link copied. Share it with family or friends.')}}catch(e){}});
+
+/* chat */
+const SUGS=["Will it hurt?","Can I pay monthly?","How long does it take?","Can I eat normally?"];
+let opened=false;
+function openChat(){$('#chat').classList.add('open');$('#hint').classList.remove('on');if(!opened){opened=true;bot("Hi Sarah, I'm your plan assistant. I know every detail of your plan from Dr Hart. What would you like to know?")}setTimeout(()=>$('#chati').focus(),250)}
+$('#fab').addEventListener('click',()=>$('#chat').classList.contains('open')?$('#chat').classList.remove('open'):openChat());
+$('#chatx').addEventListener('click',()=>$('#chat').classList.remove('open'));
+function add(t,c){const m=document.createElement('div');m.className='m '+c;m.textContent=t;$('#msgs').appendChild(m);$('#msgs').scrollTop=1e6;return m}
+function bot(t){const ty=add('•••','a typing');setTimeout(()=>{ty.remove();add(t,'a')},700+Math.min(t.length*6,900))}
+$('#sugs').innerHTML=SUGS.map(s=>`<button type="button">${s}</button>`).join('');
+$$('#sugs button').forEach(b=>b.addEventListener('click',()=>ask(b.textContent)));
+$('#chatf').addEventListener('submit',e=>{e.preventDefault();const v=$('#chati').value.trim();if(v){ask(v);$('#chati').value=''}});
+function ask(q){add(q,'u');const l=q.toLowerCase();let best=null,sc=0;
+ FAQ.forEach(f=>{const s=f[2].reduce((a,k)=>a+(l.includes(k)?k.length:0),0);if(s>sc){sc=s;best=f}});
+ if(/accept|go ahead|book|start/.test(l))return bot("Lovely. Tap 'Yes, I accept this treatment' at the bottom of your plan. Your aligner fit on Thu 19 Nov at 10:30 is held for you, and your coordinator will call you the same day.");
+ if(/hello|hi\b|hey/.test(l)&&!best)return bot("Hello Sarah. Ask me anything about your aligners, the timeline or the payment options.");
+ bot(best?best[1]:"Good question. I have passed it to your treatment coordinator, who will reply on WhatsApp shortly. Anything else I can help with in the meantime?")}
+setTimeout(()=>{if(!opened)$('#hint').classList.add('on');setTimeout(()=>$('#hint').classList.remove('on'),6000)},9000);
+
+/* header, scrollspy, mobile bar, reveal, counters */
+const secs=['video','journey','progress','success','faq','reviews','investment','accept'].map(id=>document.getElementById(id));
+const links=$$('nav.chips a');
+addEventListener('scroll',()=>{const y=scrollY;$('#top').classList.toggle('scrolled',y>10);
+ let cur=null;secs.forEach(s=>{if(s.getBoundingClientRect().top<180)cur=s.id});
+ links.forEach(a=>{const on=a.getAttribute('href')=='#'+cur;if(on&&!a.classList.contains('on')){a.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'})}a.classList.toggle('on',on)});
+ const acc=$('#accept').getBoundingClientRect();$('#mbar').classList.toggle('show',y>600&&acc.top>innerHeight-40);
+},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+const pio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){$('#pbar').style.width='33%';pio.disconnect()}}),{threshold:.4});pio.observe($('.prog'));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){cio.disconnect();const el=$('#count');const t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1100),v=Math.round(3700*(1-Math.pow(1-k,3)));el.textContent=v.toLocaleString('en-GB');if(k<1)requestAnimationFrame(f)})(t0)}}),{threshold:.5});cio.observe($('.inv'));
+</script>
+</body>
+</html>
