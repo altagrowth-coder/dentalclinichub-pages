@@ -18,3 +18,7 @@ Each client offer is a folder with its own `index.html`, e.g. `/marlow-implants/
 - ActiveCampaign form embed + site tracking snippet — marked spots in HTML comments.
 
 Maintained by Viktor. Ask in Slack to add or edit a page.
+
+## Abbey House treatment pages
+
+`/abbey-house-implants`, `/abbey-house-invisalign`, `/abbey-house-general` — built by `projects/abbey_landing_pages/build.py` (edit there, not here).
