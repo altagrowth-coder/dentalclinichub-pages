@@ -70,6 +70,46 @@ nav svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.6}
 .foot{position:fixed;left:24px;bottom:28px;color:var(--soft);font-size:13px;font-weight:600;z-index:4}
 canvas{position:fixed;inset:0;pointer-events:none;z-index:9}
 @media(max-width:600px){.opts.grid{grid-template-columns:1fr}.opt{font-size:16px}.txt{font-size:22px}.foot{display:none}header{padding:14px 18px}}
+
+/* v2.1 spacing + mobile polish */
+.num{margin-bottom:14px;letter-spacing:.02em}
+.q h2{line-height:1.22;text-wrap:pretty}
+.q .hint{line-height:1.55;margin-top:14px}
+.welcome h1{line-height:1.1;margin-bottom:4px;text-wrap:pretty}
+.welcome .hint{margin-top:18px}
+.opts{gap:12px;margin-top:32px}
+.opt{min-height:56px;padding:14px 16px;line-height:1.35}
+.recap{gap:14px;margin-top:26px}
+.recap li{line-height:1.5}
+.ok{margin-top:32px}
+.meta{margin-top:20px;gap:10px 18px}
+.video{margin:28px 0 6px}
+.err:empty{min-height:0;margin:0}
+@media(max-width:600px){
+ header{padding:12px 20px;background:linear-gradient(180deg,rgba(25,52,82,.96) 60%,rgba(25,52,82,0));backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+ header svg{height:24px}
+ .q{align-items:flex-start;padding:84px 20px 120px}
+ .in{margin:0 auto}
+ .num{font-size:14px;margin-bottom:12px}
+ .q h2{font-size:24px;line-height:1.28}
+ .q .hint{font-size:16px;margin-top:12px}
+ .welcome h1{font-size:34px;line-height:1.12}
+ .welcome .num{margin-top:8px}
+ .opts{gap:10px;margin-top:24px}
+ .opt{min-height:54px;padding:13px 14px;font-size:16px;border-radius:12px}
+ .opt kbd{width:24px;height:24px;font-size:12px}
+ .recap{gap:12px;margin-top:22px}
+ .recap li{font-size:16px}
+ .ok,.ok.big{display:flex;width:100%;justify-content:center;margin-top:26px;padding:16px 20px;font-size:18px;border-radius:12px}
+ .ok small{display:none}
+ .meta{font-size:13px;margin-top:16px;justify-content:center}
+ .video{margin:24px 0 4px;border-radius:14px}
+ .txt{font-size:22px;margin-top:22px}
+ textarea.txt{font-size:18px;min-height:120px}
+ nav{left:0;right:0;bottom:0;justify-content:flex-end;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(0deg,rgba(19,42,68,.98) 55%,rgba(19,42,68,0))}
+ nav button{width:48px;height:42px}
+}
+@media(max-width:600px) and (max-height:700px){.q{padding-top:72px}.q h2{font-size:22px}.opt{min-height:50px;padding:11px 14px}}
 </style>
 </head>
 <body>
@@ -82,7 +122,7 @@ canvas{position:fixed;inset:0;pointer-events:none;z-index:9}
 <script>
 const VIDEO = "";
 const HOOK = "https://api.viktor.com/api/triggers/in/webhook/wh_vTTkaQmMIw2-uD_CQkDSxjwy?token=vtrtok__1CO_JfSm36VKvqw_ot_0RkLxVGfWDC1BwIh2-LzYVA";
-const KEY = "altadent-kettering-tf-v2";
+const KEY = "altadent-kettering-tf-v3";
 
 /* ===== QUESTIONS ===== type: welcome | text | email | tel | long | one | many | recap | end */
 const Q = [
@@ -95,11 +135,17 @@ const Q = [
  {id:"Top goals",t:"many",max:3,q:"What matters most? Pick up to 3.",grid:1,o:["Follow up every enquiry fast","Clear tasks for the team","See which ads bring in revenue","Convert more treatment plans","Free up the TCO's time","Simple reports for the partners"]},
  {id:"Treatments to grow",t:"many",q:"Which treatments do you want more of?",grid:1,o:["Implants","Invisalign","Composite bonding","Veneers","Whitening","New patients / general"]},
  {id:"Monthly enquiries",t:"one",q:"Roughly how many new enquiries a month, across both sites?",o:["Under 50","50 to 150","150 to 300","300+","Not sure yet"]},
+ {id:"Enquiry sources",t:"many",q:"Where do your enquiries come from?",hint:"Pick all that apply. We'll connect every one into a single inbox.",grid:1,o:["Website forms","Facebook / Instagram ads","Google Ads","Phone calls","WhatsApp","Email","Referrals and walk-ins"]},
  {id:"Monthly ad spend",t:"one",q:"And roughly what do you spend on marketing a month?",o:["Under £2k","£2k to £5k","£5k to £10k","£10k+","Prefer to discuss"]},
+ {id:"Patients in current CRM",t:"one",q:"Roughly how many patients and leads are in your current CRM?",hint:"We'll move them across for you, so nothing is lost.",o:["Under 1,000","1,000 to 5,000","5,000 to 15,000","15,000+","Not sure yet"]},
  {id:"Who handles enquiries",t:"many",q:"Who handles new enquiries today?",grid:1,o:["TCO (Claire)","New patient coordinator","Reception","Practice manager","Our marketing agency","No one owns it fully"]},
+ {id:"Team logins",t:"one",q:"How many of your team will need a login?",o:["1 to 3","4 to 6","7 to 10","More than 10"]},
  {id:"Tools to replace",t:"many",q:"Which tools should the new system replace?",hint:"We can also just connect to anything you want to keep.",grid:1,o:["Current CRM","Boxly","Uptake","Medfin","Linda AI","OnHold messaging","Keep them, just connect"]},
+ {id:"Phone system",t:"one",q:"Which phone system do the clinics use?",hint:"So missed calls can trigger an instant text back and a task for the team.",o:["A cloud phone system (e.g. RingCentral, 3CX)","A traditional landline","Not sure, we'll check"]},
+ {id:"Payments",t:"many",q:"How do patients pay deposits and treatment today?",grid:1,o:["Card in practice","Payment links","Direct debit / monthly plans","Patient finance","Practice membership plan"]},
  {id:"Must-have features",t:"many",q:"Pick your must-have features.",hint:"Choose as many as you like.",grid:1,o:["One inbox for every enquiry","Automatic follow-up texts and emails","Team task board and reminders","Treatment plans patients can view online","Finance options inside the plan","Online booking with deposits","Missed call text back","AI help replying to messages","Ad spend vs revenue dashboard","Review requests after visits","Recall and win-back campaigns","Monthly report for the partners"]},
  {id:"AI level",t:"one",q:"How much should AI do?",o:["Draft replies, the team sends them","Answer simple questions, humans handle the rest","As much as possible, with humans on calls"]},
+ {id:"Competitors",t:"many",q:"Who do you see as your main competitors?",hint:"We'll mystery call them as a patient and share the results with you.",grid:1,o:["Natural Smiles","Chancery Dental","Trinity Dental","Hall Dental","Someone else"],follow:{when:4,id:"Other competitors",ph:"Who else should we call?"}},
  {id:"Biggest frustration",t:"long",q:"What frustrates you most about how things work today?",ph:"Be as blunt as you like",hint:"Optional, but this helps us most."},
  {id:"Evening and weekend calling",t:"one",q:"Would you like our team to call your enquiries in the evenings and at weekends?",o:["Yes, tell me more","Maybe later","No, we've got it covered"]},
  {id:"Go-live",t:"one",q:"When would you like to go live?",o:["As soon as possible","Within a month","In 1 to 3 months","Just exploring for now"]},
@@ -132,7 +178,7 @@ function render(){
    <p class="hint">Thanks for your time today. A few quick questions so we can build and quote a system around Kettering and Wellingborough, not the other way round.</p>
    ${videoHTML()}
    <button class="ok big" data-go>Let's start <small>press Enter ↵</small></button>
-   <div class="meta"><span>⏱ About 4 minutes</span><span>✓ ${qn.length} quick questions</span><span>↺ Pick up where you left off</span></div></div></section>`;
+   <div class="meta"><span>⏱ About 5 minutes</span><span>✓ ${qn.length} quick questions</span><span>↺ Pick up where you left off</span></div></div></section>`;
   if(x.t==="end") return `<section class="q" data-i="${i}"><div class="in" style="text-align:center">
    <h1 style="font-size:clamp(32px,5vw,48px)">Thank you<span id="endName"></span>! 🎉</h1>
    <p class="hint" style="max-width:520px;margin:14px auto 0">Your answers are with Sim. We'll turn them into your bespoke system and quote, and walk you through it on our next call.</p>
@@ -160,7 +206,7 @@ function show(i,instant){
  const prev=sec(cur); if(prev&&prev!==sec(i)){prev.classList.remove("on");prev.classList.toggle("up",i>cur)}
  cur=i; const s=sec(i); s.classList.remove("up"); s.classList.add("on");
  const name=(state["Filled in by"]||"").split(" ")[0];
- s.querySelectorAll("h2").forEach(h=>{const x=Q[i];if(x.q)h.innerHTML=x.q.replace("{name}",esc(name||"there"))});
+ s.querySelectorAll("h2").forEach(h=>{const x=Q[i];if(x.q)h.innerHTML=name?x.q.replace("{name}",esc(name)):x.q.replace(", {name}","").replace("{name}","")});
  if(Q[i].t==="end"&&name) $("#endName").textContent=", "+name;
  $("#bar").style.width=Math.round(100*Math.max(0,i)/(Q.length-1))+"%";
  $("#prev").disabled=i===0||Q[i].t==="end"; $("#next").disabled=Q[i].t==="end";
@@ -179,7 +225,8 @@ function back(){if(cur>0&&Q[cur].t!=="end")show(cur-1)}
 function pick(i,j){const x=Q[i],o=x.o[j];if(!o)return;const s=sec(i);const btn=s.querySelectorAll(".opt")[j];
  if(x.t==="many"){let a=[].concat(state[x.id]||[]);
   if(a.includes(o))a=a.filter(v=>v!==o);else{if(x.max&&a.length>=x.max){s.querySelector(".err").textContent="Up to "+x.max+", untick one first";return}a.push(o)}
-  state[x.id]=a;btn.classList.toggle("on");s.querySelector(".err").textContent="";save();return}
+  state[x.id]=a;btn.classList.toggle("on");s.querySelector(".err").textContent="";save();
+  if(x.follow){const sh=a.includes(x.o[x.follow.when]);const f=s.querySelector("[data-f]");f.style.display=sh?"block":"none";if(sh&&o===x.o[x.follow.when])setTimeout(()=>f.focus(),100)}return}
  state[x.id]=o;s.querySelectorAll(".opt").forEach(b=>b.classList.remove("on"));btn.classList.add("on","flash");save();
  if(x.follow){const show2=j===x.follow.when;s.querySelector("[data-f]").style.display=show2?"block":"none";s.querySelector("[data-go]").style.display=show2?"inline-flex":"none";
   if(show2){setTimeout(()=>s.querySelector("[data-f]").focus(),100);return}}
@@ -200,7 +247,7 @@ function bind(){
 
 function payload(){const sections={},answers={};let n=0;
  Q.forEach(x=>{if(!x.id)return;n++;let v=state[x.id];if(Array.isArray(v))v=v.join(", ");
-  if(x.follow&&state[x.follow.id]&&state[x.id]===x.o[x.follow.when])v+=": "+state[x.follow.id];
+  if(x.follow&&state[x.follow.id]&&[].concat(state[x.id]||[]).includes(x.o[x.follow.when]))v+=": "+state[x.follow.id];
   if(v===undefined||v==="")v="(skipped)";const k=x.id;answers[k]=v;(sections["Answers"]=sections["Answers"]||{})[n+". "+k]=v});
  return {source:"bespoke-blueprint",final:true,practice:"Kettering & Wellingborough Dental",name:state["Filled in by"]||"",email:state["Email"]||"",mobile:state["Mobile"]||"",
   must_haves:[].concat(state["Must-have features"]||[]),sections,answers,page:location.href.split("?")[0],sent_at:new Date().toISOString()}}
