@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Your bespoke system | Confident Dental & Implant Clinics</title>
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Your bespoke system, Confident Dental & Implant Clinics">
+<meta property="og:description" content="A few quick questions so AltaDent can set up your treatment plans and quote a system built around every Confident site.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F3B5C;--navy2:#132a44;--teal:#00B3A4;--soft:#b9c8d8;--line:rgba(255,255,255,.22)}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Manrope,system-ui,sans-serif;color:#fff;background:radial-gradient(1100px 600px at 90% -10%,rgba(0,179,164,.28),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy2));background-attachment:fixed;-webkit-font-smoothing:antialiased;overflow:hidden}
+h1,h2{font-family:"Bricolage Grotesque",Manrope,sans-serif;letter-spacing:-.01em;margin:0}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+input,textarea{font:inherit}
+.bar{position:fixed;top:0;left:0;right:0;height:4px;background:rgba(255,255,255,.1);z-index:5}
+.bar i{display:block;height:100%;width:0;background:var(--teal);transition:width .4s}
+header{position:fixed;top:4px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;z-index:4}
+header svg{height:30px;width:auto}
+.hr{display:flex;align-items:center;gap:14px}.wa{display:inline-flex;align-items:center;gap:7px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(37,211,102,.3);transition:transform .15s}.wa:hover{transform:translateY(-1px)}.wa svg{width:18px;height:18px}.wa2{background:transparent;border:1.5px solid #25D366;color:#fff;box-shadow:none;font-size:17px;padding:14px 24px;margin-top:14px}
+@media(max-width:600px){.wa{padding:7px 11px;font-size:13px}.hr{gap:8px}#saved{display:none}}
+
+header small{color:var(--soft);font-weight:600;font-size:13px}
+.stage{position:relative;height:100%;height:100dvh}
+.q{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:90px 22px 100px;opacity:0;pointer-events:none;transform:translateY(40px);transition:opacity .45s,transform .45s;overflow-y:auto}
+.q.on{opacity:1;pointer-events:auto;transform:none}
+.q.up{transform:translateY(-40px)}
+.in{width:100%;max-width:680px;margin:auto}
+.num{display:inline-flex;align-items:center;gap:6px;color:var(--teal);font-weight:800;font-size:15px;margin-bottom:10px}
+.q h2{font-size:clamp(24px,3.6vw,34px);line-height:1.2;font-weight:700}
+.q .hint{color:var(--soft);font-size:17px;margin:10px 0 0}
+.opts{display:flex;flex-direction:column;gap:10px;margin-top:26px;max-width:520px}
+.opts.grid{display:grid;grid-template-columns:1fr 1fr;max-width:680px}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:rgba(255,255,255,.06);font-size:17px;font-weight:600;transition:.15s}
+.opt:hover{background:rgba(255,255,255,.12)}
+.opt kbd{flex:none;width:26px;height:26px;display:grid;place-items:center;border:1.5px solid var(--line);border-radius:6px;font:700 13px Manrope;color:var(--soft)}
+.opt.on{border-color:var(--teal);background:rgba(0,179,164,.22)}
+.opt.on kbd{background:var(--teal);border-color:var(--teal);color:#fff}
+.opt .tick{margin-left:auto;opacity:0;color:var(--teal);font-weight:800}
+.opt.on .tick{opacity:1}
+.opt.flash{animation:fl .35s}
+@keyframes fl{30%{background:rgba(0,179,164,.5)}}
+.txt{width:100%;margin-top:28px;background:transparent;border:0;border-bottom:2px solid var(--line);color:#fff;font-size:26px;padding:8px 0;outline:none;transition:border .2s}
+.txt:focus{border-color:var(--teal)}
+.txt::placeholder{color:rgba(255,255,255,.35)}
+textarea.txt{font-size:20px;resize:none;min-height:110px;line-height:1.4}
+.ok{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--teal);color:#fff;font-weight:800;font-size:18px;padding:12px 22px;border-radius:10px;box-shadow:0 10px 24px rgba(0,179,164,.3);transition:transform .15s}
+.ok:hover{transform:translateY(-2px)}
+.ok small{font-weight:600;font-size:13px;opacity:.85}
+.ok.big{font-size:20px;padding:16px 30px}
+.recap{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:9px}
+.recap li{display:flex;gap:12px;align-items:flex-start;font-size:17px;color:#e6eef6}
+.recap li:before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+.video{position:relative;border-radius:16px;overflow:hidden;background:#0f2238;aspect-ratio:16/9;box-shadow:0 30px 60px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.14);margin:22px 0 4px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:repeating-linear-gradient(45deg,#17304d 0 14px,#1a3654 14px 28px);color:var(--soft);font-size:15px;font-weight:600}
+.play{width:68px;height:68px;border-radius:50%;background:var(--teal);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(0,179,164,.2);animation:pulse 2.4s infinite}
+.play svg{width:24px;height:24px;fill:#fff;margin-left:4px}
+@keyframes pulse{50%{box-shadow:0 0 0 22px rgba(0,179,164,.08)}}
+.welcome h1{font-size:clamp(32px,5vw,50px);line-height:1.06}
+.welcome h1 em{font-style:normal;color:var(--teal)}
+.meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--soft);font-weight:600;font-size:14px;margin-top:14px}
+.err{color:#ffb4a6;font-weight:700;font-size:14px;margin-top:10px;min-height:20px}
+nav{position:fixed;right:20px;bottom:20px;display:flex;gap:2px;z-index:4}
+nav button{width:44px;height:40px;background:var(--teal);display:grid;place-items:center}
+nav button:first-child{border-radius:8px 0 0 8px}nav button:last-child{border-radius:0 8px 8px 0}
+nav button:disabled{opacity:.4;cursor:default}
+nav svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.6}
+.foot{position:fixed;left:24px;bottom:28px;color:var(--soft);font-size:13px;font-weight:600;z-index:4}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:9}
+@media(max-width:600px){.opts.grid{grid-template-columns:1fr}.opt{font-size:16px}.txt{font-size:22px}.foot{display:none}header{padding:14px 18px}}
+
+/* v2.1 spacing + mobile polish */
+.num{margin-bottom:14px;letter-spacing:.02em}
+.q h2{line-height:1.22;text-wrap:pretty}
+.q .hint{line-height:1.55;margin-top:14px}
+.welcome h1{line-height:1.1;margin-bottom:4px;text-wrap:pretty}
+.welcome .hint{margin-top:18px}
+.opts{gap:12px;margin-top:32px}
+.opt{min-height:56px;padding:14px 16px;line-height:1.35}
+.recap{gap:14px;margin-top:26px}
+.recap li{line-height:1.5}
+.ok{margin-top:32px}
+.meta{margin-top:20px;gap:10px 18px}
+.video{margin:28px 0 6px}
+.err:empty{min-height:0;margin:0}
+@media(max-width:600px){
+ header{padding:12px 20px;background:linear-gradient(180deg,rgba(25,52,82,.96) 60%,rgba(25,52,82,0));backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+ header svg{height:24px}
+ .q{align-items:flex-start;padding:84px 20px 120px}
+ .in{margin:0 auto}
+ .num{font-size:14px;margin-bottom:12px}
+ .q h2{font-size:24px;line-height:1.28}
+ .q .hint{font-size:16px;margin-top:12px}
+ .welcome h1{font-size:34px;line-height:1.12}
+ .welcome .num{margin-top:8px}
+ .opts{gap:10px;margin-top:24px}
+ .opt{min-height:54px;padding:13px 14px;font-size:16px;border-radius:12px}
+ .opt kbd{width:24px;height:24px;font-size:12px}
+ .recap{gap:12px;margin-top:22px}
+ .recap li{font-size:16px}
+ .ok,.ok.big{display:flex;width:100%;justify-content:center;margin-top:26px;padding:16px 20px;font-size:18px;border-radius:12px}
+ .ok small{display:none}
+ .meta{font-size:13px;margin-top:16px;justify-content:center}
+ .video{margin:24px 0 4px;border-radius:14px}
+ .txt{font-size:22px;margin-top:22px}
+ textarea.txt{font-size:18px;min-height:120px}
+ nav{left:0;right:0;bottom:0;justify-content:flex-end;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(0deg,rgba(19,42,68,.98) 55%,rgba(19,42,68,0))}
+ nav button{width:48px;height:42px}
+}
+@media(max-width:600px) and (max-height:700px){.q{padding-top:72px}.q h2{font-size:22px}.opt{min-height:50px;padding:11px 14px}}
+
+.cf{display:flex;flex-direction:column;gap:12px;margin-top:26px}
+.cfi{border:1.5px solid var(--line);border-radius:14px;background:rgba(255,255,255,.06);padding:14px 16px;transition:.2s}
+.cfi.edit{border-color:#f2a33a;background:rgba(242,163,58,.08)}
+.cfi.flash2{border-color:var(--teal);background:rgba(0,179,164,.18)}
+.cft{display:flex;gap:12px;align-items:flex-start;font-size:17px;line-height:1.45;color:#eef4fa}
+.cft b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-size:12px;margin-top:1px}
+.cfi.edit .cft b{background:#f2a33a}
+.cfi.edit .cft span{text-decoration:line-through;opacity:.55}
+.cfb{display:flex;gap:8px;margin:10px 0 0 36px}
+.pill{font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);color:var(--soft)}
+.pill:hover{background:rgba(255,255,255,.1)}
+.cfi:not(.edit) .ok2{border-color:var(--teal);color:#fff;background:rgba(0,179,164,.25)}
+.cfi.edit .ed{border-color:#f2a33a;color:#fff;background:rgba(242,163,58,.25)}
+.cfe{display:none;width:calc(100% - 36px);margin:10px 0 0 36px;background:rgba(0,0,0,.18);border:1.5px solid rgba(242,163,58,.6);border-radius:10px;color:#fff;font:600 16px/1.45 Manrope;padding:10px 12px;outline:none;resize:none}
+.cfi.edit .cfe{display:block}
+.txt.cfm{font-size:18px;margin-top:22px}
+@media(max-width:600px){.cft{font-size:16px}.cfi{padding:13px 14px}.cfb,.cfe{margin-left:36px}}
+</style>
+</head>
+<body>
+<div class="bar"><i id="bar"></i></div>
+<header><svg role="img" aria-label="AltaDent Growth" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="480 420 970 240"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#ffffff;}.cls-3{fill:#00b3a4;}</style></defs><path class="cls-2" d="M681,646.34V485.43h28.43V646.34Z"/><path class="cls-2" d="M798.46,563.46H773.55v45.85q0,5.73,2.87,8.37t8.37,3a122.1,122.1,0,0,0,13.67-.11v25.79q-29.33,3.3-41.33-5.51t-12-31.52V563.46H725.94V536.13h19.18V513.87l28.43-8.6v30.86h24.91Z"/><path class="cls-2" d="M899,536.13H927.4V646.34H899v-13Q886.19,649.42,863,649.42q-22,0-37.8-16.86t-15.76-41.33q0-24.47,15.76-41.33T863,533q23.15,0,35.93,16.09Zm-52.46,77.48q8.6,8.7,21.82,8.7t21.93-8.7Q899,604.9,899,591.23t-8.71-22.37q-8.7-8.7-21.93-8.71t-21.82,8.71q-8.6,8.71-8.6,22.37T846.51,613.61Z"/><path class="cls-2" d="M1015.79,492.05q31.74,0,53,22.26t21.27,54.88q0,32.63-21.27,54.89t-53,22.26H954.51V492.05Zm0,125.19q20.06,0,32.62-13.33T1061,569.19q0-21.37-12.57-34.72t-32.62-13.33H984.93v96.1Z"/><path class="cls-2" d="M1134.37,602.92q5.73,20.72,31.08,20.72,16.32,0,24.69-11l22.92,13.23q-16.3,23.6-48,23.58-27.33,0-43.86-16.53t-16.53-41.66q0-24.9,16.31-41.55T1162.81,533q24.24,0,40,16.75t15.76,41.44a66.13,66.13,0,0,1-1.1,11.69Zm-.44-22h56.21q-2.43-11.24-10-16.75a28.77,28.77,0,0,0-17.3-5.51q-11.46,0-19,5.84T1133.93,580.87Z"/><path class="cls-2" d="M1299.69,533q18.06,0,29.86,12.13t11.8,33.5v67.67h-28.44V582.2q0-11-6-16.86t-15.87-5.85q-11,0-17.63,6.84t-6.61,20.49v59.52h-28.44V536.13h28.44v12.34Q1277.2,533.05,1299.69,533Z"/><path class="cls-2" d="M1428.63,563.46h-24.91v45.85q0,5.73,2.87,8.37t8.38,3a121.93,121.93,0,0,0,13.66-.11v25.79q-29.31,3.3-41.33-5.51t-12-31.52V563.46h-19.18V536.13h19.18V513.87l28.43-8.6v30.86h24.91Z"/><path class="cls-3" d="M620,519l-59,96.8h50.57l6.74,30.53h33Z"/><polygon class="cls-3" points="646.2 492.46 623.57 487.28 526.59 646.33 491.37 646.33 592.56 480.24 568.97 474.82 634.64 430.57 646.2 492.46"/></svg><div class="hr"><small id="saved"></small><a class="wa" href="https://wa.me/447940636939?text=Hi%20Sim%2C%20it%27s%20Colin%20at%20Confident%20Dental%20about%20our%20blueprint" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>WhatsApp Sim</span></a></div></header>
+<div class="stage" id="stage"></div>
+<nav><button id="prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></button><button id="next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button></nav>
+<div class="foot">Answers save automatically</div>
+<canvas id="cf"></canvas>
+<script>
+const VIDEO = "https://www.tella.tv/video/practice-onboarding-and-next-steps-3gsz63lw";
+const HOOK = "https://api.viktor.com/api/triggers/in/webhook/wh_vTTkaQmMIw2-uD_CQkDSxjwy?token=vtrtok__1CO_JfSm36VKvqw_ot_0RkLxVGfWDC1BwIh2-LzYVA";
+const KEY = "altadent-confident-tf-v1";
+
+/* ===== QUESTIONS ===== type: welcome | text | email | tel | long | one | many | recap | end */
+const Q = [
+ {t:"welcome"},
+ {id:"Filled in by",t:"text",q:"First things first, what's your name?",ph:"Type your name here",req:1},
+ {id:"Call recap",t:"confirm",q:"Here's what we heard on the call, {name}. Did we get it right?",hint:"Tap Edit on anything we got wrong, then confirm.",
+  items:["Finance is the main reason keen patients don't go ahead. A second lender for lower credit scores matters.","Treatment plans go live first, with a print option and your 5% discount for paying upfront.","Every site launches together, so clinicians who move between clinics work one way.","The new system replaces Boxly and syncs with Dentally.","Calls connect through your phone system. You're checking the Cisco Webex upgrade.","Full-arch marketing leans on patient video stories."],
+  miss:{id:"Anything we missed",ph:"Anything we missed? (optional)"}},
+ {id:"Sites",t:"many",q:"Which sites should the system cover?",hint:"Pick every site, including the ones on the way.",grid:1,o:["Stroud","Bishop's Cleeve","Cheltenham","Swindon","Minchinhampton (opening)","Cirencester (in build)"]},
+ {id:"Top goals",t:"many",max:3,q:"What matters most? Pick up to 3.",grid:1,o:["Convert more implant and full-arch plans","Keep patients who struggle with finance","Answer every enquiry fast","One view of every site","Clear tasks for the treatment coordinators","See which marketing brings in revenue","Grow Cheltenham and Swindon"]},
+ {id:"Scaling ambitions",t:"many",grid:1,q:"Where would you like the group to be in 3 years?",hint:"So we build for where you're going, not just where you are.",o:["Open Minchinhampton and Cirencester smoothly","Add more sites","More full-arch cases","Grow the referral centre","Ready the group for investment or sale","Something else"],follow:{when:5,id:"Scaling detail",ph:"Tell us your plans, e.g. revenue or site targets"}},
+ {id:"Treatments to grow",t:"many",q:"Which treatments do you want more of?",grid:1,o:["All-on-X / Teeth in a Day","Single implants","Zygomatic implants","Invisalign","Smile makeovers and bonding","New patients / general"]},
+ {id:"Who presents plans",t:"many",q:"Who presents treatment plans to patients today?",hint:"Part 2 of 3: your treatment plans. This gets the plan tool ready to go live.",grid:1,o:["Treatment coordinators","The dentist","Patient Journey Coordinator","Reception"]},
+ {id:"Plans per month",t:"one",q:"Roughly how many treatment plans go out a month, across the group?",o:["Under 50","50 to 150","150 to 300","300+","Not sure yet"]},
+ {id:"Full-arch plan value",t:"one",q:"What's a typical full-arch plan worth per patient?",hint:"This sets the finance limits we build into the plan.",o:["Under £10k","£10k to £20k","£20k to £30k","Over £30k","Varies a lot"]},
+ {id:"Finance provider",t:"many",q:"Which finance providers do you use today?",hint:"We build your main lender in first, then a second option for lower credit scores.",grid:1,o:["Tabeo","Chrysalis","Medenta","In-house payment plans","None yet","Someone else"],follow:{when:5,id:"Other finance provider",ph:"Which provider?"}},
+ {id:"Upfront discount",t:"one",q:"Your 5% discount for paying upfront: where should it show?",o:["On every plan","Only on plans over a set value","Let's decide together"]},
+ {id:"Plan videos",t:"many",q:"Which videos should your plans include?",hint:"Every plan already gets 3D treatment animations.",grid:1,o:["Clinician videos we already have","Patient testimonial videos","Help us film new ones","Animations only for now"]},
+ {id:"Plan delivery",t:"many",q:"How should patients receive their plan?",grid:1,o:["Email","SMS","WhatsApp","Printed PDF in the clinic"]},
+ {id:"Monthly enquiries",t:"one",q:"Roughly how many new enquiries a month, across every site?",hint:"Part 3 of 3: your system.",o:["Under 100","100 to 300","300 to 600","600+","Not sure yet"]},
+ {id:"Enquiry sources",t:"many",q:"Where do your enquiries come from?",hint:"Pick all that apply. We'll connect every one into a single inbox.",grid:1,o:["Website forms","Phone calls","Web chat","Online booking","eBook downloads","Google Ads","Facebook / Instagram","Dentist referrals","WhatsApp and email"]},
+ {id:"Monthly ad spend",t:"one",q:"And roughly what do you spend on marketing a month?",o:["Under £2k","£2k to £5k","£5k to £10k","£10k+","Prefer to discuss"]},
+ {id:"Patients in current CRM",t:"one",q:"Roughly how many patients and leads sit in Boxly today?",hint:"We'll move them across for you, so nothing is lost.",o:["Under 1,000","1,000 to 5,000","5,000 to 15,000","15,000+","Not sure yet"]},
+ {id:"Team size",t:"one",q:"How many people work across the group?",hint:"Dentists, hygienists, nurses, reception and management.",o:["Under 20","20 to 40","40 to 70","70+"]},
+ {id:"Team logins",t:"one",q:"How many of your team will need a login?",o:["Under 10","10 to 20","20 to 40","More than 40"]},
+ {id:"Phone system",t:"one",q:"Where are you with the phone system?",hint:"So every call is logged and a missed call triggers a text back and a task.",o:["Upgrading to Cisco Webex","Staying with our current provider","Getting quotes from new providers","Not sure yet"]},
+ {id:"Evening and weekend calling",t:"one",q:"Would you like our team to take on your calls before the full system is live?",hint:"Evenings, weekends and daytime overflow, booked straight into your diary.",o:["Yes, as soon as possible","Yes, evenings and weekends only","Later, with the full system","No, we've got it covered"]},
+ {id:"Must-have features",t:"many",q:"Pick your must-have features.",hint:"Choose as many as you like.",grid:1,o:["One inbox for every site","Automatic follow-up texts and emails","Task board for coordinators","Interactive treatment plans","Finance with a backup lender","Online booking with deposits","Missed call text back","AI replies on WhatsApp","Marketing spend vs revenue","Review requests after visits","Lost-plan reasons by clinician","Group report by site"]},
+ {id:"AI level",t:"one",q:"How much should AI do?",o:["Draft replies, the team sends them","Answer simple questions, humans handle the rest","As much as possible, including answering calls"]},
+ {id:"Competitors",t:"many",q:"Who do you see as your main competitors?",hint:"We'll mystery call them as a patient and share the results with you.",grid:1,o:["Cheltenham Spa Dental","Lovat House","One Wood Street","Aurora Dental","Rowcroft Dental Centre","Someone else"],follow:{when:5,id:"Other competitors",ph:"Who else should we call?"}},
+ {id:"Biggest frustration",t:"long",q:"What frustrates you most about how things work today?",ph:"Be as blunt as you like",hint:"Optional, but this helps us most."},
+ {id:"Go-live",t:"one",q:"When would you like the full system live?",o:["As soon as possible","Before Minchinhampton opens","In 1 to 3 months","Just exploring for now"]},
+ {id:"Proposal readers",t:"many",q:"Who else should see the proposal?",grid:1,o:["Libby (Group Clinics Manager)","Sarah (Group Finance Manager)","A business partner","Just me"]},
+ {id:"Email",t:"email",q:"Where should we send your bespoke quote?",ph:"name@example.com",req:1},
+ {id:"Mobile",t:"tel",q:"And the best mobile number to reach you?",ph:"07...",hint:"Optional. Only used to arrange your follow-up call."},
+ {t:"end"}
+];
+const L = "ABCDEFGHIJKLMNOP";
+let state = {}; try{state = JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+let cur = 0, sent = false;
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const qn = Q.filter(x=>x.id);
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){};$("#saved").textContent="Saved"}
+
+function videoHTML(){let u=(new URLSearchParams(location.search).get("v"))||VIDEO;
+ if(u&&!u.startsWith("__")){let src=u.trim();const m=src.match(/tella\.tv\/video\/([^/?#]+)/);if(m)src="https://www.tella.tv/video/"+m[1]+"/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0";
+  return `<div class="video"><iframe src="${esc(src)}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="A quick hello from Sim"></iframe></div>`}
+ return `<div class="video"><div class="vph"><div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>A quick hello from Sim</div></div>`}
+
+function render(){
+ $("#stage").innerHTML = Q.map((x,i)=>{
+  const n = qn.indexOf(x)+1;
+  const head = x.id?`<div class="num">${n} <span>→</span></div><h2>${x.q}</h2>${x.hint?`<p class="hint">${x.hint}</p>`:""}`:"";
+  let body="";
+  if(x.t==="welcome") return `<section class="q welcome" data-i="${i}"><div class="in">
+   <div class="num">For Dr Colin Neil</div>
+   <h1>Let's design <em>your</em> system.</h1>
+   <p class="hint">Thanks for your time on Monday. Three short parts: what we heard, your treatment plans, then your system. Your answers set up the plans and shape a quote built around every Confident site.</p>
+   ${videoHTML()}
+   <button class="ok big" data-go>${state._at>1&&!state.sent?"Continue where you left off":"Let's start"} <small>press Enter ↵</small></button>
+   <div class="meta"><span>⏱ About 6 minutes</span><span>✓ ${qn.length} quick questions</span><span>↺ Pick up where you left off</span></div></div></section>`;
+  if(x.t==="end") return `<section class="q" data-i="${i}"><div class="in" style="text-align:center">
+   <h1 style="font-size:clamp(32px,5vw,48px)">Thank you<span id="endName"></span>! 🎉</h1>
+   <p class="hint" style="max-width:520px;margin:14px auto 0">Your answers are with Sim. We'll turn them into your bespoke system and quote, and walk you through it on our next call.</p>
+   <a class="ok big" href="https://zcal.co/simjuneja/introduction" style="text-decoration:none">Book the follow-up call</a>
+   <div><a class="wa wa2" href="https://wa.me/447940636939?text=Hi%20Sim%2C%20it%27s%20Colin%20at%20Confident%20Dental%20about%20our%20blueprint" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Or WhatsApp Sim</span></a></div>
+   <p class="hint" style="font-size:14px;margin-top:18px">Want Libby or Sarah to add their view? Send them this link.</p></div></section>`;
+  if(x.t==="confirm"){const ed=state[x.id+"__edits"]||{};
+   body = `<div class="cf">${x.items.map((t,k)=>`<div class="cfi ${ed[k]!=null?"edit":""}" data-k="${k}"><div class="cft"><b>${k+1}</b><span>${t}</span></div><div class="cfb"><button class="pill ok2" data-c="ok">✓ Correct</button><button class="pill ed" data-c="ed">✎ Edit</button></div><textarea class="cfe" rows="2" placeholder="What should it say?">${esc(ed[k]!=null?ed[k]:t)}</textarea></div>`).join("")}</div>
+   <input class="txt cfm" data-f="${x.miss.id}" placeholder="${x.miss.ph}" value="${esc(state[x.miss.id]||"")}">
+   <div><button class="ok" data-go>Confirm and continue <small>press Enter ↵</small></button></div>`;}
+  if(x.t==="recap") body = `<ul class="recap">${x.items.map(s=>`<li>${s}</li>`).join("")}</ul>`;
+  if(["one","many","recap"].includes(x.t)){
+   const sel = [].concat(state[x.id]||[]);
+   body += `<div class="opts ${x.grid?"grid":""}">${x.o.map((o,j)=>`<button class="opt ${sel.includes(o)?"on":""}" data-o="${esc(o)}"><kbd>${L[j]}</kbd>${o}<span class="tick">✓</span></button>`).join("")}</div>`;
+   if(x.follow) body += `<input class="txt" data-f="${x.follow.id}" placeholder="${x.follow.ph}" value="${esc(state[x.follow.id]||"")}" style="display:${sel.includes(x.o[x.follow.when])?"block":"none"};font-size:20px">`;
+   if(x.t==="many") body += `<div><button class="ok" data-go>OK ✓ <small>press Enter ↵</small></button></div>`;
+   else if(x.follow) body += `<div><button class="ok" data-go style="display:${sel.includes(x.o[x.follow.when])?"inline-flex":"none"}">OK ✓</button></div>`;
+  } else if(x.t!=="confirm") {
+   const v = esc(state[x.id]||"");
+   body = x.t==="long"?`<textarea class="txt" data-f="${x.id}" placeholder="${x.ph||""}">${v}</textarea>`
+     :`<input class="txt" data-f="${x.id}" type="${x.t==="text"?"text":x.t}" placeholder="${x.ph||""}" value="${v}" autocomplete="${x.t==="email"?"email":x.t==="tel"?"tel":"name"}">`;
+   const last = i===Q.length-2;
+   body += `<div><button class="ok" data-go>${last?"Submit":"OK ✓"} <small>${x.t==="long"?"Shift + Enter for a new line":"press Enter ↵"}</small></button></div>`;
+  }
+  return `<section class="q" data-i="${i}"><div class="in">${head}${body}<div class="err"></div></div></section>`}).join("");
+ bind(); show(0,true)}
+
+function sec(i){return document.querySelector(`.q[data-i="${i}"]`)}
+function show(i,instant){
+ const prev=sec(cur); if(prev&&prev!==sec(i)){prev.classList.remove("on");prev.classList.toggle("up",i>cur)}
+ cur=i; if(i>0&&Q[i].t!=="end"){state._at=i;save()} const s=sec(i); s.classList.remove("up"); s.classList.add("on");
+ const name=(state["Filled in by"]||"").split(" ")[0];
+ s.querySelectorAll("h2").forEach(h=>{const x=Q[i];if(x.q)h.innerHTML=name?x.q.replace("{name}",esc(name)):x.q.replace(", {name}","").replace("{name}","")});
+ if(Q[i].t==="end"&&name) $("#endName").textContent=", "+name;
+ $("#bar").style.width=Math.round(100*Math.max(0,i)/(Q.length-1))+"%";
+ $("#prev").disabled=i===0||Q[i].t==="end"; $("#next").disabled=Q[i].t==="end";
+ if(document.activeElement&&document.activeElement.blur)document.activeElement.blur();
+ const f=s.querySelector("input.txt,textarea.txt"); if(f&&f.offsetParent&&!/Mobi|Android/i.test(navigator.userAgent)) setTimeout(()=>f.focus(),instant?0:350)}
+
+function valid(i){const x=Q[i],s=sec(i),e=s&&s.querySelector(".err");if(e)e.textContent="";
+ if(x.req&&!(state[x.id]||"").trim()){e.textContent="Please fill this in";return false}
+ if(x.t==="email"&&!/^\S+@\S+\.\S+$/.test(state[x.id]||"")){e.textContent="Hmm, that email doesn't look right";return false}
+ return true}
+function next(){if(Q[cur].t==="end")return;if(!valid(cur))return;
+ if(cur===0&&state._at>1&&!state.sent&&state._at<Q.length-1){show(state._at);return}
+ if(cur===Q.length-2){submit();return}
+ show(cur+1)}
+function back(){if(cur>0&&Q[cur].t!=="end")show(cur-1)}
+
+function pick(i,j){const x=Q[i],o=x.o[j];if(!o)return;const s=sec(i);const btn=s.querySelectorAll(".opt")[j];
+ if(x.t==="many"){let a=[].concat(state[x.id]||[]);
+  if(a.includes(o))a=a.filter(v=>v!==o);else{if(x.max&&a.length>=x.max){s.querySelector(".err").textContent="Up to "+x.max+", untick one first";return}a.push(o)}
+  state[x.id]=a;btn.classList.toggle("on");s.querySelector(".err").textContent="";save();
+  if(x.follow){const sh=a.includes(x.o[x.follow.when]);const f=s.querySelector("[data-f]");f.style.display=sh?"block":"none";if(sh&&o===x.o[x.follow.when])setTimeout(()=>f.focus(),100)}return}
+ state[x.id]=o;s.querySelectorAll(".opt").forEach(b=>b.classList.remove("on"));btn.classList.add("on","flash");save();
+ if(x.follow){const show2=j===x.follow.when;s.querySelector("[data-f]").style.display=show2?"block":"none";s.querySelector("[data-go]").style.display=show2?"inline-flex":"none";
+  if(show2){setTimeout(()=>s.querySelector("[data-f]").focus(),100);return}}
+ setTimeout(next,420)}
+
+function bind(){
+ document.querySelectorAll(".q").forEach(s=>{const i=+s.dataset.i;
+  s.querySelectorAll(".opt").forEach((b,j)=>b.onclick=()=>pick(i,j));
+  s.querySelectorAll("[data-go]").forEach(b=>b.onclick=next);
+  s.querySelectorAll(".cfi").forEach(c=>{const k=c.dataset.k,x=Q[i],key=x.id+"__edits";
+   c.querySelector('[data-c="ed"]').onclick=()=>{const e=state[key]||{};e[k]=c.querySelector(".cfe").value;state[key]=e;c.classList.add("edit");save();setTimeout(()=>c.querySelector(".cfe").focus(),60)};
+   c.querySelector('[data-c="ok"]').onclick=()=>{const e=state[key]||{};delete e[k];state[key]=e;c.classList.remove("edit");c.classList.add("flash2");setTimeout(()=>c.classList.remove("flash2"),400);save()};
+   c.querySelector(".cfe").oninput=ev=>{const e=state[key]||{};e[k]=ev.target.value;state[key]=e;save()}});
+  s.querySelectorAll("[data-f]").forEach(f=>f.oninput=()=>{state[f.dataset.f]=f.value;save()})});
+ $("#prev").onclick=back;$("#next").onclick=next;
+ document.addEventListener("keydown",e=>{const x=Q[cur];const typing=e.target.matches("input,textarea");
+  if(e.key==="Enter"&&!(e.target.tagName==="TEXTAREA"&&e.shiftKey)){e.preventDefault();next();return}
+  if(typing)return;
+  const j=L.indexOf(e.key.toUpperCase());if(x.o&&j>=0&&j<x.o.length&&e.key.length===1)pick(cur,j);
+  if(e.key==="ArrowUp")back();if(e.key==="ArrowDown")next()});
+ let wl=0;addEventListener("wheel",e=>{if(Date.now()-wl<900||Math.abs(e.deltaY)<40)return;const s=sec(cur);if(s.scrollHeight>s.clientHeight+4)return;wl=Date.now();e.deltaY>0?next():back()},{passive:true})}
+
+function payload(){const sections={},answers={};let n=0;
+ Q.forEach(x=>{if(!x.id)return;n++;let v=state[x.id];
+  if(x.t==="confirm"){const e=state[x.id+"__edits"]||{};const ch=Object.keys(e).filter(k=>e[k].trim()&&e[k].trim()!==x.items[k]);
+   v=ch.length?ch.map(k=>"Change "+(+k+1)+": \""+x.items[k]+"\" -> \""+e[k].trim()+"\"").join(" | ")+" | Rest confirmed":"All confirmed";
+   if(state[x.miss.id])v+=" | Missed: "+state[x.miss.id];}if(Array.isArray(v))v=v.join(", ");
+  if(x.follow&&state[x.follow.id]&&[].concat(state[x.id]||[]).includes(x.o[x.follow.when]))v+=": "+state[x.follow.id];
+  if(v===undefined||v==="")v="(skipped)";const k=x.id;answers[k]=v;(sections["Answers"]=sections["Answers"]||{})[n+". "+k]=v});
+ return {source:"bespoke-blueprint",final:true,practice:"Confident Dental & Implant Clinics",name:state["Filled in by"]||"",email:state["Email"]||"",mobile:state["Mobile"]||"",
+  must_haves:[].concat(state["Must-have features"]||[]),sections,answers,page:location.href.split("?")[0],sent_at:new Date().toISOString()}}
+function submit(){if(!sent){sent=true;try{fetch(HOOK,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload())})}catch(e){}}
+ state.sent=new Date().toISOString();save();show(Q.length-1);confetti()}
+
+function confetti(){const c=$("#cf"),x=c.getContext("2d");c.width=innerWidth;c.height=innerHeight;const cols=["#00B3A4","#3fd0c3","#f2a33a","#ffffff","#8fd8ff"];
+ const P=Array.from({length:170},()=>({x:innerWidth/2,y:innerHeight/3,vx:(Math.random()-.5)*15,vy:Math.random()*-13-4,s:Math.random()*7+4,c:cols[Math.random()*5|0],r:Math.random()*6,vr:(Math.random()-.5)*.3}));let f=0;
+ (function t(){x.clearRect(0,0,c.width,c.height);P.forEach(p=>{p.vy+=.35;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);x.restore()});if(++f<170)requestAnimationFrame(t);else x.clearRect(0,0,c.width,c.height)})()}
+render();
+</script>
+</body>
+</html>
