@@ -195,7 +195,7 @@ function render(){
    <h1>Let's design <em>your</em> system.</h1>
    <p class="hint">Thanks for your time today. A few quick questions so we can build and quote a system around Kettering and Wellingborough, not the other way round.</p>
    ${videoHTML()}
-   <button class="ok big" data-go>Let's start <small>press Enter ↵</small></button>
+   <button class="ok big" data-go>${state._at>1&&!state.sent?"Continue where you left off":"Let's start"} <small>press Enter ↵</small></button>
    <div class="meta"><span>⏱ About 5 minutes</span><span>✓ ${qn.length} quick questions</span><span>↺ Pick up where you left off</span></div></div></section>`;
   if(x.t==="end") return `<section class="q" data-i="${i}"><div class="in" style="text-align:center">
    <h1 style="font-size:clamp(32px,5vw,48px)">Thank you<span id="endName"></span>! 🎉</h1>
@@ -226,7 +226,7 @@ function render(){
 function sec(i){return document.querySelector(`.q[data-i="${i}"]`)}
 function show(i,instant){
  const prev=sec(cur); if(prev&&prev!==sec(i)){prev.classList.remove("on");prev.classList.toggle("up",i>cur)}
- cur=i; const s=sec(i); s.classList.remove("up"); s.classList.add("on");
+ cur=i; if(i>0&&Q[i].t!=="end"){state._at=i;save()} const s=sec(i); s.classList.remove("up"); s.classList.add("on");
  const name=(state["Filled in by"]||"").split(" ")[0];
  s.querySelectorAll("h2").forEach(h=>{const x=Q[i];if(x.q)h.innerHTML=name?x.q.replace("{name}",esc(name)):x.q.replace(", {name}","").replace("{name}","")});
  if(Q[i].t==="end"&&name) $("#endName").textContent=", "+name;
@@ -240,6 +240,7 @@ function valid(i){const x=Q[i],s=sec(i),e=s&&s.querySelector(".err");if(e)e.text
  if(x.t==="email"&&!/^\S+@\S+\.\S+$/.test(state[x.id]||"")){e.textContent="Hmm, that email doesn't look right";return false}
  return true}
 function next(){if(Q[cur].t==="end")return;if(!valid(cur))return;
+ if(cur===0&&state._at>1&&!state.sent&&state._at<Q.length-1){show(state._at);return}
  if(cur===Q.length-2){submit();return}
  show(cur+1)}
 function back(){if(cur>0&&Q[cur].t!=="end")show(cur-1)}
