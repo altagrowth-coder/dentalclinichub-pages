@@ -154,6 +154,8 @@ const Q = [
   miss:{id:"Anything we missed",ph:"Anything we missed? (optional)"}},
  {id:"Sites",t:"many",q:"Which sites should the system cover?",hint:"Pick every site, including the ones on the way.",grid:1,o:["Stroud","Bishop's Cleeve","Cheltenham","Swindon","Minchinhampton (opening)","Cirencester (in build)"]},
  {id:"Top goals",t:"many",max:3,q:"What matters most? Pick up to 3.",grid:1,o:["Convert more implant and full-arch plans","Keep patients who struggle with finance","Answer every enquiry fast","One view of every site","Clear tasks for the treatment coordinators","See which marketing brings in revenue","Grow Cheltenham and Swindon"]},
+ {id:"Problems to solve",t:"long",q:"In your own words, which problems do you most want us to solve?",ph:"e.g. plans that go quiet after the consult, finance declines, calls missed at lunch, sites working differently...",hint:"Write as much as you like. This shapes your quote more than anything else."},
+ {id:"Six months from now",t:"long",q:"Picture it working perfectly six months from now. What's different?",ph:"e.g. every plan followed up within a day, Libby sees every site on one screen...",hint:"Optional."},
  {id:"Scaling ambitions",t:"many",grid:1,q:"Where would you like the group to be in 3 years?",hint:"So we build for where you're going, not just where you are.",o:["Open Minchinhampton and Cirencester smoothly","Add more sites","More full-arch cases","Grow the referral centre","Ready the group for investment or sale","Something else"],follow:{when:5,id:"Scaling detail",ph:"Tell us your plans, e.g. revenue or site targets"}},
  {id:"Treatments to grow",t:"many",q:"Which treatments do you want more of?",grid:1,o:["All-on-X / Teeth in a Day","Single implants","Zygomatic implants","Invisalign","Smile makeovers and bonding","New patients / general"]},
  {id:"Who presents plans",t:"many",q:"Who presents treatment plans to patients today?",hint:"Part 2 of 3: your treatment plans. This gets the plan tool ready to go live.",grid:1,o:["Treatment coordinators","The dentist","Patient Journey Coordinator","Reception"]},
@@ -175,8 +177,10 @@ const Q = [
  {id:"AI level",t:"one",q:"How much should AI do?",o:["Draft replies, the team sends them","Answer simple questions, humans handle the rest","As much as possible, including answering calls"]},
  {id:"Competitors",t:"many",q:"Who do you see as your main competitors?",hint:"We'll mystery call them as a patient and share the results with you.",grid:1,o:["Cheltenham Spa Dental","Lovat House","One Wood Street","Aurora Dental","Rowcroft Dental Centre","Someone else"],follow:{when:5,id:"Other competitors",ph:"Who else should we call?"}},
  {id:"Biggest frustration",t:"long",q:"What frustrates you most about how things work today?",ph:"Be as blunt as you like",hint:"Optional, but this helps us most."},
+ {id:"Patient journey wishes",t:"long",q:"Is there one moment in the patient journey you'd change tomorrow?",ph:"From first enquiry to treatment day, where do patients get stuck or go quiet?",hint:"Optional."},
  {id:"Go-live",t:"one",q:"When would you like the full system live?",o:["As soon as possible","Before Minchinhampton opens","In 1 to 3 months","Just exploring for now"]},
  {id:"Proposal readers",t:"many",q:"Who else should see the proposal?",grid:1,o:["Libby (Group Clinics Manager)","Sarah (Group Finance Manager)","A business partner","Just me"]},
+ {id:"Anything else",t:"long",q:"Anything else we should know before we build your quote?",ph:"Ideas, worries, things you've tried before, anything at all",hint:"Optional."},
  {id:"Email",t:"email",q:"Where should we send your bespoke quote?",ph:"name@example.com",req:1},
  {id:"Mobile",t:"tel",q:"And the best mobile number to reach you?",ph:"07...",hint:"Optional. Only used to arrange your follow-up call."},
  {t:"end"}
@@ -205,7 +209,7 @@ function render(){
    <p class="hint">Thanks for your time on Monday. Three short parts: what we heard, your treatment plans, then your system. Your answers set up the plans and shape a quote built around every Confident site.</p>
    ${videoHTML()}
    <button class="ok big" data-go>${state._at>1&&!state.sent?"Continue where you left off":"Let's start"} <small>press Enter ↵</small></button>
-   <div class="meta"><span>⏱ About 6 minutes</span><span>✓ ${qn.length} quick questions</span><span>↺ Pick up where you left off</span></div></div></section>`;
+   <div class="meta"><span>⏱ About 7 minutes</span><span>✓ ${qn.length} quick questions</span><span>↺ Pick up where you left off</span></div></div></section>`;
   if(x.t==="end") return `<section class="q" data-i="${i}"><div class="in" style="text-align:center">
    <h1 style="font-size:clamp(32px,5vw,48px)">Thank you<span id="endName"></span>! 🎉</h1>
    <p class="hint" style="max-width:520px;margin:14px auto 0">Your answers are with Sim. We'll turn them into your bespoke system and quote, and walk you through it on our next call.</p>
