@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your 34 Dental page</title><meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
+<meta property="og:title" content="Your 34 Dental page"><meta property="og:description" content="A short video and a time that suits you.">
+<meta property="og:image" content="https://go.dentalclinichub.com/34dental/assets/34-dental-logo.png">
+<link rel="icon" href="https://www.34dental.co.uk/wp-content/uploads/2023/08/cropped-34dental-logo-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#e9b949; --gold-deep:#c99a2e; --gold-soft:#fbf3df;
+  --ink:#2f2f2e; --ink-soft:#5d5c58; --line:#e8e3d8;
+  --paper:#fffdf8; --white:#ffffff;
+  --wa:#1fa855; --wa-deep:#178a45;
+  --display:"Josefin Sans", "Futura", "Century Gothic", sans-serif;
+  --body:"DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+header{background:var(--white);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+header img{height:54px;width:auto;display:block}
+
+.hero{padding:64px 0 72px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-180px;top:-160px;width:560px;height:560px;border:1.5px solid var(--gold);border-radius:50%;opacity:.35}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative}
+.eyebrow{font-family:var(--display);text-transform:uppercase;letter-spacing:.22em;font-size:13px;font-weight:600;color:var(--gold-deep)}
+h1{font-family:var(--display);font-weight:300;font-size:clamp(38px,5.2vw,60px);line-height:1.05;margin:14px 0 20px;text-wrap:balance}
+h1 strong{font-weight:700}
+.lede{font-size:18px;color:var(--ink-soft);max-width:34em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 18px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-book{background:var(--ink);color:var(--white)}
+.btn-book:hover{background:#000}
+.btn-wa{background:var(--wa);color:var(--white)}
+.btn-wa:hover{background:var(--wa-deep)}
+.btn svg{width:20px;height:20px;flex:none}
+.reassure{font-size:14px;color:var(--ink-soft)}
+.reassure span{display:inline-block;margin-right:16px}
+.reassure span:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle}
+
+.video-card{justify-self:center;width:100%;max-width:360px}
+.video-frame{position:relative;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 60px -25px rgba(47,47,46,.45);aspect-ratio:9/16}
+.video-frame video{width:100%;height:100%;display:block;object-fit:cover}
+.video-cap{margin-top:14px;font-size:14px;color:var(--ink-soft);text-align:center}
+.video-cap b{color:var(--ink)}
+
+.offers{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.4vw,38px);line-height:1.15;text-wrap:balance}
+h2 strong{font-weight:700}
+.offers h2{margin-bottom:36px;max-width:22em}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tile{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px 22px}
+.tile .big{font-family:var(--display);font-weight:700;font-size:30px;color:var(--gold-deep);line-height:1}
+.tile h3{font-family:var(--display);font-weight:600;font-size:18px;margin:14px 0 8px}
+.tile p{font-size:15px;color:var(--ink-soft)}
+
+.visit{padding:64px 0}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.visit p{color:var(--ink-soft);margin-top:14px;max-width:32em}
+dl{display:grid;grid-template-columns:auto 1fr;gap:12px 24px;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px}
+dt{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--gold-deep);padding-top:3px}
+dd{font-size:16px}
+dd a{text-decoration:none;border-bottom:1px solid var(--gold)}
+
+.final{background:var(--ink);color:var(--white);padding:64px 0;text-align:center}
+.final h2{color:var(--white);margin:0 auto 10px;max-width:20em}
+.final p{color:#cfcdc6}
+.final .ctas{justify-content:center}
+.final .btn-book{background:var(--gold);color:var(--ink)}
+.final .btn-book:hover{background:#f3c95f}
+
+footer{background:#232322;color:#9d9b94;font-size:13px;padding:22px 0 100px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+.sticky{display:none}
+.dots{display:none}
+
+@media (max-width:900px){
+  .hero{padding:36px 0 48px}
+  .hero .wrap{grid-template-columns:1fr;gap:36px}
+  .grid{grid-template-columns:1fr 1fr}
+  .visit .wrap{grid-template-columns:1fr;gap:28px}
+}
+@media (max-width:560px){
+  header .wrap{height:64px;justify-content:center}
+  header img{height:36px}
+  .hero{padding:22px 0 28px}
+  .hero:before{display:none}
+  .hero .wrap{gap:22px;grid-template-columns:minmax(0,1fr)}
+  .hero .wrap>*{min-width:0}
+  .eyebrow{font-size:11px;letter-spacing:.18em}
+  h1{font-size:32px;margin:8px 0 10px}
+  .lede{font-size:15px;line-height:1.5}
+  .lede .more{display:none}
+  .ctas{margin:18px 0 12px;gap:8px;flex-wrap:nowrap}
+  .ctas .btn{flex:1 1 0;justify-content:center;padding:13px 10px;font-size:14px;gap:6px}
+  .ctas .btn svg{width:17px;height:17px}
+  .ctas .btn .x{display:none}
+  .reassure{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -24px;padding:0 24px}
+  .reassure::-webkit-scrollbar{display:none}
+  .reassure span{flex:none;margin:0;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;white-space:nowrap}
+  .video-card{max-width:250px}
+  .video-cap{margin-top:8px;font-size:13px}
+  .offers{padding:32px 0 26px}
+  .offers h2{margin-bottom:18px;font-size:26px}
+  .grid{display:flex;grid-template-columns:none;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -24px;padding:0 24px 4px;scroll-padding:0 24px;scrollbar-width:none}
+  .grid::-webkit-scrollbar{display:none}
+  .tile{flex:0 0 78%;scroll-snap-align:start;padding:20px 18px}
+  .tile .big{font-size:26px}
+  .tile h3{margin:10px 0 6px}
+  .tile p{font-size:14px}
+  .dots{display:flex;justify-content:center;gap:6px;margin-top:14px}
+  .dots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:all .2s}
+  .dots i.on{background:var(--gold-deep);width:18px;border-radius:4px}
+  .visit{padding:30px 0 28px}
+  .visit .wrap{gap:16px;grid-template-columns:minmax(0,1fr)}
+  .visit h2{font-size:24px}
+  .visit p{display:none}
+  dl{padding:18px;gap:8px 16px}
+  dd{font-size:15px}
+  .final{display:none}
+  footer{padding:18px 0 90px;font-size:12px}
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,253,248,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);z-index:10}
+  .sticky .btn{flex:1;justify-content:center;padding:14px 10px;font-size:15px}
+}
+
+.hero{padding:40px 0 48px}.hero h1{font-size:clamp(34px,4.6vw,54px)}
+.vf iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 18px 40px -28px rgba(47,47,46,.35)}
+.offer{display:grid;grid-template-columns:1fr auto;gap:6px 18px;align-items:start}
+.offer h3{font-family:var(--display);font-weight:600;font-size:22px}
+.offer .what{color:var(--ink-soft);font-size:15px}
+.price{font-family:var(--display);font-weight:700;font-size:34px;line-height:1;text-align:right}
+.price small{display:block;font-family:var(--body);font-weight:500;font-size:12px;color:var(--ink-soft);margin-top:6px;max-width:12em}
+.ticks{grid-column:1/-1;list-style:none;margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;font-size:15px}
+.ticks li:before{content:"\2713";color:var(--gold-deep);font-weight:700;margin-right:8px}
+.pick{padding:56px 0;background:var(--gold-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pick .card{max-width:640px;margin:22px auto 0}
+.pick h2{text-align:center}.pick .sub{text-align:center;color:var(--ink-soft);margin-top:8px}
+.lbl{font-weight:700;font-size:14px;margin:18px 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:var(--white);border-radius:999px;padding:10px 16px;font:600 15px var(--body);color:var(--ink);cursor:pointer}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+textarea{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:12px;font:15px var(--body);min-height:70px;resize:vertical}
+.go{width:100%;justify-content:center;margin-top:20px;border:0;cursor:pointer}
+.go[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.ok{display:none;text-align:center;padding:10px 0}.ok h3{font-family:var(--display);font-size:26px;font-weight:600;margin-bottom:8px}
+.or{text-align:center;margin-top:18px;font-size:15px;color:var(--ink-soft)}.or a{font-weight:700;border-bottom:1.5px solid var(--gold);text-decoration:none;color:var(--ink)}
+.fin{padding:56px 0}.fin .wrap{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:center}
+.hp{position:absolute;left:-9999px}
+footer{padding:28px 0;font-size:14px;color:var(--ink-soft)}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.hero .wrap,.fin .wrap{grid-template-columns:1fr;gap:28px}.video-card{max-width:300px}.ticks{grid-template-columns:1fr}.fin .video-card{order:-1}}
+@media (max-width:560px){.hero{padding:26px 0 34px}.card{padding:20px}.price{font-size:28px}.pick{padding:38px 0}}
+#app{min-height:70vh}</style></head><body>
+<header><div class="wrap"><img src="/34dental/assets/34-dental-logo.png" alt="34 Dental"></div></header>
+<main id="app"></main>
+<footer><div class="wrap"><span>34 Dental · 34 Leicester Road, Oadby, Leicester LE2 5BA</span><a href="https://www.34dental.co.uk/" style="text-decoration:none">34dental.co.uk</a></div></footer>
+<script>
+(function(){var B={"checkup": "<section class=\"hero\"><div class=\"wrap\"><div>\n<div class=\"eyebrow\">Made for you</div><h1>__HI__, <strong>let's find you a time</strong></h1>\n<p class=\"lede\">__LINE__</p>\n<div class=\"card offer\" style=\"margin-top:26px\"><div><h3>New Patient Exam</h3><div class=\"what\">Your first visit, with Dr Shaila or Dr Sunny</div></div>\n<div class=\"price\">\u00a349<small>was \u00a399</small></div><ul class=\"ticks\"><li>Full check-up with your dentist</li><li>2 X-rays included</li><li>Oral cancer screening</li><li>A clear plan, explained in plain English</li></ul></div>\n<div class=\"ctas\"><a class=\"btn btn-book\" href=\"#pick\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M16 2v4M8 2v4M3 10h18\"/></svg>Choose a time</a>\n<a class=\"btn btn-wa\" data-k=\"wa_click\" href=\"__WA__\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.38 9.38 0 0 1 9.43 9.44c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.7C5.8.7.7 5.8.7 12.06c0 2 .52 3.95 1.52 5.67L.6 23.6l6.02-1.58a11.33 11.33 0 0 0 5.42 1.38h.01c6.26 0 11.35-5.09 11.36-11.35 0-3.03-1.18-5.88-3.33-8.02z\"/></svg>WhatsApp us</a></div>\n<div class=\"reassure\"><span>Rated 5.0 on Google</span><span>Family practice in Oadby for 30+ years</span></div></div>\n<figure class=\"video-card\"><div class=\"video-frame vf\"><iframe src=\"https://player.vimeo.com/video/1241756591?h=63d3522787&title=0&byline=0&portrait=0&dnt=1&playsinline=1\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><figcaption class=\"video-cap\"><b>Welcome to 34 Dental</b> \u00b7 Dr Shaila and Dr Sunny Kotecha</figcaption></figure></div></section>\n<section class=\"pick\" id=\"pick\"><div class=\"wrap\"><div class=\"eyebrow\" style=\"text-align:center\">Your appointment</div>\n<h2 style=\"margin-top:12px\">Choose a time <strong>that suits you</strong></h2><p class=\"sub\">Pick a day and a time of day. We'll call you to confirm.</p>\n<div class=\"card\"><form id=\"f\"><div id=\"fs\"><div class=\"lbl\">Which day?</div><div class=\"chips\"><button type=\"button\" class=\"chip\" data-g=\"day\">Mon</button><button type=\"button\" class=\"chip\" data-g=\"day\">Tue</button><button type=\"button\" class=\"chip\" data-g=\"day\">Wed</button><button type=\"button\" class=\"chip\" data-g=\"day\">Thu</button><button type=\"button\" class=\"chip\" data-g=\"day\">Fri</button><button type=\"button\" class=\"chip\" data-g=\"day\">Sat</button></div>\n<div class=\"lbl\">What time of day?</div><div class=\"chips\"><button type=\"button\" class=\"chip\" data-g=\"time\">Morning</button><button type=\"button\" class=\"chip\" data-g=\"time\">Afternoon</button><button type=\"button\" class=\"chip\" data-g=\"time\">After 4pm</button></div>\n<div class=\"lbl\">Anything we should know? <span style=\"font-weight:400;color:var(--ink-soft)\">(optional)</span></div><textarea id=\"nt\" maxlength=\"500\"></textarea>\n<input class=\"hp\" id=\"hp\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n<button class=\"btn btn-book go\" id=\"go\" disabled>Request my time</button></div>\n<div class=\"ok\" id=\"ok\"><h3>Thank you__COMMAFIRST__</h3><p>We'll call you to confirm your time. Opening hours are Monday to Friday 9:00am to 5:30pm and Saturday 8:30am to 5:30pm.</p></div></form>\n<p class=\"or\">Prefer to pick an exact slot? <a data-k=\"book_click\" href=\"__BOOK__\">Book online</a></p></div></div></section>\n", "missing_damaged": "<section class=\"hero\"><div class=\"wrap\"><div>\n<div class=\"eyebrow\">Made for you</div><h1>__HI__, <strong>let's find you a time</strong></h1>\n<p class=\"lede\">__LINE__</p>\n<div class=\"card offer\" style=\"margin-top:26px\"><div><h3>Treatment Coordinator consultation</h3><div class=\"what\">Talk through every option for missing or damaged teeth</div></div>\n<div class=\"price\">\u00a320<small>refundable, comes off treatment</small></div><ul class=\"ticks\"><li>Options such as implants, bridges or dentures</li><li>Video, phone or in-practice</li><li>Clear costs before you decide</li><li>0% finance over up to 12 months</li></ul></div>\n<div class=\"ctas\"><a class=\"btn btn-book\" href=\"#pick\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M16 2v4M8 2v4M3 10h18\"/></svg>Choose a time</a>\n<a class=\"btn btn-wa\" data-k=\"wa_click\" href=\"__WA__\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.38 9.38 0 0 1 9.43 9.44c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.7C5.8.7.7 5.8.7 12.06c0 2 .52 3.95 1.52 5.67L.6 23.6l6.02-1.58a11.33 11.33 0 0 0 5.42 1.38h.01c6.26 0 11.35-5.09 11.36-11.35 0-3.03-1.18-5.88-3.33-8.02z\"/></svg>WhatsApp us</a></div>\n<div class=\"reassure\"><span>Rated 5.0 on Google</span><span>Family practice in Oadby for 30+ years</span></div></div>\n<figure class=\"video-card\"><div class=\"video-frame vf\"><iframe src=\"https://player.vimeo.com/video/1241756625?h=603fdc16da&title=0&byline=0&portrait=0&dnt=1&playsinline=1\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><figcaption class=\"video-cap\"><b>Your implant consultation</b> \u00b7 Hannah, 34 Dental</figcaption></figure></div></section>\n<section class=\"pick\" id=\"pick\"><div class=\"wrap\"><div class=\"eyebrow\" style=\"text-align:center\">Your appointment</div>\n<h2 style=\"margin-top:12px\">Choose a time <strong>that suits you</strong></h2><p class=\"sub\">Pick a day and a time of day. We'll call you to confirm.</p>\n<div class=\"card\"><form id=\"f\"><div id=\"fs\"><div class=\"lbl\">Which day?</div><div class=\"chips\"><button type=\"button\" class=\"chip\" data-g=\"day\">Mon</button><button type=\"button\" class=\"chip\" data-g=\"day\">Tue</button><button type=\"button\" class=\"chip\" data-g=\"day\">Wed</button><button type=\"button\" class=\"chip\" data-g=\"day\">Thu</button><button type=\"button\" class=\"chip\" data-g=\"day\">Fri</button><button type=\"button\" class=\"chip\" data-g=\"day\">Sat</button></div>\n<div class=\"lbl\">What time of day?</div><div class=\"chips\"><button type=\"button\" class=\"chip\" data-g=\"time\">Morning</button><button type=\"button\" class=\"chip\" data-g=\"time\">Afternoon</button><button type=\"button\" class=\"chip\" data-g=\"time\">After 4pm</button></div>\n<div class=\"lbl\">Anything we should know? <span style=\"font-weight:400;color:var(--ink-soft)\">(optional)</span></div><textarea id=\"nt\" maxlength=\"500\"></textarea>\n<input class=\"hp\" id=\"hp\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n<button class=\"btn btn-book go\" id=\"go\" disabled>Request my time</button></div>\n<div class=\"ok\" id=\"ok\"><h3>Thank you__COMMAFIRST__</h3><p>We'll call you to confirm your time. Opening hours are Monday to Friday 9:00am to 5:30pm and Saturday 8:30am to 5:30pm.</p></div></form>\n<p class=\"or\">Prefer to pick an exact slot? <a data-k=\"book_click\" href=\"__BOOK__\">Book online</a></p></div></div></section>\n<section class=\"fin\"><div class=\"wrap\"><div><div class=\"eyebrow\">Spreading the cost</div>\n<h2 style=\"margin-top:12px\">Treatment you can <strong>pay for monthly</strong></h2>\n<p class=\"lede\" style=\"margin-top:14px\">0% finance is available over up to 12 months, so you can start treatment now and spread the cost. Hannah explains how it works in under 30 seconds.</p></div>\n<figure class=\"video-card\"><div class=\"video-frame vf\"><iframe src=\"https://player.vimeo.com/video/1241756635?h=dc07f797e9&title=0&byline=0&portrait=0&dnt=1&playsinline=1\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><figcaption class=\"video-cap\"><b>Paying for your treatment</b> \u00b7 Hannah, 34 Dental</figcaption></figure></div></section>", "smile": "<section class=\"hero\"><div class=\"wrap\"><div>\n<div class=\"eyebrow\">Made for you</div><h1>__HI__, <strong>let's find you a time</strong></h1>\n<p class=\"lede\">__LINE__</p>\n<div class=\"card offer\" style=\"margin-top:26px\"><div><h3>Cosmetic consultation</h3><div class=\"what\">Bonding, clear aligners or whitening</div></div>\n<div class=\"price\">\u00a320<small>refundable, comes off treatment</small></div><ul class=\"ticks\"><li>See what is possible for your smile</li><li>Honest advice, no pressure</li><li>Clear costs before you decide</li><li>0% finance over up to 12 months</li></ul></div>\n<div class=\"ctas\"><a class=\"btn btn-book\" href=\"#pick\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M16 2v4M8 2v4M3 10h18\"/></svg>Choose a time</a>\n<a class=\"btn btn-wa\" data-k=\"wa_click\" href=\"__WA__\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.38 9.38 0 0 1 9.43 9.44c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.7C5.8.7.7 5.8.7 12.06c0 2 .52 3.95 1.52 5.67L.6 23.6l6.02-1.58a11.33 11.33 0 0 0 5.42 1.38h.01c6.26 0 11.35-5.09 11.36-11.35 0-3.03-1.18-5.88-3.33-8.02z\"/></svg>WhatsApp us</a></div>\n<div class=\"reassure\"><span>Rated 5.0 on Google</span><span>Family practice in Oadby for 30+ years</span></div></div>\n<figure class=\"video-card\"><div class=\"video-frame vf\"><iframe src=\"https://player.vimeo.com/video/1241756619?h=0c15d3993f&title=0&byline=0&portrait=0&dnt=1&playsinline=1\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><figcaption class=\"video-cap\"><b>Composite bonding explained</b> \u00b7 Our cosmetic team</figcaption></figure></div></section>\n<section class=\"pick\" id=\"pick\"><div class=\"wrap\"><div class=\"eyebrow\" style=\"text-align:center\">Your appointment</div>\n<h2 style=\"margin-top:12px\">Choose a time <strong>that suits you</strong></h2><p class=\"sub\">Pick a day and a time of day. We'll call you to confirm.</p>\n<div class=\"card\"><form id=\"f\"><div id=\"fs\"><div class=\"lbl\">Which day?</div><div class=\"chips\"><button type=\"button\" class=\"chip\" data-g=\"day\">Mon</button><button type=\"button\" class=\"chip\" data-g=\"day\">Tue</button><button type=\"button\" class=\"chip\" data-g=\"day\">Wed</button><button type=\"button\" class=\"chip\" data-g=\"day\">Thu</button><button type=\"button\" class=\"chip\" data-g=\"day\">Fri</button><button type=\"button\" class=\"chip\" data-g=\"day\">Sat</button></div>\n<div class=\"lbl\">What time of day?</div><div class=\"chips\"><button type=\"button\" class=\"chip\" data-g=\"time\">Morning</button><button type=\"button\" class=\"chip\" data-g=\"time\">Afternoon</button><button type=\"button\" class=\"chip\" data-g=\"time\">After 4pm</button></div>\n<div class=\"lbl\">Anything we should know? <span style=\"font-weight:400;color:var(--ink-soft)\">(optional)</span></div><textarea id=\"nt\" maxlength=\"500\"></textarea>\n<input class=\"hp\" id=\"hp\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n<button class=\"btn btn-book go\" id=\"go\" disabled>Request my time</button></div>\n<div class=\"ok\" id=\"ok\"><h3>Thank you__COMMAFIRST__</h3><p>We'll call you to confirm your time. Opening hours are Monday to Friday 9:00am to 5:30pm and Saturday 8:30am to 5:30pm.</p></div></form>\n<p class=\"or\">Prefer to pick an exact slot? <a data-k=\"book_click\" href=\"__BOOK__\">Book online</a></p></div></div></section>\n<section class=\"fin\"><div class=\"wrap\"><div><div class=\"eyebrow\">Spreading the cost</div>\n<h2 style=\"margin-top:12px\">Treatment you can <strong>pay for monthly</strong></h2>\n<p class=\"lede\" style=\"margin-top:14px\">0% finance is available over up to 12 months, so you can start treatment now and spread the cost. Hannah explains how it works in under 30 seconds.</p></div>\n<figure class=\"video-card\"><div class=\"video-frame vf\"><iframe src=\"https://player.vimeo.com/video/1241756635?h=dc07f797e9&title=0&byline=0&portrait=0&dnt=1&playsinline=1\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><figcaption class=\"video-cap\"><b>Paying for your treatment</b> \u00b7 Hannah, 34 Dental</figcaption></figure></div></section>", "implants": "<section class=\"hero\"><div class=\"wrap\"><div>\n<div class=\"eyebrow\">Made for you</div><h1>__HI__, <strong>let's find you a time</strong></h1>\n<p class=\"lede\">__LINE__</p>\n<div class=\"card offer\" style=\"margin-top:26px\"><div><h3>Treatment Coordinator consultation</h3><div class=\"what\">Talk through every option for missing or damaged teeth</div></div>\n<div class=\"price\">\u00a320<small>refundable, comes off treatment</small></div><ul class=\"ticks\"><li>Options such as implants, bridges or dentures</li><li>Video, phone or in-practice</li><li>Clear costs before you decide</li><li>0% finance over up to 12 months</li></ul></div>\n<div class=\"ctas\"><a class=\"btn btn-book\" href=\"#pick\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M16 2v4M8 2v4M3 10h18\"/></svg>Choose a time</a>\n<a class=\"btn btn-wa\" data-k=\"wa_click\" href=\"__WA__\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.38 9.38 0 0 1 9.43 9.44c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.7C5.8.7.7 5.8.7 12.06c0 2 .52 3.95 1.52 5.67L.6 23.6l6.02-1.58a11.33 11.33 0 0 0 5.42 1.38h.01c6.26 0 11.35-5.09 11.36-11.35 0-3.03-1.18-5.88-3.33-8.02z\"/></svg>WhatsApp us</a></div>\n<div class=\"reassure\"><span>Rated 5.0 on Google</span><span>Family practice in Oadby for 30+ years</span></div></div>\n<figure class=\"video-card\"><div class=\"video-frame vf\"><iframe src=\"https://player.vimeo.com/video/1241756625?h=603fdc16da&title=0&byline=0&portrait=0&dnt=1&playsinline=1\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><figcaption class=\"video-cap\"><b>Your implant consultation</b> \u00b7 Hannah, 34 Dental</figcaption></figure></div></section>\n<section class=\"pick\" id=\"pick\"><div class=\"wrap\"><div class=\"eyebrow\" style=\"text-align:center\">Your appointment</div>\n<h2 style=\"margin-top:12px\">Choose a time <strong>that suits you</strong></h2><p class=\"sub\">Pick a day and a time of day. We'll call you to confirm.</p>\n<div class=\"card\"><form id=\"f\"><div id=\"fs\"><div class=\"lbl\">Which day?</div><div class=\"chips\"><button type=\"button\" class=\"chip\" data-g=\"day\">Mon</button><button type=\"button\" class=\"chip\" data-g=\"day\">Tue</button><button type=\"button\" class=\"chip\" data-g=\"day\">Wed</button><button type=\"button\" class=\"chip\" data-g=\"day\">Thu</button><button type=\"button\" class=\"chip\" data-g=\"day\">Fri</button><button type=\"button\" class=\"chip\" data-g=\"day\">Sat</button></div>\n<div class=\"lbl\">What time of day?</div><div class=\"chips\"><button type=\"button\" class=\"chip\" data-g=\"time\">Morning</button><button type=\"button\" class=\"chip\" data-g=\"time\">Afternoon</button><button type=\"button\" class=\"chip\" data-g=\"time\">After 4pm</button></div>\n<div class=\"lbl\">Anything we should know? <span style=\"font-weight:400;color:var(--ink-soft)\">(optional)</span></div><textarea id=\"nt\" maxlength=\"500\"></textarea>\n<input class=\"hp\" id=\"hp\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n<button class=\"btn btn-book go\" id=\"go\" disabled>Request my time</button></div>\n<div class=\"ok\" id=\"ok\"><h3>Thank you__COMMAFIRST__</h3><p>We'll call you to confirm your time. Opening hours are Monday to Friday 9:00am to 5:30pm and Saturday 8:30am to 5:30pm.</p></div></form>\n<p class=\"or\">Prefer to pick an exact slot? <a data-k=\"book_click\" href=\"__BOOK__\">Book online</a></p></div></div></section>\n<section class=\"fin\"><div class=\"wrap\"><div><div class=\"eyebrow\">Spreading the cost</div>\n<h2 style=\"margin-top:12px\">Treatment you can <strong>pay for monthly</strong></h2>\n<p class=\"lede\" style=\"margin-top:14px\">0% finance is available over up to 12 months, so you can start treatment now and spread the cost. Hannah explains how it works in under 30 seconds.</p></div>\n<figure class=\"video-card\"><div class=\"video-frame vf\"><iframe src=\"https://player.vimeo.com/video/1241756635?h=dc07f797e9&title=0&byline=0&portrait=0&dnt=1&playsinline=1\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><figcaption class=\"video-cap\"><b>Paying for your treatment</b> \u00b7 Hannah, 34 Dental</figcaption></figure></div></section>"},M={"checkup": {"type": "new_patient_exam", "treat": "your check-up"}, "missing_damaged": {"type": "implant_tco", "treat": "your consultation"}, "smile": {"type": "cosmetic", "treat": "your consultation"}, "implants": {"type": "implant_tco", "treat": "your consultation"}},FB="<section class=\"hero\"><div class=\"wrap\"><div><div class=\"eyebrow\">34 Dental</div><h1>This link has <strong>expired</strong></h1>\n<p class=\"lede\">You can still choose a time online or message our team on WhatsApp.</p><div class=\"ctas\">\n<a class=\"btn btn-book\" href=\"https://go.dentalclinichub.com/34dental\">See 34 Dental</a><a class=\"btn btn-wa\" href=\"https://wa.me/447863750619\">WhatsApp us</a></div></div></div></section>",C="https://dusty-tapir-656.convex.cloud",BOOK="https://34dental.altadentgrowth.com/book";
+var T=(new URLSearchParams(location.search).get("p")||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+var bot=/bot|crawl|spider|preview|scanner|safelinks|proofpoint|mimecast|barracuda|facebookexternalhit|whatsapp|slackbot|headless/i.test(navigator.userAgent);
+function esc(x){return String(x).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function call(kind,path,args){return fetch(C+"/api/"+kind,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({path:path,args:args,format:"json"}),keepalive:true}).then(function(r){return r.json()})}
+function s(k,x){if(bot)return Promise.resolve();return call("mutation","leadEvents:track",Object.assign({token:T,kind:k,ua:navigator.userAgent},x||{}))}
+var app=document.getElementById("app");
+if(!T){app.innerHTML=FB;return}
+call("query","leadEvents:page",{token:T}).then(function(r){var p=r&&r.value;if(!p||!B[p.concern]){app.innerHTML=FB;return}
+var f=p.first||"",m=M[p.concern],book=BOOK+"?type="+m.type+(f?"&first="+encodeURIComponent(f):""),
+wa="https://wa.me/447863750619?text="+encodeURIComponent("Hi, it's "+(f||"me")+". I'd like to book "+m.treat+".");
+document.title=(f?"Hi "+f+", ":"")+"your 34 Dental page";
+app.innerHTML=B[p.concern].split("__HI__").join(f?"Hi "+esc(f):"Hello").split("__LINE__").join(esc(p.line)).split("__COMMAFIRST__").join(f?", "+esc(f):"")
+.split("__BOOK__").join(esc(book)).split("__WA__").join(esc(wa));
+setTimeout(function(){if(document.visibilityState!=="hidden")s("view")},2500);
+app.querySelectorAll("[data-k]").forEach(function(a){a.addEventListener("click",function(){s(a.getAttribute("data-k"))})});
+var sel={},go=document.getElementById("go");
+app.querySelectorAll(".chip").forEach(function(c){c.addEventListener("click",function(){var g=c.getAttribute("data-g");
+app.querySelectorAll('.chip[data-g="'+g+'"]').forEach(function(o){o.classList.remove("on")});c.classList.add("on");sel[g]=c.textContent;go.disabled=!(sel.day&&sel.time)})});
+document.getElementById("f").addEventListener("submit",function(e){e.preventDefault();if(go.disabled)return;go.disabled=true;go.textContent="Sending...";
+var a={day:sel.day,time:sel.time,note:document.getElementById("nt").value};var hp=document.getElementById("hp").value;if(hp)a.website=hp;
+s("request",a).then(function(){document.getElementById("fs").style.display="none";document.getElementById("ok").style.display="block"})
+.catch(function(){go.disabled=false;go.textContent="Request my time";alert("Sorry, that didn't send. Please WhatsApp us instead.")})});
+}).catch(function(){app.innerHTML=FB});
+})();
+</script></body></html>
