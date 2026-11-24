@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduce a Practice · AltaDent Growth</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Give us a name and a number. We will do the rest.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AltaDent Growth">
+<meta property="og:title" content="Introduce a practice to AltaDent">
+<meta property="og:description" content="Give us a name and a number. We will do the rest.">
+<meta property="og:url" content="https://go.dentalclinichub.com/refer/marlow">
+<meta property="og:image" content="https://go.dentalclinichub.com/refer/img/og-400.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F3B5C;--teal:#00B3A4;--cream:#F4F7FA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Manrope',Arial,sans-serif;background:var(--cream);color:var(--navy);min-height:100dvh;display:flex;flex-direction:column}
+.hero{background:var(--navy);padding:28px 20px 84px}
+.wrap{max-width:560px;margin:0 auto}
+.logo img{height:34px;width:auto;display:block}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+.hero .eyebrow{margin-top:36px}
+h1{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:700;color:#fff;font-size:clamp(28px,7vw,40px);line-height:1.12;margin-top:12px}
+.sub{color:rgba(255,255,255,.84);font-size:17px;line-height:1.6;margin-top:14px}
+main{flex:1;padding:0 20px 56px}
+.card{max-width:560px;margin:-52px auto 0;background:#fff;border:1px solid rgba(31,59,92,.1);border-radius:14px;box-shadow:0 10px 40px rgba(31,59,92,.1);padding:30px}
+@media(max-width:520px){.card{padding:22px}}
+label{display:block;font-size:14px;font-weight:700;margin:18px 0 7px}
+label span{font-weight:600;color:rgba(31,59,92,.5)}
+input{width:100%;border:1px solid rgba(31,59,92,.18);border-radius:8px;padding:14px;font-size:17px;font-family:inherit;color:var(--navy);outline:none}
+input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,179,164,.2)}
+::placeholder{color:rgba(31,59,92,.35)}
+.btn{width:100%;margin-top:26px;background:var(--teal);color:#fff;font-weight:700;font-size:17px;font-family:inherit;border:none;border-radius:999px;padding:16px;cursor:pointer;min-height:52px}
+.btn[disabled]{opacity:.6}
+.note{margin-top:14px;font-size:13.5px;line-height:1.6;color:rgba(31,59,92,.6);text-align:center}
+.steps{list-style:none;margin-top:4px}
+.steps li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5;margin-top:12px}
+.steps em{flex:0 0 24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-style:normal;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.thx{max-width:560px;margin:22px auto 0;background:var(--navy);color:#fff;border-radius:14px;padding:22px 24px;font-size:15px;line-height:1.6}
+.thx b{color:var(--teal)}
+.err{display:none;margin-top:14px;font-size:14px;font-weight:600;color:#c0392b}
+.done{display:none;text-align:center;padding:16px 0}
+.done h2{font-family:'Bricolage Grotesque',Arial,sans-serif;font-size:26px;margin-top:14px}
+.done p{margin-top:10px;font-size:15.5px;line-height:1.6;color:rgba(31,59,92,.75)}
+.done svg{width:50px;height:50px;color:var(--teal)}
+.hp{position:absolute;left:-9999px;opacity:0}
+footer{background:var(--navy);padding:20px;text-align:center;color:rgba(255,255,255,.6);font-size:12.5px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <div class="logo"><img src="/assets/email/altadent-logo-white.png" alt="AltaDent Growth"></div>
+  <div class="eyebrow">For the Marlow Valley team</div>
+  <h1>Know a practice that should see this?</h1>
+  <p class="sub">Give us a name and a number. We will do the rest.</p>
+</div></header>
+<main>
+  <div class="card">
+    <div id="done" class="done">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      <h2>Thank you</h2>
+      <p>Sim has it and will call them personally, mentioning Marlow Valley. Want to add another? <a href="" style="color:var(--teal);font-weight:700">Send one more</a></p>
+    </div>
+    <form id="f">
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label for="tn">Their name</label>
+      <input id="tn" required placeholder="e.g. Dr Jane Smith" autocomplete="off">
+      <label for="tf">Their number</label>
+      <input id="tf" required type="tel" inputmode="tel" placeholder="Mobile or practice number" autocomplete="off">
+      <label for="tp">Their practice <span>(optional)</span></label>
+      <input id="tp" placeholder="If you know it" autocomplete="off">
+      <label for="rn">Your name <span>(optional)</span></label>
+      <input id="rn" placeholder="So we can thank you" autocomplete="name">
+      <p id="err" class="err"></p>
+      <button class="btn" type="submit" id="sb">Send the introduction</button>
+      <p class="note">Takes 30 seconds. We call them, explain what we do and always say you sent us.</p>
+    </form>
+  </div>
+  <div class="thx">
+    <div class="eyebrow" style="margin-bottom:6px">What happens next</div>
+    <ul class="steps">
+      <li><em>1</em><span>Sim calls them personally within two working days.</span></li>
+      <li><em>2</em><span>They get a free case acceptance review, with no obligation.</span></li>
+      <li><em>3</em><span>If they join, you get <b>£400 in John Lewis vouchers</b> as a thank you.</span></li>
+    </ul>
+  </div>
+</main>
+<footer>Altadent Growth Ltd · success@altadentgrowth.com · altadent.co.uk</footer>
+<script>
+const API="https://original-wildcat-714.convex.cloud/api/mutation";
+const f=document.getElementById("f"),err=document.getElementById("err"),btn=document.getElementById("sb");
+f.addEventListener("submit",async e=>{
+  e.preventDefault();err.style.display="none";
+  const v=id=>document.getElementById(id).value.trim();
+  if(v("tf").replace(/\D/g,"").length<10){err.textContent="Please check the phone number.";err.style.display="block";return}
+  btn.disabled=true;btn.textContent="Sending…";
+  const ref=new URLSearchParams(location.search).get("ref");
+  const args={referrerName:v("rn")||"Marlow Valley team",referrerPractice:"Marlow Valley Smiles",referrerEmail:"patientcare@marlowvalleysmiles.co.uk",
+    refereeName:v("tn"),refereePractice:v("tp")||"Not given",refereePhone:v("tf"),source:ref?"client:marlow:"+ref:"client:marlow"};
+  const hp=f.querySelector(".hp").value;if(hp)args.website=hp;
+  try{
+    const r=await fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({path:"referrals:submit",args,format:"json"})});
+    const j=await r.json();
+    if(j.status!=="success")throw new Error((j.errorMessage||"").replace(/^.*Error: /,"")||"Something went wrong.");
+    f.style.display="none";document.getElementById("done").style.display="block";
+  }catch(ex){
+    err.textContent=/Server Error/.test(ex.message)?"Something went wrong. Please try again.":ex.message;
+    err.style.display="block";btn.disabled=false;btn.textContent="Send the introduction";
+  }
+});
+</script>
+</body>
+</html>
