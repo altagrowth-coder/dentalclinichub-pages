@@ -51,4 +51,4 @@ test('same endpoint and local autosave, recap edit and resume remain in shell',(
  for(const bit of ['localStorage.setItem(KEY','Continue where you left off','data-c="ed"','state._at','mode:"no-cors"','source:"bespoke-blueprint"'])assert.ok(code.includes(bit),bit);
 });
 
-test('Rise stage contains off-screen transforms to prevent mobile document scroll',()=>{assert.match(html,/\.stage\{[^}]*overflow:hidden/);});
+test('Rise stage contains off-screen transforms to prevent mobile document scroll',()=>{assert.match(html,/\.stage\{[^}]*overflow:clip/);});
