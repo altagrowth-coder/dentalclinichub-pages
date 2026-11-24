@@ -16,7 +16,7 @@ test('Rise identifiers, existing branding, video and valid JavaScript',()=>{
  assert.match(code,/proposal-builder-walkthrough-bnaf6ynm\/embed/);
  for(const stale of ['Iconic','Lana','Aura','Boxly','__VIDEO__','business@iconic'])assert.ok(!html.includes(stale),stale);
  assert.doesNotMatch(html,/[£€]|\$\d/);
- assert.match(html,/website notes to check, not agreed call facts/);
+ assert.match(html,/A starting point from your website/);
 });
 test('33 focused questions; only name and work email required; unknowns accepted',()=>{
  const ctx=context();
