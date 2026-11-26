@@ -1,7 +1,85 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Case Acceptance Scorecard | AltaDent Growth</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<meta property="og:title" content="Case Acceptance Scorecard | AltaDent Growth"><meta property="og:description" content=""><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"></head><body><div class="wrap">
+<style>
+:root{--navy:#1F3B5C;--teal:#00B3A4;--cream:#F4F7FA;--line:rgba(31,59,92,.12)}
+*{box-sizing:border-box}body{margin:0;font-family:Manrope,system-ui,sans-serif;color:var(--navy);background:var(--cream)}
+.wrap{max-width:760px;margin:0 auto;padding:32px 20px 80px}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+h1,h2,h3{font-family:'Bricolage Grotesque',serif;letter-spacing:-.01em;margin:.2em 0 .4em}
+h1{font-size:38px;line-height:1.1}h2{font-size:26px}h3{font-size:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:18px}
+.bar{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin:18px 0 6px}
+.bar>i{display:block;height:100%;background:var(--teal);width:0;transition:width .3s}
+.q{font-size:19px;font-weight:700;margin:6px 0 16px}
+.opt{display:block;border:1px solid var(--line);border-radius:10px;padding:13px 16px;margin-bottom:9px;cursor:pointer;font-weight:500;transition:.15s}
+.opt:hover{border-color:var(--teal);background:rgba(0,179,164,.06)}
+.opt.sel{border-color:var(--teal);background:rgba(0,179,164,.12);font-weight:600}
+.btn{display:inline-block;background:var(--teal);color:#fff;border:0;border-radius:99px;padding:14px 26px;font-family:Manrope;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none}
+.btn.wa{background:#25D366;color:#0b2318;display:inline-flex;align-items:center;gap:8px}.btn.wa svg{width:17px;height:17px;flex:0 0 auto}
+.btn.ghost{background:transparent;color:var(--navy);border:1px solid var(--line)}
+.row{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;align-items:center}
+.stat{flex:1 1 180px;background:var(--navy);color:#fff;border-radius:12px;padding:18px}
+.stat b{display:block;font-family:'Bricolage Grotesque',serif;font-size:30px;color:var(--teal)}
+.stat span{font-size:13px;opacity:.85}
+.small{font-size:13px;opacity:.7;line-height:1.6}
+table{width:100%;border-collapse:collapse;margin:10px 0 4px;font-size:15px}
+td,th{text-align:left;padding:9px 0;border-bottom:1px solid var(--line)}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+ul{padding-left:20px;line-height:1.7}
+.hide{display:none}
+a[data-viktor-badge]{display:none!important}
+.logo{height:38px;display:block;margin-bottom:22px}
+.field{margin-bottom:12px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
+.field input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-family:Manrope;font-size:15px;color:var(--navy)}
+.field input:focus{outline:0;border-color:var(--teal)}
+.err{color:#C0392B;font-size:13px;font-weight:600;margin-top:8px}
+.chip{display:inline-block;background:rgba(0,179,164,.14);color:var(--navy);border-radius:99px;padding:6px 14px;font-weight:700;font-size:13px}
+footer{margin-top:30px;font-size:12px;opacity:.6;text-align:center}
+
+/* MOBILE-PASS */
+details.acc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:18px}
+details.acc>summary{list-style:none;cursor:pointer;padding:18px 22px;font-family:'Bricolage Grotesque',serif;font-size:17px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+details.acc>summary::-webkit-details-marker{display:none}
+details.acc>summary::after{content:"+";font-size:22px;color:var(--teal);font-weight:700}
+details.acc[open]>summary::after{content:"\2013"}
+details.acc>.body{padding:0 22px 20px}
+.stickybar{display:none}
+@media(max-width:620px){
+ .wrap{padding:16px 14px 96px}
+ .logo{height:30px;margin-bottom:14px}
+ h1{font-size:27px}h2{font-size:21px}h3{font-size:16px}
+ .card{padding:16px 16px 18px;border-radius:12px;margin-bottom:12px}
+ details.acc{margin-bottom:12px}details.acc>summary{padding:14px 16px;font-size:16px}details.acc>.body{padding:0 16px 16px}
+ #sub{font-size:13px}
+ .q{font-size:17px;margin:4px 0 12px}
+ .opt{padding:11px 13px;margin-bottom:7px;font-size:15px;border-radius:9px}
+ .bar{margin:10px 0 4px}
+ .row{gap:8px;margin-top:12px}
+ .stat{flex:1 1 0;min-width:0;padding:11px 10px;border-radius:10px}
+ .stat b{font-size:19px}
+ .stat span{font-size:11px;line-height:1.3;display:block}
+ table{font-size:14px;margin:6px 0 2px}td,th{padding:7px 0}
+ .small{font-size:12px;line-height:1.5}
+ .field{margin-bottom:9px}.field input{padding:11px 12px;font-size:16px}
+ .btn{padding:13px 20px;font-size:15px;width:100%;text-align:center}
+ .btn.ghost{font-size:14px}
+ ul{padding-left:18px;line-height:1.55;font-size:14px}
+ footer{margin-top:18px}
+ body.res .stickybar{display:flex;position:fixed;left:0;right:0;bottom:0;gap:8px;padding:10px 12px;
+  background:rgba(255,255,255,.96);border-top:1px solid var(--line);backdrop-filter:blur(6px);z-index:50}
+ body.res .stickybar .btn{flex:1 1 0;padding:12px 8px;font-size:14px}
+}
+
+@media(max-width:620px){
+ h2{font-size:19px;line-height:1.2}
+ #result p{font-size:14px;line-height:1.5}
+ .stat{padding:10px 9px}
+ .stat b{font-size:16px;letter-spacing:-.02em;word-break:break-word}
+ .stat span{font-size:10.5px}
+ .chip{font-size:12px;padding:5px 11px}
+ .dtl{display:none}
+}
+</style><meta property="og:title" content="Case Acceptance Scorecard | AltaDent Growth"><meta property="og:description" content=""><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"></head><body><div class="wrap">
 <img class="logo" alt="AltaDent Growth" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQ4MCA0MjAgOTcwIDI0MCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMxZjNiNWM7fS5jbHMtMntmaWxsOiMxZjNiNWM7fS5jbHMtM3tmaWxsOiMwMGIzYTQ7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTY4MSw2NDYuMzRWNDg1LjQzaDI4LjQzVjY0Ni4zNFoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik03OTguNDYsNTYzLjQ2SDc3My41NXY0NS44NXEwLDUuNzMsMi44Nyw4LjM3dDguMzcsM2ExMjIuMSwxMjIuMSwwLDAsMCwxMy42Ny0uMTF2MjUuNzlxLTI5LjMzLDMuMy00MS4zMy01LjUxdC0xMi0zMS41MlY1NjMuNDZINzI1Ljk0VjUzNi4xM2gxOS4xOFY1MTMuODdsMjguNDMtOC42djMwLjg2aDI0LjkxWiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTg5OSw1MzYuMTNIOTI3LjRWNjQ2LjM0SDg5OXYtMTNRODg2LjE5LDY0OS40Miw4NjMsNjQ5LjQycS0yMiwwLTM3LjgtMTYuODZ0LTE1Ljc2LTQxLjMzcTAtMjQuNDcsMTUuNzYtNDEuMzNUODYzLDUzM3EyMy4xNSwwLDM1LjkzLDE2LjA5Wm0tNTIuNDYsNzcuNDhxOC42LDguNywyMS44Miw4Ljd0MjEuOTMtOC43UTg5OSw2MDQuOSw4OTksNTkxLjIzdC04LjcxLTIyLjM3cS04LjctOC43LTIxLjkzLTguNzF0LTIxLjgyLDguNzFxLTguNiw4LjcxLTguNiwyMi4zN1Q4NDYuNTEsNjEzLjYxWiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTEwMTUuNzksNDkyLjA1cTMxLjc0LDAsNTMsMjIuMjZ0MjEuMjcsNTQuODhxMCwzMi42My0yMS4yNyw1NC44OXQtNTMsMjIuMjZIOTU0LjUxVjQ5Mi4wNVptMCwxMjUuMTlxMjAuMDYsMCwzMi42Mi0xMy4zM1QxMDYxLDU2OS4xOXEwLTIxLjM3LTEyLjU3LTM0LjcydC0zMi42Mi0xMy4zM0g5ODQuOTN2OTYuMVoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0xMTM0LjM3LDYwMi45MnE1LjczLDIwLjcyLDMxLjA4LDIwLjcyLDE2LjMyLDAsMjQuNjktMTFsMjIuOTIsMTMuMjNxLTE2LjMsMjMuNi00OCwyMy41OC0yNy4zMywwLTQzLjg2LTE2LjUzdC0xNi41My00MS42NnEwLTI0LjksMTYuMzEtNDEuNTVUMTE2Mi44MSw1MzNxMjQuMjQsMCw0MCwxNi43NXQxNS43Niw0MS40NGE2Ni4xMyw2Ni4xMywwLDAsMS0xLjEsMTEuNjlabS0uNDQtMjJoNTYuMjFxLTIuNDMtMTEuMjQtMTAtMTYuNzVhMjguNzcsMjguNzcsMCwwLDAtMTcuMy01LjUxcS0xMS40NiwwLTE5LDUuODRUMTEzMy45Myw1ODAuODdaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTI5OS42OSw1MzNxMTguMDYsMCwyOS44NiwxMi4xM3QxMS44LDMzLjV2NjcuNjdoLTI4LjQ0VjU4Mi4ycTAtMTEtNi0xNi44NnQtMTUuODctNS44NXEtMTEsMC0xNy42Myw2Ljg0dC02LjYxLDIwLjQ5djU5LjUyaC0yOC40NFY1MzYuMTNoMjguNDR2MTIuMzRRMTI3Ny4yLDUzMy4wNSwxMjk5LjY5LDUzM1oiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0xNDI4LjYzLDU2My40NmgtMjQuOTF2NDUuODVxMCw1LjczLDIuODcsOC4zN3Q4LjM4LDNhMTIxLjkzLDEyMS45MywwLDAsMCwxMy42Ni0uMTF2MjUuNzlxLTI5LjMxLDMuMy00MS4zMy01LjUxdC0xMi0zMS41MlY1NjMuNDZoLTE5LjE4VjUzNi4xM2gxOS4xOFY1MTMuODdsMjguNDMtOC42djMwLjg2aDI0LjkxWiIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTYyMCw1MTlsLTU5LDk2LjhoNTAuNTdsNi43NCwzMC41M2gzM1oiLz48cG9seWdvbiBjbGFzcz0iY2xzLTMiIHBvaW50cz0iNjQ2LjIgNDkyLjQ2IDYyMy41NyA0ODcuMjggNTI2LjU5IDY0Ni4zMyA0OTEuMzcgNjQ2LjMzIDU5Mi41NiA0ODAuMjQgNTY4Ljk3IDQ3NC44MiA2MzQuNjQgNDMwLjU3IDY0Ni4yIDQ5Mi40NiIvPjwvc3ZnPg==">
 <h1 id="title">The Case Acceptance Scorecard</h1>
 <p id="sub" class="small">Eight questions, about 90 seconds. You get your acceptance score, how it compares with the UK benchmark of 42% average and 75% top decile, and an illustrative figure for what a 10 point lift is worth to your practice.</p>
