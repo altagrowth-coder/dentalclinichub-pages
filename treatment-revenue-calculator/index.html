@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Treatment Revenue Calculator | AltaDent Growth</title>
+<meta name="description" content="See how much extra treatment revenue your clinic could win each year by raising case acceptance. Takes 30 seconds.">
+<meta property="og:title" content="How Much Treatment Revenue Could Your Clinic Win?">
+<meta property="og:description" content="A 30 second calculator for UK dental practice owners.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head><body>
+<header><div class="wrap"><svg role="img" aria-label="AltaDent Growth" class="logo" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="480 420 970 240"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#ffffff;}.cls-3{fill:#00b3a4;}</style></defs><path class="cls-2" d="M681,646.34V485.43h28.43V646.34Z"/><path class="cls-2" d="M798.46,563.46H773.55v45.85q0,5.73,2.87,8.37t8.37,3a122.1,122.1,0,0,0,13.67-.11v25.79q-29.33,3.3-41.33-5.51t-12-31.52V563.46H725.94V536.13h19.18V513.87l28.43-8.6v30.86h24.91Z"/><path class="cls-2" d="M899,536.13H927.4V646.34H899v-13Q886.19,649.42,863,649.42q-22,0-37.8-16.86t-15.76-41.33q0-24.47,15.76-41.33T863,533q23.15,0,35.93,16.09Zm-52.46,77.48q8.6,8.7,21.82,8.7t21.93-8.7Q899,604.9,899,591.23t-8.71-22.37q-8.7-8.7-21.93-8.71t-21.82,8.71q-8.6,8.71-8.6,22.37T846.51,613.61Z"/><path class="cls-2" d="M1015.79,492.05q31.74,0,53,22.26t21.27,54.88q0,32.63-21.27,54.89t-53,22.26H954.51V492.05Zm0,125.19q20.06,0,32.62-13.33T1061,569.19q0-21.37-12.57-34.72t-32.62-13.33H984.93v96.1Z"/><path class="cls-2" d="M1134.37,602.92q5.73,20.72,31.08,20.72,16.32,0,24.69-11l22.92,13.23q-16.3,23.6-48,23.58-27.33,0-43.86-16.53t-16.53-41.66q0-24.9,16.31-41.55T1162.81,533q24.24,0,40,16.75t15.76,41.44a66.13,66.13,0,0,1-1.1,11.69Zm-.44-22h56.21q-2.43-11.24-10-16.75a28.77,28.77,0,0,0-17.3-5.51q-11.46,0-19,5.84T1133.93,580.87Z"/><path class="cls-2" d="M1299.69,533q18.06,0,29.86,12.13t11.8,33.5v67.67h-28.44V582.2q0-11-6-16.86t-15.87-5.85q-11,0-17.63,6.84t-6.61,20.49v59.52h-28.44V536.13h28.44v12.34Q1277.2,533.05,1299.69,533Z"/><path class="cls-2" d="M1428.63,563.46h-24.91v45.85q0,5.73,2.87,8.37t8.38,3a121.93,121.93,0,0,0,13.66-.11v25.79q-29.31,3.3-41.33-5.51t-12-31.52V563.46h-19.18V536.13h19.18V513.87l28.43-8.6v30.86h24.91Z"/><path class="cls-3" d="M620,519l-59,96.8h50.57l6.74,30.53h33Z"/><polygon class="cls-3" points="646.2 492.46 623.57 487.28 526.59 646.33 491.37 646.33 592.56 480.24 568.97 474.82 634.64 430.57 646.2 492.46"/></svg>
+<p class="eyebrow">Free calculator</p>
+<h1>How Much Treatment Revenue Could Your Clinic Win Each Year?</h1>
+<p class="lede">Move the three sliders. You will see what your current case acceptance is worth, and what the same plans would be worth at the UK average and at top decile clinics.</p>
+</div></header>
+<main><div class="wrap">
+<div class="card lift">
+ <div class="field"><div class="row"><label for="plans">Treatment plans presented per month</label><span class="val" id="plansV"></span></div>
+ <input type="range" id="plans" min="5" max="200" step="1" value="40"><p class="hint">Count every plan over £500 your clinicians present: implants, aligners, crowns, cosmetic, perio.</p></div>
+ <div class="field"><div class="row"><label for="value">Average plan value</label><span class="val" id="valueV"></span></div>
+ <input type="range" id="value" min="500" max="15000" step="100" value="2500"></div>
+ <div class="field" style="margin-bottom:0"><div class="row"><label for="rate">Plans accepted today</label><span class="val" id="rateV"></span></div>
+ <input type="range" id="rate" min="5" max="90" step="1" value="35"><p class="hint">Not sure? The UK average is 42%. Most clinics without structured follow-up sit between 30% and 45%.</p></div>
+</div>
+
+<div class="result" aria-live="polite">
+ <p class="k" id="headK">Extra treatment revenue available each year at top decile acceptance</p>
+ <p class="big" id="gap"></p>
+ <p class="say" id="say"></p>
+ <div class="tiles">
+  <div class="tile"><b id="now"></b><span>Accepted today, per year</span></div>
+  <div class="tile"><b id="avg"></b><span>At the UK average (42%)</span></div>
+  <div class="tile"><b id="top"></b><span>At top decile (75%)</span></div>
+ </div>
+ <div class="bar"><i id="barI"></i><em style="left:42%"></em><em style="left:75%"></em></div>
+ <div class="legend"><span style="position:absolute;left:0">0%</span><span style="position:absolute;left:42%;transform:translateX(-50%)">Avg 42%</span><span style="position:absolute;left:75%;transform:translateX(-50%)">Top 75%</span><span style="position:absolute;right:0">100%</span></div>
+ <div class="ctas"><a class="btn" id="book" href="https://go.dentalclinichub.com/book-call?c=calculator">Book a 20 minute walkthrough</a><a class="btn ghost" href="#send">Email me this breakdown</a></div>
+</div>
+
+<h2>Where the Difference Comes From</h2>
+<p class="prose">Top decile clinics do not present more plans. They follow up better. The gap usually closes through four habits.</p>
+<ul class="levers">
+ <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Every patient leaves with a clear plan</b> they can read at home, with phases, prices and what happens next.</span></li>
+ <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Monthly payment options shown up front</b>, with a soft credit check that has no impact on the patient's score.</span></li>
+ <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Follow-up that never stops at one call</b>: WhatsApp, email and phone over weeks, not days.</span></li>
+ <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Acceptance tracked by clinician and site</b>, so the team can see what is working.</span></li>
+</ul>
+
+<h2 id="send">Get Your Breakdown by Email</h2>
+<p class="prose">Within one working day we will email your numbers plus a one page plan showing which of the four habits would move your acceptance most.</p>
+<div class="card" style="margin-top:14px">
+<form id="f" novalidate>
+ <div class="grid2"><div class="f"><label for="n">Your name</label><input id="n" autocomplete="name"></div>
+ <div class="f"><label for="pr">Practice name</label><input id="pr" autocomplete="organization"></div></div>
+ <div class="grid2"><div class="f"><label for="e">Email</label><input id="e" type="email" autocomplete="email"></div>
+ <div class="f"><label for="m">Mobile (optional)</label><input id="m" type="tel" autocomplete="tel"></div></div>
+ <button class="btn" type="submit" style="margin-top:6px">Send my breakdown</button>
+ <div class="err" id="err" hidden></div>
+</form>
+<div class="ok" id="ok" hidden>Thank you. Your breakdown will be with you within one working day. If you would rather talk it through, <a href="https://go.dentalclinichub.com/book-call?c=calculator-form" style="color:var(--navy)">book a 20 minute walkthrough</a>.</div>
+</div>
+
+<p class="src">Benchmarks: UK average case acceptance 42%, top 10% of clinics 75% (Henry Schein One, Catalyst Index 2026). Figures are estimates based on the numbers you enter and assume the same plans and fees. They are not a guarantee of results.</p>
+</div></main>
+<footer>&copy; 2026 AltaDent Growth Ltd</footer>
+<script>
+const HOOK="https://api.viktor.com/api/triggers/in/webhook/wh_vTTkaQmMIw2-uD_CQkDSxjwy?token=vtrtok__1CO_JfSm36VKvqw_ot_0RkLxVGfWDC1BwIh2-LzYVA";
+const $=id=>document.getElementById(id);
+const gbp=n=>"£"+Math.round(n).toLocaleString("en-GB");
+const short=n=>n>=1e6?"£"+(n/1e6).toFixed(n>=1e7?1:2).replace(/\.?0+$/,"")+"m":n>=1e3?"£"+Math.round(n/1e3).toLocaleString("en-GB")+"k":gbp(n);
+const q=new URLSearchParams(location.search);const C=q.get("c")||"";
+if(C){$("book").href="https://go.dentalclinichub.com/book-call?c=calculator-"+encodeURIComponent(C)}
+let S={};
+function fill(el){const p=(el.value-el.min)/(el.max-el.min)*100;el.style.setProperty("--p",p+"%")}
+function calc(){
+ const plans=+$("plans").value,value=+$("value").value,rate=+$("rate").value/100;
+ ["plans","value","rate"].forEach(i=>fill($(i)));
+ $("plansV").textContent=plans;$("valueV").textContent=gbp(value);$("rateV").textContent=Math.round(rate*100)+"%";
+ const pres=plans*value*12,now=pres*rate,avg=pres*.42,top=pres*.75,ten=pres*.10;
+ const gap=Math.max(0,top-now);
+ $("now").textContent=short(now);$("avg").textContent=short(avg);$("top").textContent=short(top);
+ $("barI").style.width=Math.round(rate*100)+"%";
+ if(gap>0){$("headK").textContent="Extra treatment revenue available each year at top decile acceptance";$("gap").textContent=gbp(gap);
+  $("say").textContent="You present about "+short(pres)+" of treatment a year. Every 10 points of acceptance you add is worth "+gbp(ten)+" a year, from patients who have already sat in your chair.";}
+ else{$("headK").textContent="You are already at top decile acceptance";$("gap").textContent=gbp(now);
+  $("say").textContent="That is "+gbp(now)+" accepted a year. The next opportunity is reactivating older unaccepted plans and filling the diary with more consultations.";}
+ S={plans,value,rate:Math.round(rate*100),pres,now,gap,ten};
+}
+["plans","value","rate"].forEach(i=>$(i).addEventListener("input",calc));calc();
+function post(p){if(HOOK.slice(0,4)!=="http")return Promise.resolve();
+ try{return fetch(HOOK,{method:"POST",mode:"no-cors",keepalive:true,headers:{"Content-Type":"application/json"},body:JSON.stringify(p)})}catch(e){return Promise.resolve()}}
+$("f").addEventListener("submit",function(ev){ev.preventDefault();
+ const n=$("n").value.trim(),pr=$("pr").value.trim(),e=$("e").value.trim(),m=$("m").value.trim();
+ if(!n||!pr||!/^\S+@\S+\.\S+$/.test(e)){$("err").textContent="Please add your name, practice and a valid email.";$("err").hidden=false;return}
+ $("err").hidden=true;
+ const band=S.rate>=75?"Top decile":S.rate>=42?"Above average":"Below average";
+ post({source:"treatment-revenue-calculator"+(C?"-"+C:""),name:n,practice:pr,email:e,mobile:m,band:band,score:"",
+  acceptance:S.rate+"%",presented:gbp(S.pres)+"/yr",uplift_year:gbp(S.gap)+"/yr to top decile",report_requested:true,
+  answers:{"Plans per month":S.plans,"Average plan value":gbp(S.value),"Acceptance today":S.rate+"%","Accepted per year":gbp(S.now),"+10 points worth":gbp(S.ten)+"/yr"}});
+ $("f").hidden=true;$("ok").hidden=false;});
+</script></body></html>
